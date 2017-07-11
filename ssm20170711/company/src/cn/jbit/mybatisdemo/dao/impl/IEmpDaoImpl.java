@@ -55,10 +55,41 @@ public class IEmpDaoImpl implements IEmpDao {
 		int result = -1;
 		SqlSession session = MyBatisUtil.getSession();
 		try {
-			result = session.insert("cn.jbit.mybatisdemo.dao.IEmpDao.insertEmp", emp);
+			result = session.insert(
+					"cn.jbit.mybatisdemo.dao.IEmpDao.insertEmp", emp);
 			session.commit();
 		} catch (Exception e) {
 			System.out.println("插入失败！");
+		} finally {
+			MyBatisUtil.closeSession();
+		}
+		return result;
+	}
+
+	public int deleteEmp(int empno) {
+		int result = -1;
+		SqlSession session = MyBatisUtil.getSession();
+		try {
+			result = session.delete(
+					"cn.jbit.mybatisdemo.dao.IEmpDao.deleteEmp", empno);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			MyBatisUtil.closeSession();
+		}
+		return result;
+	}
+
+	public int updateEmp(Emp emp) {
+		int result = -1;
+		SqlSession session = MyBatisUtil.getSession();
+		try {
+			result = session.update(
+					"cn.jbit.mybatisdemo.dao.IEmpDao.updateEmp", emp);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			MyBatisUtil.closeSession();
 		}

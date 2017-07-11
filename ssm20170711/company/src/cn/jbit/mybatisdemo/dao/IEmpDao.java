@@ -10,4 +10,6 @@ public interface IEmpDao {
 	Emp selectOne();
 	Emp selectByEmpno(int empno);
 	int insertEmp(Emp emp);
+	int deleteEmp(int empno);
+	int updateEmp(Emp emp);
 }
