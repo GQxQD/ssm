@@ -19,8 +19,7 @@ public class TestEmp {
 		System.out.println("-------------findEmpByExampleIf-------------");
 		IEmpDao empDao = new IEmpDaoImpl();
 		Emp emp1 = new Emp();
-		emp1.setDeptNo(10086);
-//		emp1.setEmpname("李");
+		emp1.setDeptNo(20);
 		List<Emp> list = empDao.findEmpByExampleIf(emp1);
 		System.out.println("员工编号\t员工姓名\t入职时间\t员工职位\t员工工资\t经理编号\t奖金\t部门编号");
 		for (Emp emp : list) {
@@ -29,7 +28,7 @@ public class TestEmp {
 			System.out.println(emp.getEmpno() + "\t" + emp.getEmpname() + "\t"
 					+ date + "\t" + emp.getJob() + "\t" + emp.getSalary()
 					+ "\t" + emp.getMgr() + "\t" + emp.getComm() + "\t"
-					+ emp.getDeptNo());
+					+ emp.getEmpno());
 		}
 		System.out.println("---------------------------------------");
 	}
@@ -69,7 +68,7 @@ public class TestEmp {
 			System.out.println(emp.getEmpno() + "\t" + emp.getEmpname() + "\t"
 					+ date + "\t" + emp.getJob() + "\t" + emp.getSalary()
 					+ "\t" + emp.getMgr() + "\t" + emp.getComm() + "\t"
-					+ emp.getDeptNo());
+					+ emp.getEmpno());
 		}
 		System.out.println("---------------------------------------");
 	}
@@ -83,7 +82,7 @@ public class TestEmp {
 		String date = sdf.format(emp.getHireDate());
 		System.out.println(emp.getEmpno() + "\t" + emp.getEmpname() + "\t"
 				+ date + "\t" + emp.getJob() + "\t" + emp.getSalary() + "\t"
-				+ emp.getMgr() + "\t" + emp.getComm() + "\t" + emp.getDeptNo());
+				+ emp.getMgr() + "\t" + emp.getComm() + "\t" + emp.getEmpno());
 		System.out.println("---------------------------------------");
 	}
 
@@ -96,7 +95,7 @@ public class TestEmp {
 		String date = sdf.format(emp.getHireDate());
 		System.out.println(emp.getEmpno() + "\t" + emp.getEmpname() + "\t"
 				+ date + "\t" + emp.getJob() + "\t" + emp.getSalary() + "\t"
-				+ emp.getMgr() + "\t" + emp.getComm() + "\t" + emp.getDeptNo());
+				+ emp.getMgr() + "\t" + emp.getComm() + "\t" + emp.getEmpno());
 		System.out.println("---------------------------------------");
 	}
 

@@ -8,7 +8,6 @@ public interface IEmpDao {
 
 	List<Emp> selectAll();
 	int countAll();
-	List<Emp> findEmpByExampleIf(Emp emp);
 	Emp selectOne();
 	Emp selectByEmpno(int empno);
 	int insertEmp(Emp emp);

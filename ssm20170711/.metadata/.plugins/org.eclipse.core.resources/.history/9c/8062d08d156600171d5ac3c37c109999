@@ -110,18 +110,4 @@ public class IEmpDaoImpl implements IEmpDao {
 		return count;
 	}
 
-	public List<Emp> findEmpByExampleIf(Emp emp) {
-		SqlSession session = MyBatisUtil.getSession();
-		List<Emp> list = new ArrayList<Emp>();
-		try {
-			list = session.selectList(
-					"cn.jbit.mybatisdemo.dao.IEmpDao.findEmpByExampleIf", emp);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			MyBatisUtil.closeSession();
-		}
-		return list;
-	}
-
 }

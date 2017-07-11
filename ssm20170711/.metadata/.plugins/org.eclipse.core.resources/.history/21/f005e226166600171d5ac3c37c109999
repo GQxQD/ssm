@@ -17,8 +17,8 @@
 	
 	<select id="findEmpByExampleIf" parameterType="Emp" resultMap="empResultMap">
   		select * from emp where 1 = 1
-  		<if test ="deptNo != null">   
-  			and deptno= #{deptNo}
+  		<if test ="deptno != null">   
+  			and deptno= #{deptno}
   		</if>
   		<if test ="empname != null">
   			and ename like '%${empname}%'
