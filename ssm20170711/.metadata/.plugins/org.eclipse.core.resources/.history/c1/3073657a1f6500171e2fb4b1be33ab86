@@ -1,0 +1,22 @@
+package cn.jbit.mybatisdemo.entity;
+
+import java.util.Date;
+
+public class Emp {
+
+	private Integer empno;
+
+	private String empName;
+
+	private Date hireDate;
+	// 员工职位
+	private String job;
+	// 员工工资
+	private Double salary;
+	// 经理编号
+	private Integer mgr;
+	// 奖金
+	private Double comm;
+	// 部门编号
+	private Integer deptNo;
+}

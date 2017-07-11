@@ -1,0 +1,40 @@
+package cn.jbit.mybatisdemo.test;
+
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+import cn.jbit.mybatisdemo.dao.IEmpDao;
+import cn.jbit.mybatisdemo.dao.impl.IEmpDaoImpl;
+import cn.jbit.mybatisdemo.entity.Emp;
+
+public class TestEmp {
+
+	public static void main(String[] args) {
+		IEmpDao iEmpDao = new IEmpDaoImpl();
+		List<Emp> list = iEmpDao.selectAll();
+		System.out.println("员工编号\t员工姓名\t入职时间\t员工职位\t员工工资\t经理编号\t奖金\t部门编号");
+		for (Emp emp : list) {
+			SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
+			String date = sdf.format(emp.getHireDate());
+			System.out.println(emp.getEmpno() + "\t" + emp.getEname() + "\t"
+					+ date + "\t" + emp.getJob() + "\t" + emp.getSalary()
+					+ "\t" + emp.getMgr() + "\t" + emp.getComm() + "\t"
+					+ emp.getEmpno());
+		}
+		System.out.println("--------------------------");
+		Emp emp = iEmpDao.selectOne();
+		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
+		String date = sdf.format(emp.getHireDate());
+		System.out.println(emp.getEmpno() + "\t" + emp.getEname() + "\t" + date
+				+ "\t" + emp.getJob() + "\t" + emp.getSalary() + "\t"
+				+ emp.getMgr() + "\t" + emp.getComm() + "\t" + emp.getEmpno());
+		System.out.println("--------------------------");
+		emp = iEmpDao.selectByEmpno(7369);
+		sdf = new SimpleDateFormat("YYYY-MM-dd");
+		date = sdf.format(emp.getHireDate());
+		System.out.println(emp.getEmpno() + "\t" + emp.getEname() + "\t" + date
+				+ "\t" + emp.getJob() + "\t" + emp.getSalary() + "\t"
+				+ emp.getMgr() + "\t" + emp.getComm() + "\t" + emp.getEmpno());
+	}
+
+}

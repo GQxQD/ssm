@@ -1,0 +1,5 @@
+package cn.jbit.mybatisdemo.dao;
+
+public interface IEmpDao {
+
+}
