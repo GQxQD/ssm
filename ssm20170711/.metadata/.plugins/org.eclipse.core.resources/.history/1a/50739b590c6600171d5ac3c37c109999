@@ -20,7 +20,7 @@ public class TestEmp {
 		System.out.println("-------------updateEmp-------------");
 		IEmpDao empDao = new IEmpDaoImpl();
 		Emp emp = empDao.selectByEmpno(7935);
-		emp.setEmpname("李四dfdfdf");
+		emp.setEmpname("李四");
 		empDao.updateEmp(emp);
 		System.out.println("---------------------------------------");
 	}
