@@ -7,7 +7,6 @@ import cn.jbit.mybatisdemo.entity.Emp;
 public interface IEmpDao {
 
 	List<Emp> selectAll();
-	int countAll();
 	Emp selectOne();
 	Emp selectByEmpno(int empno);
 	int insertEmp(Emp emp);

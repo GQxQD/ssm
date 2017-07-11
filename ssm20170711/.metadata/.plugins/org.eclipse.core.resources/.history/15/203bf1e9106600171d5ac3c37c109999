@@ -15,10 +15,6 @@
 		<result property="deptNo" column="deptno"/>
 	</resultMap>
 	
-	<select id="countAll" resultType="int">
-		select count(*) from emp
-	</select>
-	
 	<select id="selectAll" resultType="Emp" resultMap="empResultMap">
 		select * from emp
 	</select>

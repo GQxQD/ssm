@@ -12,7 +12,8 @@ public class TestEmp {
 
 	public static void main(String[] args) {
 		selectEmps();
-		countAll();
+		updateEmp();
+		selectEmps();
 	}
 
 	public static void countAll() {

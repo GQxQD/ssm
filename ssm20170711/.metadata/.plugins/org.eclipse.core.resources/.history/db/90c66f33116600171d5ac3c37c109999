@@ -96,18 +96,4 @@ public class IEmpDaoImpl implements IEmpDao {
 		return result;
 	}
 
-	public int countAll() {
-		int count = 0;
-		SqlSession session = MyBatisUtil.getSession();
-		try {
-			count = session
-					.selectOne("cn.jbit.mybatisdemo.dao.IEmpDao.countAll");
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			MyBatisUtil.closeSession();
-		}
-		return count;
-	}
-
 }
