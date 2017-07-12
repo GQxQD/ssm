@@ -24,6 +24,7 @@ public class AddEmpServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html;charset=utf8");
+		req.setCharacterEncoding("utf-8");
 		try {
 			String empname = req.getParameter("empname");
 			if (empname == null || "".equals(empname)) {

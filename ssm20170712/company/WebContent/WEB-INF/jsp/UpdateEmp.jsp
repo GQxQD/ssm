@@ -29,7 +29,7 @@ if(emp==null){
 		<tr>
 			<th>员工编号</th>
 			<td>
-				<input class="form-control" type="text" name="job" value="<%=emp.getEmpno() %>" readonly="readonly"/>
+				<input class="form-control" type="text" name="empno" value="<%=emp.getEmpno() %>" readonly="readonly"/>
 			</td>
 		</tr>
 		<tr>

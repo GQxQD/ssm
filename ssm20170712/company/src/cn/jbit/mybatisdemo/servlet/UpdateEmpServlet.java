@@ -39,13 +39,21 @@ public class UpdateEmpServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html;charset=utf8");
+		req.setCharacterEncoding("utf-8");
 		try {
+			String empno = req.getParameter("empno");
+			if (empno == null || "".equals(empno)) {
+				throw new Exception("员工编号不能为空！");
+			}
 			String empname = req.getParameter("empname");
 			if (empname == null || "".equals(empname)) {
 				throw new Exception("员工名称不能为空！");
 			}
 			IEmpDao empDao = new IEmpDaoImpl();
-			Emp emp = new Emp();
+			Emp emp = empDao.selectByEmpno(Integer.parseInt(empno));
+			if (emp == null) {
+				throw new Exception("该员工不存在！");
+			}
 			emp.setEmpname(empname);
 			emp.setJob(req.getParameter("job"));
 			String comm = req.getParameter("comm");
@@ -58,7 +66,7 @@ public class UpdateEmpServlet extends HttpServlet {
 			}
 			String hireDate = req.getParameter("hireDate");
 			if (hireDate != null && !"".equals(hireDate)) {
-				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 				emp.setHireDate(sdf.parse(hireDate));
 			}
 			String mgr = req.getParameter("mgr");
@@ -69,11 +77,12 @@ public class UpdateEmpServlet extends HttpServlet {
 			if (salary != null && !"".equals(salary)) {
 				emp.setSalary(Double.valueOf(salary));
 			}
-			empDao.insertEmp(emp);
-			resp.sendRedirect("EmpList");
+			empDao.updateEmp(emp);
+			resp.getWriter()
+			.print("<script>alert(\"修改成功！\");window.location.href='EmpList';</script>");
 		} catch (Exception e) {
 			resp.getWriter()
-					.print("<script>alert(\"添加错误！\\\n" + e.getMessage() + "\");window.history.go(-1);</script>");
+					.print("<script>alert(\"修改错误！\\\n" + e.getMessage() + "\");window.history.go(-1);</script>");
 			return;
 		}
 	}
