@@ -47,8 +47,8 @@
 			<td><%=emp.getComm()==null?0:emp.getComm() %></td>
 			<td><%=emp.getDeptNo() %></td>
 			<td>
-				<a class="btn btn-info glyphicon glyphicon-edit"> 修改</a>
-				<a class="btn btn-danger glyphicon glyphicon-trash" href="<%=request.getContextPath() %>/deleteEmp?empno=<%=emp.getEmpno() %>"> 删除</a>
+				<a class="btn btn-info glyphicon glyphicon-edit">修改</a>
+				<a class="btn btn-danger" href="<%=request.getContextPath() %>/deleteEmp?empno=<%=emp.getEmpno() %>">删除</a>
 			</td>
 		</tr>
 		<%

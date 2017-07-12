@@ -8,55 +8,50 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+<div class="col-sm-6 col-sm-offset-3">
 <form method="post">
-	<table class="table table-striped">
+	<table class="table table-hover">
 		<caption class="h1 text-center">添加员工</caption>
-		<tr>
-			<td colspan="2" class="bg-success">
-				<a href="<%=request.getContextPath() %>/EmpList" class="btn btn-success">查看所有员工</a>
-			</td>
-		</tr>
 		<tr>
 			<th>员工姓名</th>
 			<td>
-				<input class="form-control" type="text" name="empname"/>
+				<input type="text" name="name"/>
 			</td>
 		</tr>
 		<tr>
 			<th>入职时间</th>
 			<td>
-				<input class="form-control" type="text" name="hireDate"/>
+				<input type="text" name="name"/>
 			</td>
 		</tr>
 		<tr>
 			<th>员工职位</th>
 			<td>
-				<input class="form-control" type="text" name="job"/>
+				<input type="text" name="name"/>
 			</td>
 		</tr>
 		<tr>
 			<th>员工工资</th>
 			<td>
-				<input class="form-control" type="text" name="salary"/>
+				<input type="text" name="name"/>
 			</td>
 		</tr>
 		<tr>
 			<th>经理编号</th>
 			<td>
-				<input class="form-control" type="text" name="mgr"/>
+				<input type="text" name="name"/>
 			</td>
 		</tr>
 		<tr>
 			<th>奖金</th>
 			<td>
-				<input class="form-control" type="text" name="comm"/>
+				<input type="text" name="name"/>
 			</td>
 		</tr>
 		<tr>
 			<th>部门编号</th>
 			<td>
-				<input class="form-control" type="text" name="deptNo"/>
+				<input type="text" name="name"/>
 			</td>
 		</tr>
 		<tr>

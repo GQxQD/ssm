@@ -1,7 +1,6 @@
 package cn.jbit.mybatisdemo.servlet;
 
 import java.io.IOException;
-import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,12 +16,6 @@ public class AddEmpServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/html;charset=utf8");
-		Enumeration pNames = req.getParameterNames();
-		while(pNames.hasMoreElements()){
-		    String name=(String)pNames.nextElement();
-		    String value=req.getParameter(name);
-		    resp.getWriter().print(name + "=" + value+"<br>");
-		}
+		this.doGet(req, resp);
 	}
 }
