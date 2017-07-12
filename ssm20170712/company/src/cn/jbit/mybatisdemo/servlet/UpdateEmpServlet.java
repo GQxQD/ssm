@@ -1,6 +1,7 @@
 package cn.jbit.mybatisdemo.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Enumeration;
 
@@ -57,7 +58,8 @@ public class UpdateEmpServlet extends HttpServlet {
 			}
 			String hireDate = req.getParameter("hireDate");
 			if (hireDate != null && !"".equals(hireDate)) {
-				emp.setHireDate(new Date(hireDate));
+				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+				emp.setHireDate(sdf.parse(hireDate));
 			}
 			String mgr = req.getParameter("mgr");
 			if (mgr != null && !"".equals(mgr)) {

@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>添加员工</title>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script type="text/javascript" src="<%=request.getContextPath() %>/static/jedate/jedate.js"></script>
 </head>
 <body>
 <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
@@ -26,7 +27,7 @@
 		<tr>
 			<th>入职时间</th>
 			<td>
-				<input class="form-control" type="text" name="hireDate"/>
+				<input class="form-control" type="text" name="hireDate" id="hireDate" style="cursor: pointer;" readOnly/>
 			</td>
 		</tr>
 		<tr>
@@ -68,5 +69,12 @@
 	</table>
 </form>
 </div>
+<script type="text/javascript">
+jeDate({
+	dateCell:"#hireDate",//isinitVal:true,
+	format:"YYYY-MM-DD",
+	isTime:false, //isClear:false,
+})
+</script>
 </body>
 </html>
