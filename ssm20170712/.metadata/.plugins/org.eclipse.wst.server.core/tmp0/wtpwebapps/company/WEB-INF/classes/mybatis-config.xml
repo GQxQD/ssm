@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 设置实体类别名 -->
+	<typeAliases>
+		<typeAlias alias="Emp" type="cn.jbit.mybatisdemo.entity.Emp"/>
+	</typeAliases>
+	
+	<!-- 配置数据库信息 -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://123.207.98.175:3306/ssm1707?characterEncoding=utf8"/>
+				<property name="username" value="kohai"/>
+				<property name="password" value="yuzipei"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- 引入映射文件 -->
+	<mappers>
+		<mapper resource="cn/jbit/mybatisdemo/dao/EmpDaoMapper.xml"/>
+		<!-- <mapper resource="cn/jbit/mybatisdemo/dao/UserDaoMapper.xml"/> -->
+	</mappers>
+</configuration>
+
