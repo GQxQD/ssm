@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>company</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<servlet-class>cn.jbit.mybatisdemo.servlet.HelloServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/HelloServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EmpListServlet</servlet-name>
+  	<servlet-class>cn.jbit.mybatisdemo.servlet.EmpListServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>EmpListServlet</servlet-name>
+  	<url-pattern>/EmpList</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AddEmpServlet</servlet-name>
+  	<servlet-class>cn.jbit.mybatisdemo.servlet.AddEmpServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddEmpServlet</servlet-name>
+  	<url-pattern>/AddEmp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DeleteEmpServlet</servlet-name>
+  	<servlet-class>cn.jbit.mybatisdemo.servlet.DeleteEmpServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeleteEmpServlet</servlet-name>
+  	<url-pattern>/DeleteEmp</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

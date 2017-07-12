@@ -38,8 +38,10 @@
 			<td><%=emp.getEmpno() %></td>
 			<td><%=emp.getEmpname() %></td>
 			<td><%
+			if(emp.getHireDate()!=null){
 				SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
 				out.print(sdf.format(emp.getHireDate()));
+			}
 			%></td>
 			<td><%=emp.getJob() %></td>
 			<td><%=emp.getSalary() %></td>
@@ -47,8 +49,8 @@
 			<td><%=emp.getComm()==null?0:emp.getComm() %></td>
 			<td><%=emp.getDeptNo() %></td>
 			<td>
-				<a class="btn btn-info glyphicon glyphicon-edit"> 修改</a>
-				<a class="btn btn-danger glyphicon glyphicon-trash" href="<%=request.getContextPath() %>/deleteEmp?empno=<%=emp.getEmpno() %>"> 删除</a>
+				<a class="btn btn-info glyphicon glyphicon-edit" href="<%=request.getContextPath() %>/UpdateEmp?empno=<%=emp.getEmpno() %>"> 修改</a>
+				<a class="btn btn-danger glyphicon glyphicon-trash" href="<%=request.getContextPath() %>/DeleteEmp?empno=<%=emp.getEmpno() %>" onclick="return confirm('确认要删除吗？');"> 删除</a>
 			</td>
 		</tr>
 		<%

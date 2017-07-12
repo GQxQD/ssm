@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hello World!
+<script>
+	window.location.href='EmpList';
+</script>
 </body>
 </html>
