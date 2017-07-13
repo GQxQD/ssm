@@ -20,7 +20,14 @@
 	<thead>
 		<tr>
 			<td colspan="10" class="bg-success">
-				<a href="<%=request.getContextPath() %>/AddEmp" class="btn btn-success">添加员工</a>
+				<form class="form-inline" method="get">
+					<a href="<%=request.getContextPath() %>/AddEmp" class="btn btn-success">添加员工</a>
+					<div class="pull-right">
+						<input type="text" name="empno" class="form-control" placeholder="员工编号">
+						<input type="text" name="empname" class="form-control" placeholder="员工姓名">
+						<input type="submit" value="查询" class="btn btn-primary"/>
+					</div>
+				</form>
 			</td>
 		</tr>
 		<tr>

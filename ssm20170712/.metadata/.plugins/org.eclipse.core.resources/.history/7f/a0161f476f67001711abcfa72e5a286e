@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.jbit.mybatisdemo.dao.IEmpDao">
+
+	<resultMap type="Emp" id="empResultMap">
+		<id property="empno" column="empno" jdbcType="INTEGER"/>
+		<result property="empname" column="ename" jdbcType="VARCHAR"/>
+		<result property="hireDate" column="hireDate" jdbcType="DATE"/>
+		<result property="job" column="job" jdbcType="VARCHAR"/>
+		<result property="salary" column="sal" jdbcType="DOUBLE"/>
+		<result property="mgr" column="mgr"/>
+		<result property="comm" column="comm"/>
+		<result property="deptNo" column="deptno"/>
+	</resultMap>
+	
+	<select id="findEmpByExampleIf" parameterType="Emp" resultMap="empResultMap">
+  		select * from emp where 1 = 1
+  		<if test ="deptNo != null">   
+  			and deptno= #{deptNo}
+  		</if>
+  		<if test ="empname != null">
+  			and ename like '%${empname}%'
+  		</if>
+	</select>
+	
+	<select id="countAll" resultType="int">
+		select count(*) from emp
+	</select>
+	
+	<select id="selectAll" resultType="Emp" resultMap="empResultMap">
+		select * from emp
+	</select>
+	
+	<select id="selectOne" resultType="Emp" resultMap="empResultMap">
+		select * from emp where empno=7369
+	</select>
+	
+	<select id="selectByEmpno" resultType="Emp" parameterType="int" resultMap="empResultMap">
+		select * from emp where empno=#{empno}
+	</select>
+	
+	<insert id="insertEmp" parameterType="Emp" useGeneratedKeys="true" keyProperty="empno">
+		insert into emp (ename,job,mgr,hiredate,sal,comm,deptno)
+		 values (#{empname},#{job},#{mgr},#{hireDate},#{salary},#{comm},#{deptNo})
+	</insert>
+	
+	<delete id="deleteEmp" parameterType="int">
+		delete from emp where empno=#{empno}
+	</delete>
+	
+	<update id="updateEmp" parameterType="Emp">
+		update emp set ename=#{empname},job=#{job},mgr=#{mgr},hiredate=#{hireDate},sal=#{salary},comm=#{comm},deptno=#{deptNo}
+		 where empno=#{empno}
+	</update>
+</mapper>

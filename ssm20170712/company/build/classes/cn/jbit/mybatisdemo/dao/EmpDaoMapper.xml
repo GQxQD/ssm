@@ -17,6 +17,9 @@
 	
 	<select id="findEmpByExampleIf" parameterType="Emp" resultMap="empResultMap">
   		select * from emp where 1 = 1
+  		<if test="empno != null">
+  			and empno= #{empno}
+  		</if>
   		<if test ="deptNo != null">   
   			and deptno= #{deptNo}
   		</if>

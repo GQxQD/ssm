@@ -17,8 +17,20 @@ public class EmpListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");
+		String empno = req.getParameter("empno");
+		String empname = req.getParameter("empname");
+		System.out.println(empno);
+		System.out.println(empname);
+		Emp emp = new Emp();
+		if (empno != null && !"".equals(empno)) {
+			emp.setEmpno(Integer.parseInt(empno));
+		}
+		if (empname != null && !"".equals(empname)) {
+			emp.setEmpname(empname);
+		}
+		System.out.println(emp.getEmpno());
 		IEmpDao empDao = new IEmpDaoImpl();
-		List<Emp> list = empDao.selectAll();
+		List<Emp> list = empDao.findEmpByExampleIf(emp);
 		req.setAttribute("empList", list);
 		req.getRequestDispatcher("/WEB-INF/jsp/EmpList.jsp").forward(req, resp);
 	}
