@@ -2,20 +2,27 @@ package cn.jbit.mybatisdemo.servlet;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Enumeration;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cn.jbit.mybatisdemo.dao.IEmpDao;
-import cn.jbit.mybatisdemo.dao.impl.IEmpDaoImpl;
+import cn.jbit.mybatisdemo.biz.IEmpService;
+import cn.jbit.mybatisdemo.biz.impl.EmpService;
 import cn.jbit.mybatisdemo.entity.Emp;
 
 @SuppressWarnings("serial")
 public class AddEmpServlet extends HttpServlet {
+
+	private IEmpService empService;
+
+	public AddEmpServlet() {
+		if (this.empService == null) {
+			this.empService = new EmpService();
+			System.out.println("new EmpService...");
+		}
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getRequestDispatcher("/WEB-INF/jsp/AddEmp.jsp").forward(req, resp);
@@ -30,7 +37,6 @@ public class AddEmpServlet extends HttpServlet {
 			if (empname == null || "".equals(empname)) {
 				throw new Exception("员工名称不能为空！");
 			}
-			IEmpDao empDao = new IEmpDaoImpl();
 			Emp emp = new Emp();
 			emp.setEmpname(empname);
 			emp.setJob(req.getParameter("job"));
@@ -43,9 +49,9 @@ public class AddEmpServlet extends HttpServlet {
 				emp.setDeptNo(Integer.parseInt(deptNo));
 			}
 			String hireDate = req.getParameter("hireDate");
-			System.out.println("hi"+hireDate);
+			System.out.println("hi" + hireDate);
 			if (hireDate != null && !"".equals(hireDate)) {
-				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 				emp.setHireDate(sdf.parse(hireDate));
 			}
 			String mgr = req.getParameter("mgr");
@@ -56,7 +62,7 @@ public class AddEmpServlet extends HttpServlet {
 			if (salary != null && !"".equals(salary)) {
 				emp.setSalary(Double.valueOf(salary));
 			}
-			empDao.insertEmp(emp);
+			this.empService.insertEmp(emp);
 			resp.sendRedirect("EmpList");
 		} catch (Exception e) {
 			e.printStackTrace();

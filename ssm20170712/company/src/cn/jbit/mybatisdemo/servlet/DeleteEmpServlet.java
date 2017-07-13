@@ -7,11 +7,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cn.jbit.mybatisdemo.dao.IEmpDao;
-import cn.jbit.mybatisdemo.dao.impl.IEmpDaoImpl;
+import cn.jbit.mybatisdemo.biz.IEmpService;
+import cn.jbit.mybatisdemo.biz.impl.EmpService;
 
 @SuppressWarnings("serial")
 public class DeleteEmpServlet extends HttpServlet {
+
+	private IEmpService empService;
+
+	public DeleteEmpServlet() {
+		if (this.empService == null) {
+			this.empService = new EmpService();
+			System.out.println("new EmpService...");
+		}
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String empno = req.getParameter("empno");
@@ -20,9 +30,8 @@ public class DeleteEmpServlet extends HttpServlet {
 			resp.getWriter().print("<script>alert(\"删除员工编号不能为空！\");window.history.go(-1);</script>");
 		} else {
 			try {
-				IEmpDao empDao = new IEmpDaoImpl();
-				int result = empDao.deleteEmp(Integer.parseInt(empno));
-				if (result>0) {
+				int result = this.empService.deleteEmp(Integer.parseInt(empno));
+				if (result > 0) {
 					resp.getWriter().print("<script>alert(\"删除成功！\");window.location.href='EmpList';</script>");
 				}
 			} catch (Exception e) {

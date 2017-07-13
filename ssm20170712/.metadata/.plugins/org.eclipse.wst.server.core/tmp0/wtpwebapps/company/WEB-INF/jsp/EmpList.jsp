@@ -12,6 +12,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>员工列表</title>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="http://www.jeasyui.net/Public/js/easyui/themes/default/easyui.css">
+<style type="text/css">
+</style>
 </head>
 <body>
 <div class="col-md-8 col-md-offset-2">
@@ -23,6 +26,15 @@
 				<form class="form-inline" method="get">
 					<a href="<%=request.getContextPath() %>/AddEmp" class="btn btn-success">添加员工</a>
 					<div class="pull-right">
+						<select class="easyui-combobox">
+						<%
+							for(Emp emp:list){
+						%>
+							<option value="<%=emp.getEmpno() %>"><%=emp.getEmpno() %></option>
+						<%
+							}
+						%>
+						</select>
 						<input type="text" name="empno" class="form-control" placeholder="员工编号">
 						<input type="text" name="empname" class="form-control" placeholder="员工姓名">
 						<input type="submit" value="查询" class="btn btn-primary"/>
@@ -66,5 +78,7 @@
 	</tbody>
 </table>
 </div>
+<script type="text/javascript" src="http://www.jeasyui.net/Public/js/jquery.js"></script>
+<script type="text/javascript" src="http://www.jeasyui.net/Public/js/easyui/jquery.easyui.min.js"></script>
 </body>
 </html>

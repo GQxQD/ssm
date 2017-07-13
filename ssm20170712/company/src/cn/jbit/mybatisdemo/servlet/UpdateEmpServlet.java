@@ -2,20 +2,26 @@ package cn.jbit.mybatisdemo.servlet;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Enumeration;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cn.jbit.mybatisdemo.dao.IEmpDao;
-import cn.jbit.mybatisdemo.dao.impl.IEmpDaoImpl;
+import cn.jbit.mybatisdemo.biz.IEmpService;
+import cn.jbit.mybatisdemo.biz.impl.EmpService;
 import cn.jbit.mybatisdemo.entity.Emp;
 
 @SuppressWarnings("serial")
 public class UpdateEmpServlet extends HttpServlet {
+
+	private IEmpService empService;
+
+	public UpdateEmpServlet() {
+		if (this.empService == null) {
+			this.empService = new EmpService();
+		}
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String empno = req.getParameter("empno");
@@ -24,8 +30,7 @@ public class UpdateEmpServlet extends HttpServlet {
 			resp.getWriter().print("<script>alert(\"员工编号不能为空！\");window.history.go(-1);</script>");
 		} else {
 			try {
-				IEmpDao empDao = new IEmpDaoImpl();
-				Emp emp = empDao.selectByEmpno(Integer.parseInt(empno));
+				Emp emp = this.empService.selectByEmpno(Integer.parseInt(empno));
 				req.setAttribute("emp", emp);
 				req.getRequestDispatcher("/WEB-INF/jsp/UpdateEmp.jsp").forward(req, resp);
 			} catch (Exception e) {
@@ -35,7 +40,6 @@ public class UpdateEmpServlet extends HttpServlet {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html;charset=utf8");
@@ -49,8 +53,7 @@ public class UpdateEmpServlet extends HttpServlet {
 			if (empname == null || "".equals(empname)) {
 				throw new Exception("员工名称不能为空！");
 			}
-			IEmpDao empDao = new IEmpDaoImpl();
-			Emp emp = empDao.selectByEmpno(Integer.parseInt(empno));
+			Emp emp = this.empService.selectByEmpno(Integer.parseInt(empno));
 			if (emp == null) {
 				throw new Exception("该员工不存在！");
 			}
@@ -77,9 +80,8 @@ public class UpdateEmpServlet extends HttpServlet {
 			if (salary != null && !"".equals(salary)) {
 				emp.setSalary(Double.valueOf(salary));
 			}
-			empDao.updateEmp(emp);
-			resp.getWriter()
-			.print("<script>alert(\"修改成功！\");window.location.href='EmpList';</script>");
+			this.empService.updateEmp(emp);
+			resp.getWriter().print("<script>alert(\"修改成功！\");window.location.href='EmpList';</script>");
 		} catch (Exception e) {
 			resp.getWriter()
 					.print("<script>alert(\"修改错误！\\\n" + e.getMessage() + "\");window.history.go(-1);</script>");

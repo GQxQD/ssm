@@ -1,0 +1,58 @@
+package cn.jbit.mybatisdemo.biz.impl;
+
+import java.util.List;
+
+import cn.jbit.mybatisdemo.biz.IEmpService;
+import cn.jbit.mybatisdemo.entity.Emp;
+
+public class EmpService implements IEmpService {
+
+	@Override
+	public List<Emp> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Emp> findEmpByExampleIf(Emp emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Emp selectOne() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Emp selectByEmpno(int empno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insertEmp(Emp emp) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteEmp(int empno) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateEmp(Emp emp) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

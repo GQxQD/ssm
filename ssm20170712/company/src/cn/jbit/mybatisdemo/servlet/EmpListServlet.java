@@ -8,19 +8,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cn.jbit.mybatisdemo.dao.IEmpDao;
-import cn.jbit.mybatisdemo.dao.impl.IEmpDaoImpl;
+import cn.jbit.mybatisdemo.biz.IEmpService;
+import cn.jbit.mybatisdemo.biz.impl.EmpService;
 import cn.jbit.mybatisdemo.entity.Emp;
 
 @SuppressWarnings("serial")
 public class EmpListServlet extends HttpServlet {
+
+	private IEmpService empService;
+
+	public EmpListServlet() {
+		if (this.empService == null) {
+			this.empService = new EmpService();
+			System.out.println("new EmpService...");
+		}
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf8");
 		resp.setContentType("text/html;charset=utf-8");
 		String empno = req.getParameter("empno");
 		String empname = req.getParameter("empname");
-		System.out.println(empname);
 		Emp emp = new Emp();
 		if (empno != null && !"".equals(empno)) {
 			emp.setEmpno(Integer.parseInt(empno));
@@ -28,8 +37,7 @@ public class EmpListServlet extends HttpServlet {
 		if (empname != null && !"".equals(empname)) {
 			emp.setEmpname(empname);
 		}
-		IEmpDao empDao = new IEmpDaoImpl();
-		List<Emp> list = empDao.findEmpByExampleIf(emp);
+		List<Emp> list = this.empService.findEmpByExampleIf(emp);
 		req.setAttribute("empList", list);
 		req.getRequestDispatcher("/WEB-INF/jsp/EmpList.jsp").forward(req, resp);
 	}
