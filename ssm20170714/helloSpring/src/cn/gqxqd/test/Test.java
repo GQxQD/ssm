@@ -1,5 +1,7 @@
 package cn.gqxqd.test;
 
+import java.lang.reflect.Method;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,12 +9,19 @@ import cn.gqxqd.entity.User;
 import cn.gqxqd.service.IUserService;
 
 public class Test {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
 		User user = (User) context.getBean("user");
 		IUserService userService = (IUserService) context
 				.getBean("userService");
 		userService.addUser(user);
+		// User libai = (User) context.getBean("libai");
+		// User libai2 = (User) context.getBean("libai");
+		// System.out.println(libai);
+		// System.out.println(libai2);
+		// User luo = (User) context.getBean("luo");
+		// libai.say();
+		// luo.say();
 	}
 }

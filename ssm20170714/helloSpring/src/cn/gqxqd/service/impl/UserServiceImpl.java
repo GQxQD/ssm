@@ -6,7 +6,7 @@ import cn.gqxqd.service.IUserService;
 
 public class UserServiceImpl implements IUserService {
 
-	IUserDao userDao;
+	private IUserDao userDao;
 
 	public void setUserDao(IUserDao userDao) {
 		this.userDao = userDao;
