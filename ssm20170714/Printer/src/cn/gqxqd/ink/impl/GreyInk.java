@@ -5,7 +5,7 @@ import cn.gqxqd.ink.Ink;
 public class GreyInk implements Ink {
 
 	public String getInkColor() {
-		return "ºÚÉ«";
+		return "é»‘è‰²";
 	}
 
 }

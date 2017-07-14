@@ -9,8 +9,8 @@ public class Printer {
 
 	public void print(String content) {
 		System.out.println("--START PRINTING--");
-		System.out.println("ÄúÊ¹ÓÃÁË" + ink.getInkColor() + "Ä«Ë®£¬"
-				+ paper.getPaperType() + "Ö½ÕÅ´òÓ¡ÁË[" + content + "]");
+		System.out.println("æ‚¨ä½¿ç”¨äº†" + ink.getInkColor() + "å¢¨æ°´ï¼Œ"
+				+ paper.getPaperType() + "çº¸å¼ æ‰“å°äº†[" + content + "]");
 		System.out.println("--PRINTED--");
 	}
 
