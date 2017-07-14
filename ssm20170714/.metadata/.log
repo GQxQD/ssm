@@ -4914,3 +4914,12 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.recommenders.models.rcp 1 0 2017-07-14 18:19:37.160
 !MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.ui 4 4 2017-07-14 19:17:51.503
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@11454235)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@59acb5d9)}
+
+!ENTRY org.eclipse.ui 4 4 2017-07-14 19:17:51.505
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@11454235)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@59acb5d9)}
+
+!ENTRY org.eclipse.ui 4 4 2017-07-14 19:17:58.773
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@11454235)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@59acb5d9)}

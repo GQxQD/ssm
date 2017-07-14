@@ -10,8 +10,6 @@ public class TestPrinter {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
 		Printer printer1 = (Printer) context.getBean("printer1");
-		printer1.print("è¿™æ˜¯æ‰“å°æœº1çš„å†…å®¹ï¼");
-		Printer printer2 = (Printer) context.getBean("printer2");
-		printer2.print("è¿™æ˜¯æ‰“å°æœº2çš„å†…å®¹ï¼");
+		printer1.print("ÕâÊÇ´òÓ¡»ú1µÄÄÚÈİ£¡");
 	}
 }

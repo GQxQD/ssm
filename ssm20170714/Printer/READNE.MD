@@ -1,0 +1,8 @@
+##实验结果
+
+--START PRINTING--
+您使用了彩色墨水，A4纸张打印了[这是打印机1的内容！]
+--PRINTED--
+--START PRINTING--
+您使用了黑色墨水，B5纸张打印了[这是打印机2的内容！]
+--PRINTED--
