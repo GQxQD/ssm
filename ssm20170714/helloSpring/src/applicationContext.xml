@@ -12,7 +12,7 @@
 	<bean id="userDao" class="cn.gqxqd.dao.impl.UserDaoImpl"></bean>
 	
 	<bean id="user" class="cn.gqxqd.entity.User">
-		<property name="username" value="張三"></property>
+		<property name="username" value="张三"></property>
 		<property name="password" value="123456"></property>
 	</bean>
 	
