@@ -1,0 +1,12 @@
+package cn.gqxqd.ink.impl;
+
+import cn.gqxqd.ink.Ink;
+
+public class GreyInk implements Ink {
+
+	public String getInkColor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	
+	<bean id="colorInk" class="cn.gqxqd.ink.impl.ColorInk"></bean>
+	<bean id="greyInk" class="cn.gqxqd.ink.impl.GreyInk"></bean>
+	
+	<bean id="a4Paper" class="cn.gqxqd.paper.impl.A4Paper"></bean>
+	<bean id="b5Paper" class="cn.gqxqd.paper.impl.B5Paper"></bean>
+	
+</beans>
