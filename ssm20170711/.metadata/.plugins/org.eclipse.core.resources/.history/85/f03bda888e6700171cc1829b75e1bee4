@@ -1,0 +1,22 @@
+package cn.jbit.mybatisdemo.test;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import net.sf.json.JSONArray;
+
+public class Test {
+	public static void main(String[] args) {
+		List<Object> list = new ArrayList<Object>();
+		list.add("first");
+		list.add("second");
+		Date date = new Date();
+		list.add(date);
+		JSONArray jsonArray = JSONArray.fromObject(list);
+		System.out.println(jsonArray.toString());
+		System.out.println(JSONArray.fromObject(new Object()));
+	}
+}

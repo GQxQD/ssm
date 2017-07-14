@@ -1,0 +1,15 @@
+package cn.gqxqd.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.gqxqd.printer.Printer;
+
+public class TestPrinter {
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"applicationContext.xml");
+		Printer printer1 = (Printer) context.getBean("printer1");
+		printer1.print("这是打印机1的内容！");
+	}
+}

@@ -1,0 +1,7 @@
+package cn.gqxqd.test;
+
+public class TestPrinter {
+	public static void main(String[] args) {
+
+	}
+}

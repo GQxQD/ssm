@@ -1,0 +1,31 @@
+package cn.jbit.mybatisdemo.test;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import net.sf.json.JSONArray;
+
+public class Test {
+	public static void main(String[] args) {
+		List<Object> list = new ArrayList<Object>();
+		list.add("first");
+		list.add("second");
+		// Date date = new Date();
+		// list.add(date);
+		// JSONArray jsonArray = JSONArray.fromObject(list);
+		// System.out.println(jsonArray.toString());
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("name", "张三");
+		map.put("list", list);
+		// map.put("date", date);
+		JSONArray jsonArray = JSONArray.fromObject(map);
+		jsonArray.add("a");
+		Object o = jsonArray.get(-1);
+		System.out.println(o.getClass().getName() + ":" + o);
+		System.out.println(jsonArray.toString());
+	}
+}
