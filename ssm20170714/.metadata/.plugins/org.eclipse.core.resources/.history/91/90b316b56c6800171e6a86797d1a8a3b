@@ -1,12 +1,9 @@
 package cn.gqxqd.entity;
 
-import java.util.Set;
-
 public class User {
 	private String username;
 	private String password;
 	private String words;
-	private Set<String> hobbies;
 
 	public void say() {
 		System.out.println(this.username + ":" + this.words);
@@ -34,14 +31,6 @@ public class User {
 
 	public void setWords(String words) {
 		this.words = words;
-	}
-
-	public Set<String> getHobbies() {
-		return hobbies;
-	}
-
-	public void setHobbies(Set<String> hobbies) {
-		this.hobbies = hobbies;
 	}
 
 }

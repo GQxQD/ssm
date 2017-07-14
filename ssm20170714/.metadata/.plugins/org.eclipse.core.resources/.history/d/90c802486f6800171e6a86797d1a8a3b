@@ -19,6 +19,7 @@
 				<value>打篮球</value>
 				<value>踢足球</value>
 				<value>看电影</value>
+				<value>踢足球</value>
 			</set>
 		</property>
 	</bean>

@@ -11,9 +11,8 @@ public class UserDaoImpl implements IUserDao {
 		System.out.println("密码：" + user.getPassword());
 		System.out.print("爱好：");
 		for (String hobby : user.getHobbies()) {
-			System.out.print(" " + hobby);
+			System.out.println(" " + hobby);
 		}
-		System.out.println();
 		System.out.println("--添加用户成功！--");
 		return true;
 	}

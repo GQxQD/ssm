@@ -1,12 +1,12 @@
 package cn.gqxqd.entity;
 
-import java.util.Set;
+import java.util.List;
 
 public class User {
 	private String username;
 	private String password;
 	private String words;
-	private Set<String> hobbies;
+	private List<String> hobbies;
 
 	public void say() {
 		System.out.println(this.username + ":" + this.words);
@@ -36,11 +36,11 @@ public class User {
 		this.words = words;
 	}
 
-	public Set<String> getHobbies() {
+	public List<String> getHobbies() {
 		return hobbies;
 	}
 
-	public void setHobbies(Set<String> hobbies) {
+	public void setHobbies(List<String> hobbies) {
 		this.hobbies = hobbies;
 	}
 

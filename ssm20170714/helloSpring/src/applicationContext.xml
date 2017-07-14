@@ -14,6 +14,13 @@
 	<bean id="user" class="cn.gqxqd.entity.User">
 		<property name="username" value="张三"></property>
 		<property name="password" value="123456"></property>
+		<property name="hobbies">
+			<set>
+				<value>打篮球</value>
+				<value>踢足球</value>
+				<value>看电影</value>
+			</set>
+		</property>
 	</bean>
 	
 	<bean id="libai" class="cn.gqxqd.entity.User">

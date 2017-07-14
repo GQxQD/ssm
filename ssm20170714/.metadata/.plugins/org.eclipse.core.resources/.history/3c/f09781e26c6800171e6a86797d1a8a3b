@@ -1,5 +1,7 @@
 package cn.gqxqd.test;
 
+import java.lang.reflect.Method;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -13,7 +13,6 @@ public class UserDaoImpl implements IUserDao {
 		for (String hobby : user.getHobbies()) {
 			System.out.print(" " + hobby);
 		}
-		System.out.println();
 		System.out.println("--添加用户成功！--");
 		return true;
 	}

@@ -15,11 +15,12 @@
 		<property name="username" value="张三"></property>
 		<property name="password" value="123456"></property>
 		<property name="hobbies">
-			<set>
+			<list>
 				<value>打篮球</value>
 				<value>踢足球</value>
 				<value>看电影</value>
-			</set>
+				<value>踢足球</value>
+			</list>
 		</property>
 	</bean>
 	

@@ -14,6 +14,9 @@ public class Test {
 		IUserService userService = (IUserService) context
 				.getBean("userService");
 		userService.addUser(user);
+		for (String hobby : user.getHobbies()) {
+			System.out.println(hobby);
+		}
 		// User libai = (User) context.getBean("libai");
 		// User libai2 = (User) context.getBean("libai");
 		// System.out.println(libai);
