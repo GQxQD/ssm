@@ -1,0 +1,13 @@
+package cn.gqxqd.dao.impl;
+
+import cn.gqxqd.dao.IUserDao;
+import cn.gqxqd.entity.User;
+
+public class UserDaoImpl implements IUserDao {
+
+	public boolean addUser(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

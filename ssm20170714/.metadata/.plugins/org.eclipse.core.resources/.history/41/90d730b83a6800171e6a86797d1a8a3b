@@ -1,0 +1,13 @@
+package cn.gqxqd.service.impl;
+
+import cn.gqxqd.entity.User;
+import cn.gqxqd.service.IUserService;
+
+public class UserServiceImpl implements IUserService {
+
+	public boolean addUser(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

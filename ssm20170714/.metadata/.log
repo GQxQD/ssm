@@ -1931,3 +1931,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY org.eclipse.jdt.core 2 0 2017-07-14 10:07:39.286
 !MESSAGE The Java indexing could not index C:/Program Files (x86)/Java/jre1.8.0_101/lib/ext/nashorn.jar|jdk/nashorn/internal/objects/NativeURIError.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-07-14 10:14:36.825
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2

@@ -1,0 +1,20 @@
+package cn.gqxqd.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.gqxqd.entity.User;
+import cn.gqxqd.service.IUserService;
+import cn.gqxqd.service.impl.UserServiceImpl;
+
+public class Test {
+	public static void main(String[] args) {
+		// IUserService userService = new UserServiceImpl();
+		// User user = new User();
+		// user.setUsername("èà»˝");
+		// user.setPassword("123456");
+		// userService.addUser(user);
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"applicationContext.xml");
+	}
+}
