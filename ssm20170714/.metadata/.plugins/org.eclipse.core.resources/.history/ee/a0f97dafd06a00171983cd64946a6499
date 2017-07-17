@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import cn.gqxqd.dao.IUserDao;
 import cn.gqxqd.entity.User;
 
-@Repository(value="userDao")
+@Repository("userDao")
 public class UserDaoImpl implements IUserDao {
 
 	public boolean addUser(User user) {

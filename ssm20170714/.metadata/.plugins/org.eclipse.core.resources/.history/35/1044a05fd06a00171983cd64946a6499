@@ -8,8 +8,8 @@ import cn.gqxqd.dao.IUserDao;
 import cn.gqxqd.entity.User;
 import cn.gqxqd.service.IUserService;
 
-@Service(value="userService")
-@Resource(name="userDao")
+@Service("userService")
+@Resource("userDao")
 public class UserServiceImpl implements IUserService {
 
 	private IUserDao userDao;

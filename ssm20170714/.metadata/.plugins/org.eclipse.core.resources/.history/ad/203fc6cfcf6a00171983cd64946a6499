@@ -8,7 +8,7 @@ import cn.gqxqd.dao.IUserDao;
 import cn.gqxqd.entity.User;
 import cn.gqxqd.service.IUserService;
 
-@Service(value="userService")
+@Service("userService")
 @Resource(name="userDao")
 public class UserServiceImpl implements IUserService {
 
@@ -23,9 +23,9 @@ public class UserServiceImpl implements IUserService {
 			System.out.println("用户名不能为空！");
 			return false;
 		}
-//		System.out.println("添加用户。。。");
-//		return true;
-		return userDao.addUser(user);
+		System.out.println("添加用户。。。");
+		return true;
+//		return userDao.addUser(user);
 	}
 
 	public boolean updateUser(User user) {

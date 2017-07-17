@@ -17,7 +17,7 @@
 	<!-- <bean id="userService" class="cn.gqxqd.service.impl.UserServiceImpl" p:userDao-ref="userDao">
 	</bean> -->
 	
-	<!-- <bean id="userDao" class="cn.gqxqd.dao.impl.UserDaoImpl"></bean> -->
+	<bean id="userDao" class="cn.gqxqd.dao.impl.UserDaoImpl"></bean>
 	
 	<bean id="user" class="cn.gqxqd.entity.User">
 		<property name="username" value="张三"></property>
