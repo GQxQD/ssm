@@ -10,7 +10,7 @@ public class TestPrinter {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
 		Printer printer1 = (Printer) context.getBean("printer1");
-		printer1.print("这是打印机1的内容！");
+		printer1.println("这是打印机1的内容！");
 		Printer printer2 = (Printer) context.getBean("printer2");
 		printer2.print("这是打印机2的内容！");
 	}

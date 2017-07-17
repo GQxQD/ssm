@@ -8,10 +8,15 @@ public class Printer {
 	private Paper paper;
 
 	public void print(String content) {
-		System.out.println("--START PRINTING--");
+		System.out.println("--开始打印--");
 		System.out.println("您使用了" + ink.getInkColor() + "墨水，"
-				+ paper.getPaperType() + "纸张打印了[" + content + "]");
-		System.out.println("--PRINTED--");
+				+ paper.getPaperType() + "纸张打印了\n[" + content + "]");
+		System.out.println("--结束打印--");
+	}
+	
+	public void println(String content){
+		this.print(content);
+		System.out.println();
 	}
 
 	public Ink getInk() {

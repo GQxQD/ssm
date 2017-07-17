@@ -14,12 +14,12 @@ public class Test {
 		IUserService userService = (IUserService) context
 				.getBean("userService");
 		userService.addUser(user);
-		// User libai = (User) context.getBean("libai");
-		// User libai2 = (User) context.getBean("libai");
-		// System.out.println(libai);
-		// System.out.println(libai2);
+//		 User libai = (User) context.getBean("libai");
+//		 User libai2 = (User) context.getBean("libai");
+//		 System.out.println(libai);
+//		 System.out.println(libai2);
 		// User luo = (User) context.getBean("luo");
-		// libai.say();
+//		 libai.say();
 		// luo.say();
 	}
 }
