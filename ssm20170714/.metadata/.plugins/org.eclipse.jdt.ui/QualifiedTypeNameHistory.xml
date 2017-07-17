@@ -3,4 +3,14 @@
 <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="cn.gqxqd.printer.Printer"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.stream.Entity"/>
+<fullyQualifiedTypeName name="cn.gqxqd.entity.User"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+<fullyQualifiedTypeName name="cn.gqxqd.service.IUserService"/>
+<fullyQualifiedTypeName name="cn.gqxqd.service.impl.UserServiceImpl"/>
+<fullyQualifiedTypeName name="java.net.Proxy"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Proxy"/>
+<fullyQualifiedTypeName name="java.lang.reflect.InvocationHandler"/>
 </qualifiedTypeNameHistroy>

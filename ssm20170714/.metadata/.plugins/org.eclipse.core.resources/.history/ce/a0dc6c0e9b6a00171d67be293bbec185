@@ -1,0 +1,30 @@
+package cn.gqxqd.factory;
+
+public class MyBeanFactory {
+	public static UserService createService(){
+	final UserService userService=new UserServiceImpl();
+	final MyAspect myAspect = new MyAspect();
+	UserService proxService = (UserService)Proxy.newProxyInstance(
+			MyBeanFactory.class.getClassLoader(), 
+			userService.getClass().getInterfaces(), 
+			new InvocationHandler() {
+				
+				@Override
+				public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+					
+					//执行前
+					myAspect.before();
+					
+					//方法执行时
+					Object obj = method.invoke(userService, args);
+					
+					//执行后
+					myAspect.after();
+					
+					return obj;
+				}
+			});
+
+                 return proxService;
+}
+}

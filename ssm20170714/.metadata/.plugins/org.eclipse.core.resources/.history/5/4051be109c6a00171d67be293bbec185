@@ -1,0 +1,30 @@
+package cn.gqxqd.factory;
+import java.lang.reflect.Method;
+
+import net.sf.cglib.proxy.InvocationHandler;
+import net.sf.cglib.proxy.Proxy;
+import cn.gqxqd.service.IUserService;
+import cn.gqxqd.service.impl.UserServiceImpl;
+
+public class MyBeanFactory {
+	public static IUserService createService(){
+	final IUserService userService=new UserServiceImpl();
+	final MyAspect myAspect = new MyAspect();
+	IUserService proxService = (IUserService)Proxy.newProxyInstance(
+			MyBeanFactory.class.getClassLoader(), 
+			userService.getClass().getInterfaces(), 
+			new InvocationHandler() {
+
+				@Override
+				public Object invoke(Object arg0, Method arg1, Object[] arg2)
+						throws Throwable {
+					// TODO Auto-generated method stub
+					return null;
+				}
+				
+				
+			});
+
+                 return proxService;
+}
+}

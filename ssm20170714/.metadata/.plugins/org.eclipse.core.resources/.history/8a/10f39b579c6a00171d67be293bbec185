@@ -1,0 +1,5 @@
+package cn.gqxqd.factory;
+
+public class MyAspect {
+
+}
