@@ -1,0 +1,17 @@
+package cn.gqxqd.aspect;
+
+import org.aopalliance.intercept.MethodInvocation;
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class MyAspect{
+
+	public Object invoke(MethodInvocation methodi) throws Throwable {
+		
+		System.out.println("----执行前。。。----");
+		Object obj = methodi.proceed();
+		System.out.println("----执行后。。。----\n");
+		return obj;
+	}
+
+}

@@ -1,9 +1,12 @@
 package cn.gqxqd.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import cn.gqxqd.dao.IUserDao;
 import cn.gqxqd.entity.User;
 import cn.gqxqd.service.IUserService;
 
+@Service("userService")
 public class UserServiceImpl implements IUserService {
 
 	private IUserDao userDao;
@@ -17,7 +20,9 @@ public class UserServiceImpl implements IUserService {
 			System.out.println("用户名不能为空！");
 			return false;
 		}
-		return userDao.addUser(user);
+		System.out.println("添加用户。。。");
+		return true;
+//		return userDao.addUser(user);
 	}
 
 	public boolean updateUser(User user) {

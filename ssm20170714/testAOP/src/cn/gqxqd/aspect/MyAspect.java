@@ -1,18 +1,37 @@
 package cn.gqxqd.aspect;
 
-import org.aopalliance.intercept.MethodInterceptor;
-import org.aopalliance.intercept.MethodInvocation;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
 
-public class MyAspect implements MethodInterceptor {
+@Component
+@Aspect
+public class MyAspect {
 
-	public Object invoke(MethodInvocation methodi) throws Throwable {
-		System.out.println("before procees");
-		// 执行方法的时候proceed
-		Object obj = methodi.proceed();
-
-		System.out.println("after procees");
-
-		return obj;
+	@Before("execution(* cn.gqxqd.service.*.*(..))")
+	public void beforeProcess() {
+		System.out.println("before....");
 	}
 
+	@After("execution(* cn.gqxqd.service.*.*(..))")
+	public void aferProcess() {
+		System.out.println("after....");
+	}
+
+	@Around("execution(* cn.gqxqd.service.*.*(..))")
+	public Object aroundProcess(ProceedingJoinPoint joinPoint) throws Throwable {
+		System.out.println("----around-before----");
+		Object object = joinPoint.proceed();
+		System.out.println("-----around-after----");
+		return object;
+	}
+
+	@AfterReturning("execution(* cn.gqxqd.service.*.*(..))")
+	public void afterReturning() {
+		System.out.println("----afterReturning----");
+	}
 }

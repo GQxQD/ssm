@@ -1,7 +1,5 @@
 package cn.gqxqd.dao.impl;
 
-import java.util.Set;
-
 import cn.gqxqd.dao.IUserDao;
 import cn.gqxqd.entity.User;
 

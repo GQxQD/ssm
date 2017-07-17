@@ -1,12 +1,10 @@
 package cn.gqxqd.test;
 
-import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cn.gqxqd.entity.User;
 import cn.gqxqd.service.IUserService;
-import cn.gqxqd.service.impl.UserServiceImpl;
 
 public class Test {
 	public static void main(String[] args) throws Exception {
@@ -21,14 +19,16 @@ public class Test {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
-		UserServiceImpl proxyFactoryBean = (UserServiceImpl) context.getBean("proxyService");
-//		IUserService userService = (IUserService) proxyFactoryBean.getObject();
-//		User user = (User)context.getBean("user");
-//		userService.addUser(user);
-		
-//		IUserService userService = (IUserService) context
-//				.getBean("userService");
-//		userService.addUser(user);
+		// UserServiceImpl proxyFactoryBean = (UserServiceImpl)
+		// context.getBean("proxyService");
+		IUserService userService = (IUserService) context
+				.getBean("userService");
+		User user = (User) context.getBean("user");
+		userService.addUser(user);
+
+		// IUserService userService = (IUserService) context
+		// .getBean("userService");
+		// userService.addUser(user);
 		// userService.deleteUser(user);
 		// userService.updateUser(user);
 		// System.out.println(user.getHobbies().getClass().getName());

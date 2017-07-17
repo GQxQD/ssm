@@ -1,0 +1,2 @@
+Description	Resource	Path	Location	Type
+The type java.lang.CharSequence cannot be resolved. It is indirectly referenced from required .class files	UserServiceImpl.java	/testAOP/src/cn/gqxqd/service/impl	line 1	Java Problem
