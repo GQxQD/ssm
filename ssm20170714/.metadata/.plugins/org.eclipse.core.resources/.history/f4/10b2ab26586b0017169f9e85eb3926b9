@@ -1,0 +1,10 @@
+import cn.gqxqd.dao.IUserDao;
+
+public class UserDaoImpl implements IUserDao {
+
+	public void addUser() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

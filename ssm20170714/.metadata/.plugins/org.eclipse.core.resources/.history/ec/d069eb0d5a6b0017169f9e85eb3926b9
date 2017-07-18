@@ -1,0 +1,10 @@
+package cn.gqxqd.dao.impl
+import cn.gqxqd.dao.IUserDao;
+
+public class UserDaoImpl implements IUserDao {
+
+	public void addUser() {
+		System.out.println("Add User...");
+	}
+
+}

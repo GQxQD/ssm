@@ -1,0 +1,12 @@
+package cn.gqxqd.service.impl;
+
+import cn.gqxqd.service.IUserService;
+
+public class UserServiceImpl implements IUserService {
+
+	public void addUser() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
