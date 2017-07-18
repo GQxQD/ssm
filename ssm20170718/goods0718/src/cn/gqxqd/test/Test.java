@@ -27,6 +27,9 @@ public class Test {
 //		List<Goods> goodsList = goodsDao.getGoodsList();
 //		System.out.println(goodsList.get(1).getGid());
 		Goods goods = goodsDao.findGoodsById(2);
+		if (goods==null) {
+			System.out.println("goods not found!");
+		}
 		System.out.println(goods.getGtitle()+"\n"+goods.getDescription());
 	}
 }
