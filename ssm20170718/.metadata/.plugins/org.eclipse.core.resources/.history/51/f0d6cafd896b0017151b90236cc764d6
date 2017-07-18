@@ -1,0 +1,7 @@
+package cn.gqxqd.dao;
+
+import cn.gqxqd.entity.Goods;
+
+public class GoodsDao {
+	void addGoods(Goods goods);
+}

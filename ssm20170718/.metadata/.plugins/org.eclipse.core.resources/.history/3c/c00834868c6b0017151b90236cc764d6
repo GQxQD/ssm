@@ -1,0 +1,59 @@
+package cn.gqxqd.entity;
+
+public class Goods {
+	private Integer gid;
+	private String gtitle;
+	private Integer categary;
+	private String description;
+	private Double price;
+	private Integer stock;
+
+	public Integer getGid() {
+		return gid;
+	}
+
+	public void setGid(Integer gid) {
+		this.gid = gid;
+	}
+
+	public String getGtitle() {
+		return gtitle;
+	}
+
+	public void setGtitle(String gtitle) {
+		this.gtitle = gtitle;
+	}
+
+	public Integer getCategary() {
+		return categary;
+	}
+
+	public void setCategary(Integer categary) {
+		this.categary = categary;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public Integer getStock() {
+		return stock;
+	}
+
+	public void setStock(Integer stock) {
+		this.stock = stock;
+	}
+
+}

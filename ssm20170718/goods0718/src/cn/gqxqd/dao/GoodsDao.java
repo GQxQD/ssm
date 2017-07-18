@@ -1,0 +1,12 @@
+package cn.gqxqd.dao;
+
+import java.util.List;
+
+import cn.gqxqd.entity.Goods;
+
+public interface GoodsDao {
+	int addGoods(Goods goods);
+	int deleteGoodsById(int id);
+	int deleteGoods(Goods goods);
+	List<String> getGoodsList();
+}

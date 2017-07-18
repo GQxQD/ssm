@@ -1,0 +1,14 @@
+package cn.gqxqd.dao.impl;
+
+import cn.gqxqd.dao.GoodsDao;
+import cn.gqxqd.entity.Goods;
+
+public class GoodsDaoImpl implements GoodsDao {
+
+	@Override
+	public void addGoods(Goods goods) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
