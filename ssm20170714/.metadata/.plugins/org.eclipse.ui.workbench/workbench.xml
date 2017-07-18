@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="29" version="2.0">
+<workbench progressCount="23" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="125" y="92">
 <fastViewData fastViewLocation="1024"/>
@@ -15,10 +15,11 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -37,52 +38,35 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestPrinter.java" partName="TestPrinter.java" path="C:/ssm/ssm20170714/Printer/src/cn/gqxqd/test/TestPrinter.java" title="TestPrinter.java" tooltip="Printer/src/cn/gqxqd/test/TestPrinter.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Printer/src/cn/gqxqd/test/TestPrinter.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="applicationContext.xml" partName="applicationContext.xml" path="D:/JavaEE/ssm/ssm20170714/test0718/src/applicationContext.xml" title="applicationContext.xml" tooltip="test0718/src/applicationContext.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test0718/src/applicationContext.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Printer.java" partName="Printer.java" path="C:/ssm/ssm20170714/Printer/src/cn/gqxqd/printer/Printer.java" title="Printer.java" tooltip="Printer/src/cn/gqxqd/printer/Printer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Printer/src/cn/gqxqd/printer/Printer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="439" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IUserDao.java" partName="IUserDao.java" path="D:/JavaEE/ssm/ssm20170714/test0718/src/cn/gqxqd/dao/IUserDao.java" title="IUserDao.java" tooltip="test0718/src/cn/gqxqd/dao/IUserDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test0718/src/cn/gqxqd/dao/IUserDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="70" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="C:/ssm/ssm20170714/helloSpring/src/cn/gqxqd/test/Test.java" title="Test.java" tooltip="helloSpring/src/cn/gqxqd/test/Test.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/helloSpring/src/cn/gqxqd/test/Test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="408" selectionTopPixel="71"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDaoImpl.java" partName="UserDaoImpl.java" path="D:/JavaEE/ssm/ssm20170714/test0718/src/cn/gqxqd/dao/impl/UserDaoImpl.java" title="UserDaoImpl.java" tooltip="test0718/src/cn/gqxqd/dao/impl/UserDaoImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test0718/src/cn/gqxqd/dao/impl/UserDaoImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="131" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IUserDao.java" partName="IUserDao.java" path="C:/ssm/ssm20170714/helloSpring/src/cn/gqxqd/dao/IUserDao.java" title="IUserDao.java" tooltip="helloSpring/src/cn/gqxqd/dao/IUserDao.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/helloSpring/src/cn/gqxqd/dao/IUserDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="87" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IUserService.java" partName="IUserService.java" path="D:/JavaEE/ssm/ssm20170714/test0718/src/cn/gqxqd/service/IUserService.java" title="IUserService.java" tooltip="test0718/src/cn/gqxqd/service/IUserService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test0718/src/cn/gqxqd/service/IUserService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="78" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDaoImpl.java" partName="UserDaoImpl.java" path="C:/ssm/ssm20170714/helloSpring/src/cn/gqxqd/dao/impl/UserDaoImpl.java" title="UserDaoImpl.java" tooltip="helloSpring/src/cn/gqxqd/dao/impl/UserDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/helloSpring/src/cn/gqxqd/dao/impl/UserDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="350" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserServiceImpl.java" partName="UserServiceImpl.java" path="D:/JavaEE/ssm/ssm20170714/test0718/src/cn/gqxqd/service/impl/UserServiceImpl.java" title="UserServiceImpl.java" tooltip="test0718/src/cn/gqxqd/service/impl/UserServiceImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test0718/src/cn/gqxqd/service/impl/UserServiceImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="448" selectionTopPixel="14"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserServiceImpl.java" partName="UserServiceImpl.java" path="C:/ssm/ssm20170714/helloSpring/src/cn/gqxqd/service/impl/UserServiceImpl.java" title="UserServiceImpl.java" tooltip="helloSpring/src/cn/gqxqd/service/impl/UserServiceImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/helloSpring/src/cn/gqxqd/service/impl/UserServiceImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="666" selectionTopPixel="128"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="D:/JavaEE/ssm/ssm20170714/test0718/src/cn/gqxqd/test/Test.java" title="Test.java" tooltip="test0718/src/cn/gqxqd/test/Test.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test0718/src/cn/gqxqd/test/Test.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="222" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="User.java" partName="User.java" path="C:/ssm/ssm20170714/helloSpring/src/cn/gqxqd/entity/User.java" title="User.java" tooltip="helloSpring/src/cn/gqxqd/entity/User.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/helloSpring/src/cn/gqxqd/entity/User.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="686" selectionTopPixel="475"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IUserService.java" partName="IUserService.java" path="C:/ssm/ssm20170714/helloSpring/src/cn/gqxqd/service/IUserService.java" title="IUserService.java" tooltip="helloSpring/src/cn/gqxqd/service/IUserService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/helloSpring/src/cn/gqxqd/service/IUserService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="188" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyBeanFactory.java" partName="MyBeanFactory.java" path="C:/ssm/ssm20170714/testAOP/src/cn/gqxqd/factory/MyBeanFactory.java" title="MyBeanFactory.java" tooltip="testAOP/src/cn/gqxqd/factory/MyBeanFactory.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testAOP/src/cn/gqxqd/factory/MyBeanFactory.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="678" selectionTopPixel="131"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyAspect.java" partName="MyAspect.java" path="C:/ssm/ssm20170714/testAOP/src/cn/gqxqd/factory/MyAspect.java" title="MyAspect.java" tooltip="testAOP/src/cn/gqxqd/factory/MyAspect.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/testAOP/src/cn/gqxqd/factory/MyAspect.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="130" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="applicationContext-dao.xml" partName="applicationContext-dao.xml" path="D:/JavaEE/ssm/ssm20170714/test0718/config/spring/applicationContext-dao.xml" title="applicationContext-dao.xml" tooltip="test0718/config/spring/applicationContext-dao.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test0718/config/spring/applicationContext-dao.xml"/>
 </editor>
 </editors>
 <views>
@@ -119,8 +103,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Errors (2 items)"/>
+<category IMemento.internal.id="Errors (1 item)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -155,7 +138,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
@@ -289,166 +272,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Printer/src/cn/gqxqd/printer/Printer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Printer/src/cn/gqxqd/paper/impl/A4Paper.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/helloSpring/src/cn/gqxqd/test/Test.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/helloSpring/src/cn/gqxqd/dao/IUserDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/helloSpring/src/cn/gqxqd/dao/impl/UserDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/helloSpring/src/cn/gqxqd/service/impl/UserServiceImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/helloSpring/src/cn/gqxqd/entity/User.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/helloSpring/src/cn/gqxqd/service/IUserService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/testAOP/src/cn/gqxqd/factory/MyBeanFactory.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/testAOP/src/cn/gqxqd/factory/MyAspect.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/testAOP/src/applicationContext.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/test0718/src/applicationContext.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test0718/src/cn/gqxqd/service/IUserService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test0718/src/cn/gqxqd/service/impl/UserServiceImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test0718/src/cn/gqxqd/dao/impl/UserDaoImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test0718/src/cn/gqxqd/test/Test.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/test0718/config/spring/applicationContext-dao.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test0718/src/cn/gqxqd/dao/IUserDao.java"/>
 </editors>
-<item historyLabel="Printer.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="363" y="0"/>
 </item>
-<item historyLabel="A4Paper.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="314" y="0"/>
 </item>
-<item historyLabel="Printer.java" index="0">
-<position info="not_deleted" x="439" y="0"/>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="242" y="0"/>
 </item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="applicationContext.xml" index="1">
+<position info="not_deleted" x="1030" y="0"/>
 </item>
 <item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1278" y="0"/>
+<position info="not_deleted" x="155" y="11"/>
+</item>
+<item historyLabel="applicationContext.xml" index="1">
+<position info="not_deleted" x="1121" y="0"/>
+</item>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="258" y="15"/>
+</item>
+<item historyLabel="applicationContext.xml" index="1">
+<position info="not_deleted" x="967" y="0"/>
+</item>
+<item historyLabel="IUserService.java" index="2">
+<position info="not_deleted" x="78" y="0"/>
+</item>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="146" y="0"/>
 </item>
 <item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="114" y="0"/>
+<position info="not_deleted" x="260" y="0"/>
 </item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="304" y="10"/>
 </item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="565" y="0"/>
+<item historyLabel="applicationContext.xml" index="1">
+<position info="not_deleted" x="1153" y="11"/>
 </item>
-<item historyLabel="UserServiceImpl.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="304" y="10"/>
 </item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="145" y="0"/>
-</item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="214" y="0"/>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="460" y="0"/>
 </item>
 <item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="912" y="2"/>
-</item>
-<item historyLabel="User.java" index="6">
-<position info="not_deleted" x="686" y="10"/>
+<position info="not_deleted" x="260" y="0"/>
 </item>
 <item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="912" y="2"/>
+<position info="not_deleted" x="138" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="460" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="460" y="0"/>
+</item>
+<item historyLabel="applicationContext.xml" index="1">
+<position info="not_deleted" x="1153" y="11"/>
 </item>
 <item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1052" y="0"/>
+<position info="not_deleted" x="118" y="13"/>
+</item>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="448" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="460" y="0"/>
+</item>
+<item historyLabel="applicationContext.xml" index="0">
+<position info="not_deleted" x="437" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="199" y="0"/>
+</item>
+<item historyLabel="UserServiceImpl.java" index="3">
+<position info="not_deleted" x="448" y="0"/>
+</item>
+<item historyLabel="applicationContext-dao.xml" index="6">
+<position info="not_deleted" x="1911" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="378" y="11"/>
+</item>
+<item historyLabel="applicationContext.xml" index="1">
+<position info="not_deleted" x="1157" y="7"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="438" y="11"/>
+</item>
+<item historyLabel="applicationContext-dao.xml" index="6">
+<position info="not_deleted" x="1334" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="420" y="11"/>
+</item>
+<item historyLabel="applicationContext-dao.xml" index="6">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="applicationContext.xml" index="1">
+<position info="not_deleted" x="1064" y="11"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="438" y="11"/>
+</item>
+<item historyLabel="applicationContext-dao.xml" index="6">
+<position info="not_deleted" x="1137" y="0"/>
 </item>
 <item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="965" y="10"/>
+<position info="not_deleted" x="131" y="7"/>
+</item>
+<item historyLabel="IUserService.java" index="2">
+<position info="not_deleted" x="78" y="0"/>
 </item>
 <item historyLabel="UserDaoImpl.java" index="4">
+<position info="not_deleted" x="131" y="7"/>
+</item>
+<item historyLabel="IUserService.java" index="2">
+<position info="not_deleted" x="78" y="0"/>
+</item>
+<item historyLabel="UserDaoImpl.java" index="4">
+<position info="not_deleted" x="131" y="7"/>
+</item>
+<item historyLabel="IUserDao.java" index="7">
+<position info="not_deleted" x="70" y="0"/>
+</item>
+<item historyLabel="UserDaoImpl.java" index="4">
+<position info="not_deleted" x="131" y="7"/>
+</item>
+<item historyLabel="IUserService.java" index="2">
+<position info="not_deleted" x="78" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="222" y="0"/>
+</item>
+<item historyLabel="applicationContext-dao.xml" index="6">
+<position info="not_deleted" x="1137" y="0"/>
+</item>
+<item historyLabel="Test.java" index="5">
+<position info="not_deleted" x="222" y="0"/>
+</item>
+<item historyLabel="applicationContext-dao.xml" index="6">
+<position info="not_deleted" x="1522" y="0"/>
+</item>
+<item historyLabel="applicationContext.xml" index="1">
 <position info="not_deleted" x="1016" y="0"/>
 </item>
-<item historyLabel="UserServiceImpl.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="IUserService.java" index="7">
-<position info="not_deleted" x="188" y="0"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1016" y="0"/>
-</item>
-<item historyLabel="UserServiceImpl.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="117" y="63"/>
-</item>
-<item historyLabel="IUserService.java" index="7">
-<position info="not_deleted" x="188" y="0"/>
-</item>
-<item historyLabel="UserServiceImpl.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="UserServiceImpl.java" index="5">
-<position info="not_deleted" x="581" y="0"/>
-</item>
-<item historyLabel="UserServiceImpl.java" index="5">
-<position info="not_deleted" x="666" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="565" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="599" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="156" y="0"/>
-</item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="117" y="63"/>
-</item>
-<item historyLabel="IUserDao.java" index="3">
-<position info="not_deleted" x="87" y="7"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1016" y="0"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1173" y="0"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1251" y="0"/>
-</item>
-<item historyLabel="Test.java" index="2">
-<position info="not_deleted" x="408" y="0"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1251" y="0"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1250" y="0"/>
-</item>
-<item historyLabel="MyBeanFactory.java" index="8">
-<position info="not_deleted" x="319" y="0"/>
-</item>
-<item historyLabel="MyAspect.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MyBeanFactory.java" index="8">
-<position info="not_deleted" x="872" y="0"/>
-</item>
-<item historyLabel="MyAspect.java" index="9">
-<position info="not_deleted" x="57" y="6"/>
-</item>
-<item historyLabel="MyBeanFactory.java" index="8">
-<position/>
-</item>
-<item historyLabel="MyAspect.java" index="9">
-<position info="not_deleted" x="130" y="6"/>
-</item>
-<item historyLabel="MyBeanFactory.java" index="8">
-<position info="not_deleted" x="678" y="0"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="1248" y="0"/>
-</item>
-<item historyLabel="UserDaoImpl.java" index="4">
-<position info="not_deleted" x="350" y="0"/>
-</item>
-<item active="true" historyLabel="UserServiceImpl.java" index="5">
-<position info="not_deleted" x="666" y="0"/>
+<item active="true" historyLabel="applicationContext-dao.xml" index="6">
+<position info="not_deleted" x="1522" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -456,6 +437,14 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@149fd31"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -468,6 +457,33 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="applicationContext-dao.xml" tooltip="test0718/config/spring/applicationContext-dao.xml">
+<persistable path="/test0718/config/spring/applicationContext-dao.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserServiceImpl.java" tooltip="testAOP/src/cn/gqxqd/service/impl/UserServiceImpl.java">
+<persistable path="/testAOP/src/cn/gqxqd/service/impl/UserServiceImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="test0718/src/cn/gqxqd/test/Test.java">
+<persistable path="/test0718/src/cn/gqxqd/test/Test.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserServiceImpl.java" tooltip="test0718/src/cn/gqxqd/service/impl/UserServiceImpl.java">
+<persistable path="/test0718/src/cn/gqxqd/service/impl/UserServiceImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IUserService.java" tooltip="test0718/src/cn/gqxqd/service/IUserService.java">
+<persistable path="/test0718/src/cn/gqxqd/service/IUserService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDaoImpl.java" tooltip="test0718/src/UserDaoImpl.java">
+<persistable path="/test0718/src/UserDaoImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IUserDao.java" tooltip="test0718/src/cn/gqxqd/dao/IUserDao.java">
+<persistable path="/test0718/src/cn/gqxqd/dao/IUserDao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="applicationContext.xml" tooltip="test0718/src/applicationContext.xml">
+<persistable path="/test0718/src/applicationContext.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="applicationContext.xml" tooltip="testAOP/src/applicationContext.xml">
+<persistable path="/testAOP/src/applicationContext.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyAspect.java" tooltip="testAOP/src/cn/gqxqd/factory/MyAspect.java">
 <persistable path="/testAOP/src/cn/gqxqd/factory/MyAspect.java"/>
 </file>
@@ -485,24 +501,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDaoImpl.java" tooltip="helloSpring/src/cn/gqxqd/dao/impl/UserDaoImpl.java">
 <persistable path="/helloSpring/src/cn/gqxqd/dao/impl/UserDaoImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IUserDao.java" tooltip="helloSpring/src/cn/gqxqd/dao/IUserDao.java">
-<persistable path="/helloSpring/src/cn/gqxqd/dao/IUserDao.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="helloSpring/src/cn/gqxqd/test/Test.java">
-<persistable path="/helloSpring/src/cn/gqxqd/test/Test.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="A4Paper.java" tooltip="Printer/src/cn/gqxqd/paper/impl/A4Paper.java">
-<persistable path="/Printer/src/cn/gqxqd/paper/impl/A4Paper.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Printer.java" tooltip="Printer/src/cn/gqxqd/printer/Printer.java">
-<persistable path="/Printer/src/cn/gqxqd/printer/Printer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestPrinter.java" tooltip="Printer/src/cn/gqxqd/test/TestPrinter.java">
-<persistable path="/Printer/src/cn/gqxqd/test/TestPrinter.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="README.MD" tooltip="Printer/README.MD">
-<persistable path="/Printer/README.MD"/>
 </file>
 </mruList>
 </workbench>
