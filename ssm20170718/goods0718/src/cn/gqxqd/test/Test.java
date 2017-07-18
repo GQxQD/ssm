@@ -12,24 +12,25 @@ public class Test {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		GoodsDao goodsDao = (GoodsDao) context.getBean("goodsDao");
-//		Goods goods = new Goods();
-//		goods.setGtitle("王老吉");
-//		goods.setDescription("还是原来的配方，还是熟悉的味道！");
-//		goods.setPrice(4.5);
-//		goods.setStock(500);
-//		System.out.println(goodsDao.addGoods(goods));
-//		Goods goods = new Goods();
-//		goods.setGid(1);
-//		goods.setGtitle("加多寶");
-//		goods.setDescription("金罐加多寶，还是原来的配方，还是熟悉的味道！");
-//		System.out.println(goodsDao.updateGoods(goods));
-//		System.out.println(goodsDao.deleteGoods(goods));
-//		List<Goods> goodsList = goodsDao.getGoodsList();
-//		System.out.println(goodsList.get(1).getGid());
+		// Goods goods = new Goods();
+		// goods.setGtitle("王老吉");
+		// goods.setDescription("还是原来的配方，还是熟悉的味道！");
+		// goods.setPrice(4.5);
+		// goods.setStock(500);
+		// System.out.println(goodsDao.addGoods(goods));
+		// Goods goods = new Goods();
+		// goods.setGid(1);
+		// goods.setGtitle("加多寶");
+		// goods.setDescription("金罐加多寶，还是原来的配方，还是熟悉的味道！");
+		// System.out.println(goodsDao.updateGoods(goods));
+		// System.out.println(goodsDao.deleteGoods(goods));
+		// List<Goods> goodsList = goodsDao.getGoodsList();
+		// System.out.println(goodsList.get(1).getGid());
 		Goods goods = goodsDao.findGoodsById(2);
-		if (goods==null) {
+		if (goods == null) {
 			System.out.println("goods not found!");
+		} else {
+			System.out.println(goods.getGtitle() + "\n" + goods.getDescription());
 		}
-		System.out.println(goods.getGtitle()+"\n"+goods.getDescription());
 	}
 }
