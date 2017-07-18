@@ -8,5 +8,7 @@ public interface GoodsDao {
 	int addGoods(Goods goods);
 	int deleteGoodsById(int id);
 	int deleteGoods(Goods goods);
-	List<String> getGoodsList();
+	int updateGoods(Goods goods);
+	Goods findGoodsById(int id);
+	List<Goods> getGoodsList();
 }

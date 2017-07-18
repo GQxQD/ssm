@@ -1,0 +1,43 @@
+package cn.gqxqd.dao.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import cn.gqxqd.dao.GoodsDao;
+import cn.gqxqd.entity.Goods;
+
+@Repository("goodsDao")
+public class GoodsDaoImpl implements GoodsDao {
+
+	@Resource
+	private JdbcTemplate jdbcTemplate;
+
+	@Override
+	public int addGoods(Goods goods) {
+		String sql = "insert into goods(gtitle,categary,description,price,stock) values(?,?,?,?,?)";
+		return jdbcTemplate.update(sql, new Object[] { goods.getGtitle(), goods.getCategary(), goods.getDescription(),
+				goods.getPrice(), goods.getStock() });
+	}
+
+	@Override
+	public int deleteGoodsById(int id) {
+		String sql = "delete from goods where gid = ?";
+		return jdbcTemplate.update(sql,new Object[]{id});
+	}
+
+	@Override
+	public int deleteGoods(Goods goods) {
+		return deleteGoodsById(goods.getGid());
+	}
+
+	@Override
+	public List<String> getGoodsList() {
+		String sql = "select gtitle from goods";
+		return jdbcTemplate.queryForList(sql, String.class);
+	}
+
+}

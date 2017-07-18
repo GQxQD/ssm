@@ -19,9 +19,14 @@ public class Test {
 //		goods.setStock(500);
 //		System.out.println(goodsDao.addGoods(goods));
 //		Goods goods = new Goods();
-//		goods.setGid(4);
+//		goods.setGid(1);
+//		goods.setGtitle("加多寶");
+//		goods.setDescription("金罐加多寶，还是原来的配方，还是熟悉的味道！");
+//		System.out.println(goodsDao.updateGoods(goods));
 //		System.out.println(goodsDao.deleteGoods(goods));
-		List<String> goodsList = goodsDao.getGoodsList();
-		System.out.println(goodsList.size());
+//		List<Goods> goodsList = goodsDao.getGoodsList();
+//		System.out.println(goodsList.get(1).getGid());
+		Goods goods = goodsDao.findGoodsById(2);
+		System.out.println(goods.getGtitle()+"\n"+goods.getDescription());
 	}
 }
