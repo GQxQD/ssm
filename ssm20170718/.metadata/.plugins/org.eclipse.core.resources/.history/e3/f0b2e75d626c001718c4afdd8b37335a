@@ -1,0 +1,18 @@
+package cn.gqxqd.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("school")
+public class SchoolController {
+
+	@RequestMapping("list")
+	public String gotopage(HttpServletRequest request) {
+		String name = request.getParameter("name");
+		System.out.println(name);
+		return "schoolList";
+	}
+}

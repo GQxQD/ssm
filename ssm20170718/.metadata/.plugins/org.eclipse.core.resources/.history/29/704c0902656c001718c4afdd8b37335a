@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>SchoolList</h1>
-	<a href="?name=kohai&c=${count+1}">click!</a>
+	<a href="?name=kohai&c=${count}">click!</a>
 	<hr>
 	<h1>${name}</h1>
 	<h1>${count}</h1>
