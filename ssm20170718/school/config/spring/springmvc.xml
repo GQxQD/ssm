@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- controller的扫描包 -->
+<context:component-scan 
+
+<!-- 注解驱动 -->
+<mvc:annotation-driven/>
+<!-- 配置视图解析器，jsp页面的路径 -->
+<bean class="">
+
+</bean>
