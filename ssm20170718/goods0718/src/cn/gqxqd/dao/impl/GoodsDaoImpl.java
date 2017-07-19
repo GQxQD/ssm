@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -62,8 +61,7 @@ public class GoodsDaoImpl implements GoodsDao {
 	public Goods findGoodsById(int id) {
 		String sql = "select * from goods where gid=?";
 		try {
-			return jdbcTemplate.queryForObject(sql, new Object[] { id },
-					new GoodsMapper());
+			return jdbcTemplate.queryForObject(sql, new Object[] { id }, new GoodsMapper());
 		} catch (Exception e) {
 			return null;
 		}
