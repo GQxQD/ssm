@@ -26,11 +26,17 @@ public class Test {
 		// System.out.println(goodsDao.deleteGoods(goods));
 		// List<Goods> goodsList = goodsDao.getGoodsList();
 		// System.out.println(goodsList.get(1).getGid());
-		Goods goods = goodsDao.findGoodsById(2);
-		if (goods == null) {
-			System.out.println("goods not found!");
-		} else {
-			System.out.println(goods.getGtitle() + "\n" + goods.getDescription());
+		// Goods goods = goodsDao.findGoodsById(1);
+		// if (goods == null) {
+		// System.out.println("goods not found!");
+		// } else {
+		// System.out.println(goods.getGtitle() + "\n" +
+		// goods.getDescription());
+		// }
+		List<Goods> list = goodsDao.findAll();
+		for (Goods goods : list) {
+			System.out.println(goods.getGid() + " " + goods.getGtitle() + "  " + goods.getDescription());
 		}
+		System.out.println("count:" + goodsDao.getCount());
 	}
 }

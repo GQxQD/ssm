@@ -11,4 +11,6 @@ public interface GoodsDao {
 	int updateGoods(Goods goods);
 	Goods findGoodsById(int id);
 	List<Goods> getGoodsList();
+	List<Goods> findAll();
+	int getCount();
 }
