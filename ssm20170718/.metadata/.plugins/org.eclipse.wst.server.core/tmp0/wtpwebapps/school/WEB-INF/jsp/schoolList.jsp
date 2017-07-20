@@ -2,6 +2,8 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
 	List<School> list = (List<School>)request.getAttribute("list");
 %>
@@ -17,15 +19,25 @@
 	<hr>
 	<h1>${name}</h1>
 	<h1>${count}</h1>
-	
-	<form action="" method="post">
-	</form>
-	<%
-		for(School s:list){
-	%>
-		<p><%=s.getName() %></p>
-	<%
-		}
-	%>
+	<c:if test="${list!=null && list.size()!=0}">
+	<table border="1">
+		<tr>
+			<th>学校编号</th>
+			<th>学校名称</th>
+			<th>学校地址</th>
+			<th>开学日期</th>
+		</tr>
+		<c:forEach items="${list}" var="item">
+		<tr>
+			<td>${item.id}</td>
+			<td>${item.name}</td>
+			<td>${item.address}</td>
+			<td>
+				<fmt:formatDate value="${item.schoolDate}" pattern="YYYY-MM-dd HH:mm:ss"/>
+			</td>
+		</tr>
+		</c:forEach>
+	</table>
+	</c:if>
 </body>
 </html>

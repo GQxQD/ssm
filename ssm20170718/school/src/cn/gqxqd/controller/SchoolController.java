@@ -42,7 +42,7 @@ public class SchoolController {
 		modelAndView.addObject("name", name);
 		modelAndView.addObject("count", c);
 		modelAndView.addObject("list",list);
-		modelAndView.setViewName("schoolList");
+		modelAndView.setViewName("school-list");
 		// request.setAttribute("name", "jack and rose");
 		// request.setAttribute("user", "user");
 		return modelAndView;
