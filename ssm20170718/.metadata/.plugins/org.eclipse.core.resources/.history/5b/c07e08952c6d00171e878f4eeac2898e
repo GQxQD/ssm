@@ -15,10 +15,9 @@ public class SchoolDaoImp implements SchoolDao {
 	@Override
 	public List<School> findSchoolList() {
 		List<School> list = new ArrayList<>();
-		list.add(new School(1, "1", "1", "110", new Date()));
-		list.add(new School(2, "2", "2", "120", new Date()));
-		list.add(new School(3, "3", "3", "119", new Date()));
-		list.add(new School(4, "zhku", "sdfsdf", "7834235", new Date(1345335)));
+		list.add(new School(1, "1", "1", new Date()));
+		list.add(new School(2, "2", "2", new Date()));
+		list.add(new School(3, "3", "3", new Date()));
 		return list;
 	}
 
