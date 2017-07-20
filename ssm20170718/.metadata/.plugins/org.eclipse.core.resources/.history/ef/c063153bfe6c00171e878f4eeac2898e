@@ -1,0 +1,21 @@
+package cn.gqxqd.test;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cn.gqxqd.service.SchoolService;
+
+public class Test {
+
+	@Autowired
+	private SchoolService schoolService;
+
+	public void setSchoolService(SchoolService schoolService) {
+		this.schoolService = schoolService;
+	}
+
+	public static void main(String[] args) {
+	}
+
+}

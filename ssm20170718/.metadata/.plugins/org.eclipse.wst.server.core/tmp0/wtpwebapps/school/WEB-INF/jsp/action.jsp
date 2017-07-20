@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>${name}</h1>
 <a href="?action=add">Add</a><br>
 <a href="?action=delete">Delete</a><br>
 <a href="?action=change">Change</a><br>

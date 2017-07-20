@@ -1,5 +1,10 @@
+<%@page import="cn.gqxqd.entity.School"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%
+	List<School> list = (List<School>)request.getAttribute("list");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,5 +20,12 @@
 	
 	<form action="" method="post">
 	</form>
+	<%
+		for(School s:list){
+	%>
+		<p><%=s.getName() %></p>
+	<%
+		}
+	%>
 </body>
 </html>

@@ -1,0 +1,16 @@
+package cn.gqxqd.dao.impl;
+
+import java.util.List;
+
+import cn.gqxqd.dao.SchoolDao;
+import cn.gqxqd.entity.School;
+
+public class SchoolDaoImp implements SchoolDao {
+
+	@Override
+	public List<School> findSchoolList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
