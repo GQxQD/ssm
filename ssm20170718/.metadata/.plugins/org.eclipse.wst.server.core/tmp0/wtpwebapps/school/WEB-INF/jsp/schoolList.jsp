@@ -12,5 +12,8 @@
 	<hr>
 	<h1>${name}</h1>
 	<h1>${count}</h1>
+	
+	<form action="" method="post">
+	</form>
 </body>
 </html>

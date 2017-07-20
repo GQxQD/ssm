@@ -7,13 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>SchoolList</h1>
-	<a href="?name=kohai&c=${count+1}">click!</a>
-	<hr>
-	<h1>${name}</h1>
-	<h1>${count}</h1>
-	
-	<form action="" method="post">
-	</form>
+<a href="?action=add">Add</a><br>
+<a href="?action=delete">Delete</a><br>
+<a href="?action=change">Change</a><br>
+
 </body>
 </html>

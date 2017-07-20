@@ -30,4 +30,19 @@ public class SchoolController {
 		// request.setAttribute("user", "user");
 		return modelAndView;
 	}
+
+	@RequestMapping("action")
+	public ModelAndView action(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		String action = request.getParameter("action");
+		if ("add".equals(action)) {
+			System.out.println("add...");
+		} else if ("delete".equals(action)) {
+			System.out.println("delete...");
+		} else if ("change".equals(action)) {
+			System.out.println("change...");
+		}
+		modelAndView.setViewName("action");
+		return modelAndView;
+	}
 }
