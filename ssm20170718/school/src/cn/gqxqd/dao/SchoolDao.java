@@ -13,9 +13,23 @@ public interface SchoolDao {
 	List<School> findSchoolList();
 	
 	/**
+	 * 通过学校名称模糊查找学校信息
+	 * @param name
+	 * @return
+	 */
+	List<School> findSchoolsByName(String name);
+	
+	/**
 	 * 添加学校
 	 * @param school
 	 * @return boolean 是否添加成功
 	 */
 	boolean addSchool(School school);
+	
+	/**
+	 * 删除学校
+	 * @param id删除学校id
+	 * @return 是否删除成功
+	 */
+	boolean deleteSchoolById(int id);
 }

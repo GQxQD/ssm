@@ -1,11 +1,15 @@
 package cn.gqxqd.controller;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,10 +18,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.sun.xml.internal.ws.api.server.SDDocument;
-
 import cn.gqxqd.entity.School;
 import cn.gqxqd.service.SchoolService;
+import cn.gqxqd.util.JsonMsg;
+import net.sf.json.JSONObject;
 
 @Controller("schoolController")
 @RequestMapping("school")
@@ -31,25 +35,19 @@ public class SchoolController {
 	}
 
 	@RequestMapping("school-list")
-	public ModelAndView gotopage(HttpServletRequest request, Model model) {
+	public ModelAndView gotopage(HttpServletRequest request, Model model) throws UnsupportedEncodingException {
+		request.setCharacterEncoding("utf8");
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("school-list");
-		List<School> list = schoolService.findSchoolList();
-		modelAndView.addObject("list", list);
-		// String name = request.getParameter("name");
-		// String count = request.getParameter("c");
-		// int c = 0;
-		// if (count == null || "".equals(count)) {
-		// c = 1;
-		// } else {
-		// c = Integer.parseInt(count);
-		// }
-		// System.out.println(name);
-
-		// modelAndView.addObject("name", name);
-		// modelAndView.addObject("count", c);
-		// request.setAttribute("name", "jack and rose");
-		// request.setAttribute("user", "user");
+		String schoolName = request.getParameter("school_name");
+		if (schoolName != null && !"".equals(schoolName.trim())) {
+			modelAndView.addObject("search_key", schoolName);
+			List<School> list = schoolService.findSchoolsByName(schoolName);
+			modelAndView.addObject("list", list);
+		} else {
+			List<School> list = schoolService.findSchoolList();
+			modelAndView.addObject("list", list);
+		}
 		return modelAndView;
 	}
 
@@ -73,17 +71,46 @@ public class SchoolController {
 			if (schoolService.addSchool(school)) {
 				System.out.println("add success...");
 				this.success(modelAndView, "添加成功！");
-			}else{
+			} else {
 				System.out.println("error...");
 				this.success(modelAndView, "添加失败！");
 			}
-//			modelAndView.setViewName("success");
 			return modelAndView;
 		} else {
 			ModelAndView modelAndView = new ModelAndView();
 			modelAndView.setViewName("school-add");
 			return modelAndView;
 		}
+	}
+
+	@RequestMapping("delete")
+	public void json(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.setContentType("application/json;charset=utf8");
+		String method = request.getMethod().toLowerCase();
+//		HashMap<String, Object> result = new HashMap<>();
+		JsonMsg jsonMsg = new JsonMsg();
+		if ("post".equals(method)) {
+			String idString = request.getParameter("id");
+			int id = Integer.parseInt(idString);
+			if (schoolService.deleteSchoolById(id)) {
+//				result.put("flag", 0);
+//				result.put("msg", "编号：[" + id + "]删除成功！");
+				jsonMsg.setFlag(0);
+				jsonMsg.setMsg("编号：[" + id + "]删除成功！");
+			} else {
+//				result.put("flag", 1);
+//				result.put("msg", "删除失败！");
+				jsonMsg.setFlag(1);
+				jsonMsg.setMsg("删除失败！");
+			}
+		} else {
+//			result.put("flag", "1");
+//			result.put("msg", "请求错误！");
+			jsonMsg.setFlag(1);
+			jsonMsg.setMsg("请求错误！");
+		}
+//		JSONObject jsonObject = JSONObject.fromObject(result);
+		response.getWriter().print(jsonMsg.toString());
 	}
 
 	// ModelMap是Model接口的实现类，同样可以通过ModelMap向页面传输数据
@@ -102,8 +129,8 @@ public class SchoolController {
 		modelMap.addAttribute("name", "kohai");
 		return modelAndView;
 	}
-	
-	private void success(ModelAndView modelAndView,String msg){
+
+	private void success(ModelAndView modelAndView, String msg) {
 		modelAndView.setViewName("success");
 		modelAndView.addObject("msg", msg);
 	}

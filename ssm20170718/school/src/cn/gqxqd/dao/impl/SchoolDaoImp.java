@@ -1,8 +1,6 @@
 package cn.gqxqd.dao.impl;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -43,12 +41,29 @@ public class SchoolDaoImp implements SchoolDao {
 			String sql = "insert into school(name,president,address,tel,email,status,schoolDate) values(?,?,?,?,?,?,?)";
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd");
 			String date = simpleDateFormat.format(school.getSchoolDate());
-			int r = jdbcTemplate.update(sql, new Object[] { school.getName(), school.getPresident(),
-					school.getAddress(), school.getTel(), school.getEmail(), school.getStatus() ? "1" : "0", date });
+			jdbcTemplate.update(sql, new Object[] { school.getName(), school.getPresident(), school.getAddress(),
+					school.getTel(), school.getEmail(), school.getStatus() ? "1" : "0", date });
 			result = true;
 		} catch (Exception e) {
 		}
 		return result;
+	}
+
+	@Override
+	public boolean deleteSchoolById(int id) {
+		String sql = "delete from school where id=?";
+		int row = jdbcTemplate.update(sql, new Object[] { id });
+		if (row > 0) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public List<School> findSchoolsByName(String name) {
+		String sql = "select * from school where name like ?";
+		List<School> list = jdbcTemplate.query(sql, new Object[] { "%" + name + "%" }, new SchoolMapper());
+		return list;
 	}
 
 }

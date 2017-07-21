@@ -10,3 +10,6 @@
 1500536590097	Rename resource 'member-list.html'
 1500542242459	Move compilation unit
 1500602430952	Rename resource 'member-add.html'
+1500621044976	Move 6 resources to 'lib'
+1500621051759	Delete element
+1500627657479	Rename type 'MyJson'

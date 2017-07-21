@@ -29,4 +29,14 @@ public class SchoolServiceImpl implements SchoolService {
 		return schoolDao.addSchool(school);
 	}
 
+	@Override
+	public boolean deleteSchoolById(int id) {
+		return schoolDao.deleteSchoolById(id);
+	}
+
+	@Override
+	public List<School> findSchoolsByName(String name) {
+		return schoolDao.findSchoolsByName(name);
+	}
+
 }

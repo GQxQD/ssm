@@ -8,5 +8,9 @@ public interface SchoolService {
 
 	List<School> findSchoolList();
 	
+	List<School> findSchoolsByName(String name);
+
 	boolean addSchool(School school);
+
+	boolean deleteSchoolById(int id);
 }
