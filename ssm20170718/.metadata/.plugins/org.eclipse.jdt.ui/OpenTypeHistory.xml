@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=school/src&lt;cn.gqxqd.dao{SchoolDao.java[SchoolDao" modifiers="513" timestamp="1500521501460"/>
-<typeInfo handle="=school/src&lt;cn.gqxqd.service{SchoolService.java[SchoolService" modifiers="513" timestamp="1500521813366"/>
+<typeInfo handle="=school/src&lt;cn.gqxqd.dao{SchoolDao.java[SchoolDao" modifiers="513" timestamp="1500625876077"/>
+<typeInfo handle="=school/src&lt;cn.gqxqd.service{SchoolService.java[SchoolService" modifiers="513" timestamp="1500626300511"/>
+<typeInfo handle="=school/D:\/JavaEE\/ssm\/ssm20170718\/school\/WebContent\/WEB-INF\/lib\/spring-jdbc-4.1.3.RELEASE.jar&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1500431085401"/>
 </typeInfoHistroy>
