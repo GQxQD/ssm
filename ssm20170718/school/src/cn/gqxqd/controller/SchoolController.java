@@ -72,10 +72,12 @@ public class SchoolController {
 			System.out.println(school.toString());
 			if (schoolService.addSchool(school)) {
 				System.out.println("add success...");
+				this.success(modelAndView, "添加成功！");
 			}else{
 				System.out.println("error...");
+				this.success(modelAndView, "添加失败！");
 			}
-			modelAndView.setViewName("school-add");
+//			modelAndView.setViewName("success");
 			return modelAndView;
 		} else {
 			ModelAndView modelAndView = new ModelAndView();
@@ -99,5 +101,10 @@ public class SchoolController {
 		modelAndView.setViewName("action");
 		modelMap.addAttribute("name", "kohai");
 		return modelAndView;
+	}
+	
+	private void success(ModelAndView modelAndView,String msg){
+		modelAndView.setViewName("success");
+		modelAndView.addObject("msg", msg);
 	}
 }

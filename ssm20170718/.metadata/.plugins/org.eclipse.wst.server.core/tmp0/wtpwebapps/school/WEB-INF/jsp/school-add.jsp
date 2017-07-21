@@ -42,31 +42,31 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学校名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="username" name="name" maxlength="25" required="required">
+				<input type="text" class="input-text" value="" placeholder="" id="username" name="name">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学校校长：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="president" name="president" maxlength="3" required="required">
+				<input type="text" class="input-text" value="" placeholder="" id="president" name="president">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>联系电话：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="tel" name="tel" maxlength="25" required="required">
+				<input type="text" class="input-text" value="" placeholder="" id="tel" name="tel">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学校邮箱：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="email" name="email" required="required">
+				<input type="text" class="input-text" value="" placeholder="" id="email" name="email">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学校地址：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="address" name="address" required="required">
+				<input type="text" class="input-text" value="" placeholder="" id="address" name="address">
 			</div>
 		</div>
 		<div class="row cl">
@@ -175,10 +175,26 @@ $(function(){
 				required:true,
 				email:true,
 			},
-			uploadfile:{
+			name:{
 				required:true,
+				minlength:2,
+				maxlength:50
 			},
-			
+			president:{
+				required:true,
+				minlength:2,
+				maxlength:3
+			},
+			address:{
+				required:true,
+				minlength:2,
+				maxlength:255
+			},
+			tel:{
+				required:true,
+				minlength:2,
+				maxlength:25
+			}
 		},
 		//onkeyup:false,
 		//focusCleanup:true,
