@@ -76,14 +76,4 @@ public class SchoolDaoImp implements SchoolDao {
 		return false;
 	}
 
-	@Override
-	public boolean startSchoolById(int id) {
-		String sql = "update school set status=1 where id=?";
-		int row = jdbcTemplate.update(sql, new Object[] { id });
-		if (row > 0) {
-			return true;
-		}
-		return false;
-	}
-
 }

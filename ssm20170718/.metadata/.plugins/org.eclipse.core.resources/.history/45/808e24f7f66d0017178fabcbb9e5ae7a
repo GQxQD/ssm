@@ -16,5 +16,4 @@ public interface SchoolService {
 	
 	boolean stopSchoolById(int id);
 	
-	boolean startSchoolById(int id);
 }

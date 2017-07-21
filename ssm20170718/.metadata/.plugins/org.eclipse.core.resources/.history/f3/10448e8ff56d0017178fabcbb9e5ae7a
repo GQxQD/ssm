@@ -13,8 +13,4 @@ public interface SchoolService {
 	boolean addSchool(School school);
 
 	boolean deleteSchoolById(int id);
-	
-	boolean stopSchoolById(int id);
-	
-	boolean startSchoolById(int id);
 }

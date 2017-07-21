@@ -32,18 +32,4 @@ public interface SchoolDao {
 	 * @return 是否删除成功
 	 */
 	boolean deleteSchoolById(int id);
-	
-	/**
-	 * 禁用学校
-	 * @param id
-	 * @return
-	 */
-	boolean stopSchoolById(int id);
-	
-	/**
-	 * 启用学校
-	 * @param id
-	 * @return
-	 */
-	boolean startSchoolById(int id);
 }

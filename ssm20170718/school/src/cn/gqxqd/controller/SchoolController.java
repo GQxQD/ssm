@@ -18,6 +18,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sun.prism.paint.Stop;
+
 import cn.gqxqd.entity.School;
 import cn.gqxqd.service.SchoolService;
 import cn.gqxqd.util.JsonMsg;
@@ -87,29 +89,65 @@ public class SchoolController {
 	public void json(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("application/json;charset=utf8");
 		String method = request.getMethod().toLowerCase();
-//		HashMap<String, Object> result = new HashMap<>();
 		JsonMsg jsonMsg = new JsonMsg();
 		if ("post".equals(method)) {
 			String idString = request.getParameter("id");
 			int id = Integer.parseInt(idString);
 			if (schoolService.deleteSchoolById(id)) {
-//				result.put("flag", 0);
-//				result.put("msg", "编号：[" + id + "]删除成功！");
 				jsonMsg.setFlag(0);
 				jsonMsg.setMsg("编号：[" + id + "]删除成功！");
 			} else {
-//				result.put("flag", 1);
-//				result.put("msg", "删除失败！");
 				jsonMsg.setFlag(1);
 				jsonMsg.setMsg("删除失败！");
 			}
 		} else {
-//			result.put("flag", "1");
-//			result.put("msg", "请求错误！");
 			jsonMsg.setFlag(1);
 			jsonMsg.setMsg("请求错误！");
 		}
-//		JSONObject jsonObject = JSONObject.fromObject(result);
+		response.getWriter().print(jsonMsg.toString());
+	}
+
+	@RequestMapping("stop")
+	public void stop(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.setContentType("application/json;charset=utf8");
+		String method = request.getMethod().toLowerCase();
+		JsonMsg jsonMsg = new JsonMsg();
+		if ("post".equals(method)) {
+			String idString = request.getParameter("id");
+			int id = Integer.parseInt(idString);
+			if (schoolService.stopSchoolById(id)) {
+				jsonMsg.setFlag(0);
+				jsonMsg.setMsg("编号：[" + id + "]禁用成功！");
+			} else {
+				jsonMsg.setFlag(1);
+				jsonMsg.setMsg("禁用失败！");
+			}
+		} else {
+			jsonMsg.setFlag(1);
+			jsonMsg.setMsg("请求错误！");
+		}
+		response.getWriter().print(jsonMsg.toString());
+	}
+	
+	@RequestMapping("start")
+	public void start(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.setContentType("application/json;charset=utf8");
+		String method = request.getMethod().toLowerCase();
+		JsonMsg jsonMsg = new JsonMsg();
+		if ("post".equals(method)) {
+			String idString = request.getParameter("id");
+			int id = Integer.parseInt(idString);
+			if (schoolService.startSchoolById(id)) {
+				jsonMsg.setFlag(0);
+				jsonMsg.setMsg("编号：[" + id + "]启用成功！");
+			} else {
+				jsonMsg.setFlag(1);
+				jsonMsg.setMsg("启用失败！");
+			}
+		} else {
+			jsonMsg.setFlag(1);
+			jsonMsg.setMsg("请求错误！");
+		}
 		response.getWriter().print(jsonMsg.toString());
 	}
 

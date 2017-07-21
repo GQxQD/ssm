@@ -44,9 +44,4 @@ public class SchoolServiceImpl implements SchoolService {
 		return schoolDao.stopSchoolById(id);
 	}
 
-	@Override
-	public boolean startSchoolById(int id) {
-		return schoolDao.startSchoolById(id);
-	}
-
 }
