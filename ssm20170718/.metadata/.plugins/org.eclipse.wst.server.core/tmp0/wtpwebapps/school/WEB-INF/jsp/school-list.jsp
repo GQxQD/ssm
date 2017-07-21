@@ -39,7 +39,7 @@
 		<input type="text" class="input-text" style="width:250px" placeholder="输入会员名称、电话、邮箱" id="" name="">
 		<button type="submit" class="btn btn-success radius" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>
 	</div>
-	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a></span> <span class="r">共有数据：<strong>${list.size()}</strong> 条</span> </div>
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="member_add('添加学校','school-add.html','','510')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加学校</a></span> <span class="r">共有数据：<strong>${list.size()}</strong> 条</span> </div>
 	<div class="mt-20">
 	<table class="table table-border table-bordered table-hover table-bg table-sort">
 		<thead>
@@ -47,9 +47,9 @@
 				<th width="25"><input type="checkbox" name="" value=""></th>
 				<th width="80">学校编号</th>
 				<th width="100">学校名称</th>
+				<th width="90">学校校长</th>
 				<th width="">联系电话</th>
-				<th width="90">开学日期</th>
-				<th width="150">邮箱</th>
+				<th width="150">学校邮箱</th>
 				<th width="">学校地址</th>
 				<th width="130">开学时间</th>
 				<th width="70">状态</th>
@@ -62,18 +62,19 @@
 				<td><input type="checkbox" value="1" name=""></td>
 				<td>${s.id}</td>
 				<td>${s.name}</td>
+				<td>${s.president}</td>
 				<td>${s.tel}</td>
-				<td><fmt:formatDate value="${s.schoolDate}" pattern="YYYY-MM-dd"/></td>
 				<!-- <td>1</td>
 				<td><u style="cursor:pointer" class="text-primary" onclick="member_show('张三','member-show.html','10001','360','400')">张三</u></td>
 				<td>男</td>
 				<td>13000000000</td>-->
-				<td>admin@mail.com</td>
+				<td>${s.email}</td>
 				<td class="text-l">${s.address}</td>
-				<td><fmt:formatDate value="${s.schoolDate}" pattern="YYYY-MM-dd HH:mm:ss"/></td>
-				<td class="td-status"><span class="label label-success radius">已启用</span></td>
+				<td><fmt:formatDate value="${s.schoolDate}" pattern="YYYY-MM-dd"/></td>
+				<td class="td-status"><span class="label <c:choose><c:when test="${s.status}">label-success</c:when><c:otherwise>label-danger</c:otherwise></c:choose> radius"><c:choose><c:when test="${s.status}">已启用</c:when><c:otherwise>已禁用</c:otherwise></c:choose></span></td>
 				<td class="td-manage"><a style="text-decoration:none" onClick="member_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a> <a title="编辑" href="javascript:;" onclick="member_edit('编辑','member-add.html','4','','510')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="change_password('修改密码','change-password.html','10001','600','270')" href="javascript:;" title="修改密码"><i class="Hui-iconfont">&#xe63f;</i></a> <a title="删除" href="javascript:;" onclick="member_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 			</tr>
+			
 		</c:forEach>
 		</tbody>
 	</table>

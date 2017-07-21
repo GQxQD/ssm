@@ -7,4 +7,6 @@ import cn.gqxqd.entity.School;
 public interface SchoolService {
 
 	List<School> findSchoolList();
+	
+	boolean addSchool(School school);
 }

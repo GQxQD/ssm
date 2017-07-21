@@ -11,4 +11,11 @@ public interface SchoolDao {
 	 * @return List<School> 学校List
 	 */
 	List<School> findSchoolList();
+	
+	/**
+	 * 添加学校
+	 * @param school
+	 * @return boolean 是否添加成功
+	 */
+	boolean addSchool(School school);
 }

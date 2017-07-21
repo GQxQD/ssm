@@ -21,8 +21,12 @@ public class SchoolServiceImpl implements SchoolService {
 
 	@Override
 	public List<School> findSchoolList() {
-		System.out.println("schoolService find..");
 		return schoolDao.findSchoolList();
+	}
+
+	@Override
+	public boolean addSchool(School school) {
+		return schoolDao.addSchool(school);
 	}
 
 }

@@ -1,0 +1,53 @@
+package cn.gqxqd.dao.impl;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import cn.gqxqd.dao.SchoolDao;
+import cn.gqxqd.entity.School;
+import cn.gqxqd.mapper.SchoolMapper;
+
+@Repository("schoolDao")
+public class SchoolDaoImp implements SchoolDao {
+
+	@Resource
+	private JdbcTemplate jdbcTemplate;
+
+	@Override
+	public List<School> findSchoolList() {
+		String sql = "select * from school";
+		List<School> list = jdbcTemplate.query(sql, new SchoolMapper());
+		// List<School> list = new ArrayList<School>();
+		// list.add(new School(1, "1", "zsf", "1", "110", "sdfsdf@123.com",
+		// true, new Date()));
+		// list.add(new School(2, "2", "zsf", "2", "120", "sdfsdf@123.com",
+		// false, new Date()));
+		// list.add(new School(3, "3", "zsf", "3", "119", "sdfsdf@123.com",
+		// true, new Date()));
+		// list.add(new School(4, "zhku", "zsf", "sdfsdf", "7834235",
+		// "sdfsdf@123.com", true, new Date(1345335)));
+		return list;
+	}
+
+	@Override
+	public boolean addSchool(School school) {
+		boolean result = false;
+		try {
+			String sql = "insert into school(name,president,address,tel,email,status,schoolDate) values(?,?,?,?,?,?,?)";
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd");
+			String date = simpleDateFormat.format(school.getSchoolDate());
+			int r = jdbcTemplate.update(sql, new Object[] { school.getName(), school.getPresident(),
+					school.getAddress(), school.getTel(), school.getEmail(), school.getStatus() ? "1" : "0", date });
+		} catch (Exception e) {
+		}
+		return result;
+	}
+
+}

@@ -1,5 +1,8 @@
 package cn.gqxqd.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +13,8 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.sun.xml.internal.ws.api.server.SDDocument;
 
 import cn.gqxqd.entity.School;
 import cn.gqxqd.service.SchoolService;
@@ -25,27 +30,58 @@ public class SchoolController {
 		this.schoolService = schoolService;
 	}
 
-	@RequestMapping("list")
+	@RequestMapping("school-list")
 	public ModelAndView gotopage(HttpServletRequest request, Model model) {
-		List<School> list = schoolService.findSchoolList();
-		String name = request.getParameter("name");
-		String count = request.getParameter("c");
-		int c = 0;
-		if (count == null || "".equals(count)) {
-			c = 1;
-		} else {
-			c = Integer.parseInt(count);
-		}
-		System.out.println(name);
-
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("name", name);
-		modelAndView.addObject("count", c);
-		modelAndView.addObject("list",list);
 		modelAndView.setViewName("school-list");
+		List<School> list = schoolService.findSchoolList();
+		modelAndView.addObject("list", list);
+		// String name = request.getParameter("name");
+		// String count = request.getParameter("c");
+		// int c = 0;
+		// if (count == null || "".equals(count)) {
+		// c = 1;
+		// } else {
+		// c = Integer.parseInt(count);
+		// }
+		// System.out.println(name);
+
+		// modelAndView.addObject("name", name);
+		// modelAndView.addObject("count", c);
 		// request.setAttribute("name", "jack and rose");
 		// request.setAttribute("user", "user");
 		return modelAndView;
+	}
+
+	@RequestMapping("school-add")
+	public ModelAndView addSchoolPage(HttpServletRequest request, Model model) throws ParseException {
+		String method = request.getMethod();
+		method = method.toLowerCase();
+		if ("post".equals(method)) {
+			ModelAndView modelAndView = new ModelAndView();
+			String name = request.getParameter("name");
+			String president = request.getParameter("president");
+			String address = request.getParameter("address");
+			String tel = request.getParameter("tel");
+			String email = request.getParameter("email");
+			String schoolDateStr = request.getParameter("schoolDate");
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			Date schoolDate = simpleDateFormat.parse(schoolDateStr);
+			System.out.println(schoolDateStr);
+			School school = new School(null, name, president, address, tel, email, true, schoolDate);
+			System.out.println(school.toString());
+			if (schoolService.addSchool(school)) {
+				System.out.println("add success...");
+			}else{
+				System.out.println("error...");
+			}
+			modelAndView.setViewName("school-add");
+			return modelAndView;
+		} else {
+			ModelAndView modelAndView = new ModelAndView();
+			modelAndView.setViewName("school-add");
+			return modelAndView;
+		}
 	}
 
 	// ModelMap是Model接口的实现类，同样可以通过ModelMap向页面传输数据

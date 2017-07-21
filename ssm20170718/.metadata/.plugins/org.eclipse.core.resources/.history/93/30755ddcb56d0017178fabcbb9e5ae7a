@@ -1,0 +1,25 @@
+package cn.gqxqd.dao.impl;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import cn.gqxqd.dao.SchoolDao;
+import cn.gqxqd.entity.School;
+
+@Repository("schoolDao")
+public class SchoolDaoImp implements SchoolDao {
+
+	@Override
+	public List<School> findSchoolList() {
+		List<School> list = new ArrayList<>();
+		list.add(new School(1, "1", "zsf", "1", "110", "sdfsdf@123.com", true, new Date()));
+		list.add(new School(2, "2", "zsf", "2", "120", "sdfsdf@123.com", false, new Date()));
+		list.add(new School(3, "3", "zsf", "3", "119", "sdfsdf@123.com", true, new Date()));
+		list.add(new School(4, "zhku", "zsf", "sdfsdf", "7834235", "sdfsdf@123.com", true, new Date(1345335)));
+		return list;
+	}
+
+}
