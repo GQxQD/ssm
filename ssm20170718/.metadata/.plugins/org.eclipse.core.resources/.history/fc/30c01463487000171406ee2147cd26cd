@@ -1,0 +1,19 @@
+package cn.gqxqd.service.impl;
+
+import cn.gqxqd.service.UserService;
+
+public class UserServiceImpl implements UserService {
+	
+	private String error;
+	
+	public String getError() {
+		return error;
+	}
+
+	@Override
+	public boolean login(String username, String password) {
+		
+		return false;
+	}
+
+}

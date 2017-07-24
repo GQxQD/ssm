@@ -19,10 +19,11 @@
 <body>
 <div class="container">
 	<div class="clearfix">
-		<a class="btn btn-success pull-right" href="?"><span class="glyphicon glyphicon-search"></span> Select All</a>
+		<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add a student</button>
+		<a class="btn btn-info pull-right" href="?">Select All</a>
 		<form action="" class="form-inline pull-right">
 			<input type="text" name="id" class="form-control" placeHolder="Enter a student id!">
-			<button type="submit" class="form-control btn btn-primary">search</button>
+			<button type="submit" class="form-control btn btn-primary"><span class="glyphicon glyphicon-search"></span> search</button>
 		</form>
 	</div>
 	<hr class="bg-danger">

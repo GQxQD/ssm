@@ -1,0 +1,28 @@
+package cn.gqxqd.service.impl;
+
+import cn.gqxqd.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	private String error;
+
+	public String getError() {
+		return error;
+	}
+
+	@Override
+	public boolean login(String username, String password) {
+		if (username == null || password == null) {
+			this.error = "用户名或密码不能为空！";
+			return false;
+		}
+		username = username.trim();
+		password = password.trim();
+		if ("".equals(username) || "".equals(password)) {
+			this.error = "用户名或密码不能为空！";
+			return false;
+		}
+		return false;
+	}
+
+}

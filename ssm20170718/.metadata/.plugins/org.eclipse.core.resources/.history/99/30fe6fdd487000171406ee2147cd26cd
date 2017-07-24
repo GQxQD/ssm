@@ -1,0 +1,30 @@
+package cn.gqxqd.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("user")
+public class UserController {
+	
+	@RequestMapping("login")
+	public String login(HttpServletRequest request,HttpServletResponse response){
+		String method = request.getMethod().toLowerCase();
+		request.getSession().setAttribute("user", "kohai");
+		if ("post".equals(method)) {
+			// 验证登录
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
+			if ("admin".equals(username) && "123".equals(password)) {
+				System.out.println("login success...");
+				return "common/success";
+			}else{
+				System.out.println("login failure...");
+			}
+		}
+		return "user/login";
+	}
+}
