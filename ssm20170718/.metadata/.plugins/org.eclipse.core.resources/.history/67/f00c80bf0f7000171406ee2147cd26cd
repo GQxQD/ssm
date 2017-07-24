@@ -1,0 +1,6 @@
+package cn.gqxqd.controller;
+
+@Con
+public class StudentController {
+
+}

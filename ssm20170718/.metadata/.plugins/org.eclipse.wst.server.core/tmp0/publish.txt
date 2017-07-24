@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Fri Jul 21 17:30:04 CST 2017
-org.eclipse.jst.jee.server\:/binary\:D\:\\JavaEE\\ssm\\ssm20170718\\school\\WebContent\\WEB-INF\\lib\\spring-web-4.1.3.RELEASE.jar=WEB-INF/lib/spring-web-4.1.3.RELEASE.jar
-org.eclipse.jst.jee.server\:/binary\:D\:\\JavaEE\\ssm\\ssm20170718\\school\\WebContent\\WEB-INF\\lib\\log4j-core-2.0-rc1.jar=WEB-INF/lib/log4j-core-2.0-rc1.jar
+#Mon Jul 24 09:32:16 CST 2017
+org.eclipse.jst.jee.server\:/binary\:D\:\\JavaEE\\ssm\\ssm20170718\\student\\WebContent\\WEB-INF\\lib\\log4j-core-2.0-rc1.jar=WEB-INF/lib/log4j-core-2.0-rc1.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\JavaEE\\ssm\\ssm20170718\\student\\WebContent\\WEB-INF\\lib\\spring-web-4.1.3.RELEASE.jar=WEB-INF/lib/spring-web-4.1.3.RELEASE.jar
