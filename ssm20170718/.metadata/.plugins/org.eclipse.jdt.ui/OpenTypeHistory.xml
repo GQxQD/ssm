@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=school/src&lt;cn.gqxqd.dao{SchoolDao.java[SchoolDao" modifiers="513" timestamp="1500625876077"/>
-<typeInfo handle="=school/src&lt;cn.gqxqd.service{SchoolService.java[SchoolService" modifiers="513" timestamp="1500626300511"/>
-<typeInfo handle="=school/D:\/JavaEE\/ssm\/ssm20170718\/school\/WebContent\/WEB-INF\/lib\/spring-jdbc-4.1.3.RELEASE.jar&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1500431085401"/>
+<typeInfo handle="=student/D:\/JavaEE\/ssm\/ssm20170718\/student\/WebContent\/WEB-INF\/lib\/spring-jdbc-4.1.3.RELEASE.jar&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1500431085401"/>
+<typeInfo handle="=student/C:\/Program Files\/Java\/jre1.8.0_101\/lib\/rt.jar&lt;java.sql(RowId.class[RowId" modifiers="1537" timestamp="1473136517500"/>
+<typeInfo handle="=student/src&lt;cn.gqxqd.service{StudentService.java[StudentService" modifiers="513" timestamp="1500867046122"/>
+<typeInfo handle="=student/src&lt;cn.gqxqd.service{UserService.java[UserService" modifiers="513" timestamp="1500884471847"/>
 </typeInfoHistroy>

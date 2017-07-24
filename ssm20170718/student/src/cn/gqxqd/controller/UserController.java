@@ -11,7 +11,7 @@ import cn.gqxqd.service.UserService;
 
 @Controller
 @RequestMapping("user")
-public class UserController {
+public class UserController extends BaseController{
 
 	@Autowired
 	private UserService userService;
@@ -19,7 +19,6 @@ public class UserController {
 	@RequestMapping("login")
 	public String login(HttpServletRequest request, HttpServletResponse response) {
 		String method = request.getMethod().toLowerCase();
-		request.getSession().setAttribute("user", "kohai");
 		if ("post".equals(method)) {
 			// 验证登录
 			String username = request.getParameter("username");
@@ -29,7 +28,8 @@ public class UserController {
 				return "common/success";
 			} else {
 				System.out.println("login failure..." + userService.getError());
-				return "common/error";
+				return this.error(request, userService.getError(), null, 5);
+//				return "common/error";
 			}
 		}
 		return "user/login";

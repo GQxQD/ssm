@@ -31,9 +31,17 @@
 					<label for="password">密码</label>
 					<input type="password" class="form-control" id="password" name="password" placeholder="password">
 				</div>
+				<div class="form-group">
+					<label for="identity">身份</label>
+					<select class="form-control" name="identity" id="identity">
+						<option value="user" >普通用户</option>
+						<option value="student" >学生</option>
+					</select>
+				</div>
 			</div>
-			<div class="panel-footer">
-				<button class="form-control btn btn-primary">登录</button>
+			<div class="panel-footer clearfix">
+				<button class="btn btn-primary pull-right">登录</button>
+				<button class="btn btn-default pull-left">登录</button>
 			</div>
 		</div>
 		</form>

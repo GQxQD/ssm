@@ -1,0 +1,7 @@
+package cn.gqxqd.controller;
+
+public class BaseController {
+	protected String error(String msg, String url, int timeout) {
+		return null;
+	}
+}
