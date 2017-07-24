@@ -1,0 +1,22 @@
+package cn.gqxqd.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cn.gqxqd.entity.Student;
+import cn.gqxqd.mapper.StudentMapper;
+import sun.print.resources.serviceui;
+
+public class StudentServiceImpl implements StudentService {
+
+	@Autowired
+	private StudentMapper studentMapper;
+	
+	@Override
+	public List<Student> findAll() {
+		List<Student> list = studentMapper.findAll();
+		return list;
+	}
+
+}

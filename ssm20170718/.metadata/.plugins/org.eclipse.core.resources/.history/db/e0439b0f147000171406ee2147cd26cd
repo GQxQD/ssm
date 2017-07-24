@@ -1,0 +1,18 @@
+package cn.gqxqd.mapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import cn.gqxqd.entity.Student;
+
+public class StudentMapper implements RowMapper<Student> {
+
+	@Override
+	public Student mapRow(ResultSet arg0, int arg1) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

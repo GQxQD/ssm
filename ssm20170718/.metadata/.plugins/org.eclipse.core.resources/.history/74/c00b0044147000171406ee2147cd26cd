@@ -1,0 +1,15 @@
+package cn.gqxqd.service;
+
+import java.util.List;
+
+import cn.gqxqd.entity.Student;
+
+public class StudentServiceImpl implements StudentService {
+
+	@Override
+	public List<Student> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
