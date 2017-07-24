@@ -6,4 +6,5 @@ import cn.gqxqd.entity.Student;
 
 public interface StudentService {
 	List<Student> findAll();
+	Student getStudentById(int id);
 }

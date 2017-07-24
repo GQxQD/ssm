@@ -7728,3 +7728,9 @@ Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Failure to tra
 
 !ENTRY org.eclipse.jface.text 2 0 2017-07-24 10:46:18.120
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-07-24 11:55:35.666
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-07-24 11:55:35.667
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

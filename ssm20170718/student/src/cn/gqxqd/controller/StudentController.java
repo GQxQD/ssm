@@ -1,5 +1,6 @@
 package cn.gqxqd.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +22,17 @@ public class StudentController {
 
 	@RequestMapping("index")
 	public String index(HttpServletRequest request, HttpServletResponse response) {
-		List<Student> list = studentService.findAll();
+		String idString = request.getParameter("id");
+		List<Student> list = new ArrayList<>();
+		if (idString != null && !"".equals(idString)) {
+			int id = Integer.parseInt(idString.trim());
+			Student student = studentService.getStudentById(id);
+			if (student != null) {
+				list.add(student);
+			}
+		} else {
+			list = studentService.findAll();
+		}
 		request.setAttribute("studentList", list);
 		return "index";
 	}

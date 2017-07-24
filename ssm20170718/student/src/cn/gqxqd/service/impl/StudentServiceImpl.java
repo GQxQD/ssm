@@ -21,4 +21,9 @@ public class StudentServiceImpl implements StudentService {
 		return list;
 	}
 
+	@Override
+	public Student getStudentById(int id) {
+		return studentMapper.get(id);
+	}
+
 }
