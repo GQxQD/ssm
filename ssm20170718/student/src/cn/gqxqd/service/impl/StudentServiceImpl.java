@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cn.gqxqd.entity.Student;
-import cn.gqxqd.entity.User;
 import cn.gqxqd.mapper.StudentMapper;
+import cn.gqxqd.mapper.StudentSimpleMapper;
 import cn.gqxqd.service.StudentService;
 
 @Service
@@ -15,6 +15,8 @@ public class StudentServiceImpl implements StudentService {
 
 	@Autowired
 	private StudentMapper studentMapper;
+	@Autowired
+	private StudentSimpleMapper simpleMapper;
 	private String error;
 
 	public String getError() {
@@ -83,6 +85,11 @@ public class StudentServiceImpl implements StudentService {
 			return false;
 		}
 		return true;
+	}
+
+	@Override
+	public List<Student> getStudentList() {
+		return simpleMapper.getStudentList();
 	}
 
 }

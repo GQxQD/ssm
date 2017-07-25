@@ -1,5 +1,7 @@
 package cn.gqxqd.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -7,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import cn.gqxqd.entity.Student;
 import cn.gqxqd.service.StudentService;
 import cn.gqxqd.service.UserService;
 
@@ -19,6 +22,17 @@ public class UserController extends BaseController {
 	@Autowired
 	private StudentService studentService;
 
+	@RequestMapping("index")
+	public String index(HttpServletRequest request, HttpServletResponse response) {
+		String check = this.checkUserStatus(request);
+		if (check != null) {
+			return check;
+		}
+		List<Student> list = studentService.getStudentList();
+		request.setAttribute("studentList", list);
+		return "user/index";
+	}
+
 	@RequestMapping("login")
 	public String login(HttpServletRequest request, HttpServletResponse response) {
 		String method = request.getMethod().toLowerCase();
@@ -29,18 +43,16 @@ public class UserController extends BaseController {
 			String identity = request.getParameter("identity");
 			if ("user".equals(identity)) {
 				if (userService.login(username, password)) {
-					System.out.println("user login success...");
-					return this.success(request, "登录成功！", null);
+					request.getSession().setAttribute("user", username);
+					return this.success(request, "登录成功！", "index.html");
 				} else {
-					System.out.println("user login failure..." + userService.getError());
 					return this.error(request, userService.getError());
 				}
 			} else if ("student".equals(identity)) {
 				if (studentService.login(username, password)) {
-					System.out.println("student:" + username + " login success...");
-					return this.success(request, "登录成功！", null);
+					request.getSession().setAttribute("user", username);
+					return this.success(request, "登录成功！", "index.html");
 				} else {
-					System.out.println("student:" + username + " login failure...");
 					return this.error(request, studentService.getError());
 				}
 			} else {
@@ -74,5 +86,11 @@ public class UserController extends BaseController {
 		} else {
 			return "user/register";
 		}
+	}
+
+	@RequestMapping("logout")
+	public String logout(HttpServletRequest request, HttpServletResponse response) {
+		request.getSession().setAttribute("user", null);
+		return this.success(request, "注销成功！", "login.html");
 	}
 }

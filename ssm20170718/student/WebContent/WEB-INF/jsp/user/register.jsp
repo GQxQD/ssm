@@ -32,7 +32,7 @@
 					<input type="password" class="form-control" id="password" name="password" placeholder="password">
 				</div>
 				<div class="form-group">
-					<label for="password">确认密码</label>
+					<label for="password2">确认密码</label>
 					<input type="password" class="form-control" id="password2" name="password2" placeholder="password again">
 				</div>
 				<div class="form-group">

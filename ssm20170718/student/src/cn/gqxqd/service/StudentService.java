@@ -8,6 +8,7 @@ public interface StudentService {
 	String getError();
 
 	List<Student> findAll();
+	List<Student> getStudentList();
 
 	Student getStudentById(int id);
 
