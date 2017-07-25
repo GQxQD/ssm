@@ -1,0 +1,12 @@
+package cn.gqxqd.mapper;
+
+import java.util.List;
+
+import cn.gqxqd.entity.Student;
+import cn.gqxqd.entity.User;
+
+public interface StudentMapper{
+	List<Student> findAll();
+	User findUser(User user);
+	Student get(int id);
+}

@@ -14,4 +14,8 @@
 			and password = #{password}
 		</if>
 	</select>
+	<insert id="saveUser" parameterType="cn.gqxqd.entity.User" useGeneratedKeys="true" keyProperty="uid">
+		insert into user(uid,username,password,gender,birthday,email,phone)
+		values(#{uid},#{username},#{password},#{gender},#{birthday},#{email},#{phone})
+	</insert>
 </mapper>

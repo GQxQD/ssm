@@ -4,4 +4,5 @@ import cn.gqxqd.entity.User;
 
 public interface UserMapper {
 	User findUser(User user);
+	int saveUser(User user);
 }

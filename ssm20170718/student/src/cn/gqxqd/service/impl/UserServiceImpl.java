@@ -41,4 +41,34 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
+	@Override
+	public boolean register(String username, String password) {
+		if (username == null || password == null) {
+			this.error = "用户名或密码不能为空！";
+			return false;
+		}
+		username = username.trim();
+		password = password.trim();
+		if ("".equals(username) || "".equals(password)) {
+			this.error = "用户名或密码不能为空！";
+			return false;
+		}
+		User user = new User();
+		user.setUsername(username);
+		user = userMapper.findUser(user);
+		if (user != null) {
+			this.error = "用户名已经存在！";
+			return false;
+		}
+		user = new User();
+		user.setUsername(username);
+		user.setPassword(password);
+		int uid = userMapper.saveUser(user);
+		if (uid < 0) {
+			this.error = "注册失败！";
+			return false;
+		}
+		return true;
+	}
+
 }

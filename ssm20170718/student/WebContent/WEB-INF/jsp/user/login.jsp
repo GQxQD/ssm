@@ -40,8 +40,8 @@
 				</div>
 			</div>
 			<div class="panel-footer clearfix">
-				<button class="btn btn-primary pull-right">登录</button>
-				<button class="btn btn-default pull-left">登录</button>
+				<button type="submit" class="btn btn-primary pull-right">登录</button>
+				<a href="register.html" class="btn btn-default pull-left">注册</a>
 			</div>
 		</div>
 		</form>
