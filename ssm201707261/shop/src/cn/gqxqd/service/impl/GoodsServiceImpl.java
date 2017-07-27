@@ -41,4 +41,13 @@ public class GoodsServiceImpl implements GoodsService {
 		return false;
 	}
 
+	@Override
+	public boolean deleteGoods(int id) {
+		if (goodsMapper.deleteGoods(id) > 0) {
+			return true;
+		}
+		this.error = "删除未能成功，没有影响任何数据！";
+		return false;
+	}
+
 }

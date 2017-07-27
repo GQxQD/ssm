@@ -1,7 +1,6 @@
 package cn.gqxqd.controller;
 
 import java.io.IOException;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 
@@ -11,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.gqxqd.entity.Goods;
@@ -38,16 +38,6 @@ public class GoodsController {
 	public String add(Goods goods) {
 		HashMap<String, Object> result = new HashMap<>();
 		try {
-			// String title = request.getParameter("title");
-			// System.out.println("title:"+title);
-			// String description = request.getParameter("description");
-			// try {
-			// int category =
-			// Integer.parseInt(request.getParameter("category"));
-			// int stock = Integer.parseInt(request.getParameter("stock"));
-			// double price = Double.valueOf(request.getParameter("price"));
-			// Goods goods = new Goods(null, title, category, description,
-			// price, stock, null);
 			if (goodsService.addGoods(goods)) {
 				result.put("flag", 0);
 				result.put("msg", "商品添加成功！");
@@ -55,14 +45,30 @@ public class GoodsController {
 				result.put("flag", 1);
 				result.put("msg", goodsService.getError());
 			}
-			// } catch (Exception e) {
-			// throw new Exception("商品分类、库存或价格格式不正确！");
-			// }
 		} catch (Exception e) {
 			result.put("flag", 1);
 			result.put("msg", e.getMessage());
 		}
 		return JSONObject.fromObject(result).toString();
-		// return goods.toString();
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "delete", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
+	public String delete(Integer id) {
+		System.out.println("delete id is " + id);
+		HashMap<String, Object> result = new HashMap<>();
+		try {
+			if (goodsService.deleteGoods(id)) {
+				result.put("flag", 0);
+				result.put("msg", "商品删除成功！");
+			} else {
+				result.put("flag", 1);
+				result.put("msg", goodsService.getError());
+			}
+		} catch (Exception e) {
+			result.put("flag", 1);
+			result.put("msg", e.getMessage());
+		}
+		return JSONObject.fromObject(result).toString();
 	}
 }

@@ -15,6 +15,19 @@ var goods = new Vue({
                 console.log(response);
                 this.list = response.body;
             });
+        },
+        deleteGoods: function (goods) {
+            if (confirm('确认要删除' + goods.title + '吗？')) {
+                this.$http.post('/shop/goods/delete.html', {id: goods.id},{emulateJSON: true}).then(function (response) {
+                    console.log(response);
+                    if (response.body.flag == 0) {
+                        alert('删除成功！');
+                        this.getGoodsList();
+                    } else {
+                        alert('删除失败，' + response.body.msg);
+                    }
+                });
+            }
         }
     }
 });
