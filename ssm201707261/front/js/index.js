@@ -20,30 +20,30 @@ new Vue({
 });
 
 new Vue({
-   el:'#addGoodsModal',
-   methods:{
-       addGoods:function () {
-           //var formData = new FormData(document.getElementById('add-goods-form'));
-           // this.$http.get('/shop/goods/add.html',{'title':'title'}).then(function (response) {
-           //     console.log(response);
-           // });
-           // this.$http({
-           //     method:'get',
-           //     data:{title:'title'},
-           //     url:'/shop/goods/add.html'
-           // }).then(function (response) {
-           //     console.log(response);
-           // });
-           $.ajax({
-               url:'/shop/goods/add.html',
-               data:{title:'title'},
-               dataType:'json',
-               success:function (data) {
-                   console.log(data);
-               }
-           });
-       }
-   }
+    el: '#addGoodsModal',
+    methods: {
+        addGoods: function () {
+            var formData = new FormData(document.getElementById('add-goods-form'));
+            this.$http.post('/shop/goods/add.html', formData, {emulateJSON: true}).then(function (response) {
+                console.log(response);
+            });
+            // this.$http({
+            //     method:'get',
+            //     data:{title:'title'},
+            //     url:'/shop/goods/add.html'
+            // }).then(function (response) {
+            //     console.log(response);
+            // });
+            // $.ajax({
+            //     url:'/shop/goods/add.html',
+            //     data:{title:'title'},
+            //     dataType:'json',
+            //     success:function (data) {
+            //         console.log(data);
+            //     }
+            // });
+        }
+    }
 });
 
 // goodsList.list = [{

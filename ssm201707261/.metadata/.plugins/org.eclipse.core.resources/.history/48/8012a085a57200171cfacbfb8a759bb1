@@ -35,7 +35,7 @@ public class GoodsController {
 
 	@ResponseBody
 	@RequestMapping(value = "add", produces = "text/html; charset=utf-8")
-	public String add(Goods goods){
+	public String add(String title){
 //		HashMap<String, Object> result = new HashMap<>();
 //		try {
 //			String title = request.getParameter("title");
@@ -61,6 +61,6 @@ public class GoodsController {
 //			result.put("msg", e.getMessage());
 //		}
 //		return JSONObject.fromObject(result).toString();
-		return goods.toString();
+		return title;
 	}
 }
