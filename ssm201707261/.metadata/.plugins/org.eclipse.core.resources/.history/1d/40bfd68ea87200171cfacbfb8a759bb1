@@ -12,6 +12,6 @@ public interface GoodsMapper {
 	@Select("select * from shop_goods")
 	List<Goods> getGoodsList();
 	
-	@Insert("insert into shop_goods(title,category,description,price,stock,img) values(#{title},#{category},#{description},#{price},#{stock},#{img})")
+	@Insert("insert into shop_goods(title,categary,description,price,stock,img) values(#{title},#{categary},#{description},#{price},#{stock},#{img})")
 	int addGoods(Goods goods);
 }

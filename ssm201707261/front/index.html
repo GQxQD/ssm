@@ -55,23 +55,23 @@
                 <form id="add-goods-form">
                     <div class="form-group">
                         <label for="goods-title">商品名称</label>
-                        <input class="form-control" id="goods-title" name="title" placeholder="请输入商品名称">
+                        <input class="form-control" id="goods-title" name="title" v-model="title" placeholder="请输入商品名称">
                     </div>
                     <div class="form-group">
                         <label for="goods-category">商品分类</label>
-                        <input class="form-control" id="goods-category" name="category" placeholder="请输入商品分类">
+                        <input class="form-control" id="goods-category" name="category" v-model="category" placeholder="请输入商品分类">
                     </div>
                     <div class="form-group">
                         <label for="goods-price">商品价格</label>
-                        <input class="form-control" id="goods-price" name="price" placeholder="请输入商品价格">
+                        <input class="form-control" id="goods-price" name="price" v-model="price" placeholder="请输入商品价格">
                     </div>
                     <div class="form-group">
                         <label for="goods-stock">商品库存</label>
-                        <input type="number" class="form-control" id="goods-stock" name="stock" placeholder="请输入商品库存">
+                        <input type="number" class="form-control" id="goods-stock" name="stock" v-model="stock" placeholder="请输入商品库存">
                     </div>
                     <div class="form-group">
                         <label for="goods-description">商品描述</label>
-                        <textarea class="form-control" id="goods-description" name="description" placeholder="请输入商品描述..."></textarea>
+                        <textarea class="form-control" id="goods-description" name="description" v-model="description" placeholder="请输入商品描述..."></textarea>
                     </div>
                 </form>
             </div>

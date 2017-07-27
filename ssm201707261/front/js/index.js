@@ -1,4 +1,4 @@
-new Vue({
+var goods = new Vue({
     el: '#shop',
     data: {
         list: null
@@ -21,27 +21,27 @@ new Vue({
 
 new Vue({
     el: '#addGoodsModal',
+    data: {
+        title: '',
+        category: '',
+        price: '',
+        stock: '',
+        description: ''
+    },
     methods: {
         addGoods: function () {
-            var formData = new FormData(document.getElementById('add-goods-form'));
-            this.$http.post('/shop/goods/add.html', formData, {emulateJSON: true}).then(function (response) {
+            console.log(this.title);
+            this.$http.post('/shop/goods/add.html', {
+                title: this.title,
+                category: this.category,
+                price: this.price,
+                stock: this.stock,
+                description: this.description
+            }, {emulateJSON: true}).then(function (response) {
                 console.log(response);
+                alert(response.body.msg);
+                goods.getGoodsList();
             });
-            // this.$http({
-            //     method:'get',
-            //     data:{title:'title'},
-            //     url:'/shop/goods/add.html'
-            // }).then(function (response) {
-            //     console.log(response);
-            // });
-            // $.ajax({
-            //     url:'/shop/goods/add.html',
-            //     data:{title:'title'},
-            //     dataType:'json',
-            //     success:function (data) {
-            //         console.log(data);
-            //     }
-            // });
         }
     }
 });
