@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container" id="shop">
+    <div class="h1 text-center">商品列表</div>
+    <div class="row" id="action">
+        <button class="btn btn-success" id="add-goods" data-toggle="modal" data-target="#addGoodsModal">添加商品</button>
+    </div>
+    <div class="row" id="goods-list">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>商品编号</th>
+                <th>商品分类</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <th>商品库存</th>
+                <th>商品操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(goods,index) in list">
+                <th>{{index+1}}</th>
+                <td class="goods-id">{{goods.id}}</td>
+                <td class="goods-category"><template v-if="goods.category==0">未分类</template><template v-else>{{goods.category}}</template></td>
+                <td class="goods-title"><img src="img/1.jpg" alt="1.jpg">{{goods.title}}</td>
+                <td class="goods-price">{{goods.price}}</td>
+                <td class="goods-stock">{{goods.stock}}</td>
+                <td class="text-center">
+                    <button class="btn btn-danger">删除</button>
+                </td>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--添加商品模态框-->
+<div class="modal fade" id="addGoodsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加商品</h4>
+            </div>
+            <div class="modal-body">
+                <form id="add-goods-form">
+                    <div class="form-group">
+                        <label for="goods-title">商品名称</label>
+                        <input class="form-control" id="goods-title" name="title" placeholder="请输入商品名称">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-category">商品分类</label>
+                        <input class="form-control" id="goods-category" name="category" placeholder="请输入商品分类">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-price">商品价格</label>
+                        <input class="form-control" id="goods-price" name="price" placeholder="请输入商品价格">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-stock">商品库存</label>
+                        <input type="number" class="form-control" id="goods-stock" name="stock" placeholder="请输入商品库存">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-description">商品描述</label>
+                        <textarea class="form-control" id="goods-description" name="description" placeholder="请输入商品描述..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-success" @click="addGoods">确认添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/vue-resource.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

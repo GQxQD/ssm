@@ -1,0 +1,10 @@
+package cn.gqxqd.entity;
+
+public class Goods {
+	private Integer id;// 商品编号
+	private String title;// 商品名称
+	private Integer categary;// 商品分类
+	private String description;// 商品描述
+	private Double price;// 商品价格
+	private Integer stock;// 商品库存
+}

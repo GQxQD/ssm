@@ -1,0 +1,50 @@
+package cn.gqxqd.controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.gqxqd.entity.Goods;
+import cn.gqxqd.service.GoodsService;
+import net.sf.json.JSONArray;
+
+@Controller
+@RequestMapping("goods")
+public class GoodsController {
+
+	@Autowired
+	private GoodsService goodsService;
+
+	@ResponseBody
+	@RequestMapping(value = "list", produces = "text/html; charset=utf-8")
+	public String list(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		List<Goods> goodsList = goodsService.getGoodsList();
+		System.out.println(goodsList.get(0));
+		return JSONArray.fromObject(goodsList).toString();
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "add", produces = "text/html; charset=utf-8")
+	public String add(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		try {
+			String title = request.getParameter("title");
+			String category = request.getParameter("category");
+			String price = request.getParameter("price");
+			String stock = request.getParameter("stock");
+			String description = request.getParameter("description");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		List<Goods> goodsList = goodsService.getGoodsList();
+		System.out.println(goodsList.get(0));
+		return JSONArray.fromObject(goodsList).toString();
+	}
+}

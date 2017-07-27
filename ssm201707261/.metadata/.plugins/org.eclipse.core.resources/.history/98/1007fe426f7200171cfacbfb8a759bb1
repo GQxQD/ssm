@@ -1,0 +1,16 @@
+package cn.gqxqd.service.impl;
+
+import java.util.List;
+
+import cn.gqxqd.entity.Goods;
+import cn.gqxqd.service.GoodsService;
+
+public class GoodsServiceImpl implements GoodsService {
+
+	@Override
+	public List<Goods> getGoodsList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
