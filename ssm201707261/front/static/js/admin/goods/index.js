@@ -72,6 +72,8 @@ var goods = new Vue({
     el: '#shop',
     data: {
         search_key: '',
+        listLoading: true,
+        loadingText: '数据加载中...',
         list: null
     },
     mounted: function () {
@@ -82,15 +84,18 @@ var goods = new Vue({
     computed: {},
     methods: {
         getGoodsList: function (flag) {
-            // alert(flag);
-            if (flag!==true) {
-                console.log(this.search_key+'...');
+            this.listLoading = true;
+            if (flag !== true) {
+                console.log(this.search_key + '...');
                 this.search_key = '';
             }
             console.log(this.search_key);
             this.$http.get('/shop/goods/list.html?key=' + this.search_key).then(function (response) {
                 console.log(response);
+                this.listLoading = false;
                 this.list = response.body;
+            }, function (response) {
+                this.loadingText = '数据加载失败！';
             });
         },
         showAdd: function () {
