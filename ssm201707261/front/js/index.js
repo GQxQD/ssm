@@ -1,24 +1,114 @@
+var modal = new Vue({
+    el: '#goodsModal',
+    data: {
+        isAddAction: true,
+        m_title: '',
+        m_btn: '',
+        goods: {
+            title: '',
+            category: '',
+            price: '',
+            stock: '',
+            description: ''
+        },
+    },
+    mounted: function () {
+        this.$nextTick(function () {
+            this.clearGoodsInfo();
+        })
+    },
+    methods: {
+        clearGoodsInfo: function () {
+            this.goods = {
+                title: '',
+                category: '',
+                price: '',
+                stock: '',
+                description: ''
+            }
+        },
+        doAction: function () {
+            console.log(this.isAddAction);
+            if (!this.isAddAction) {
+                this.updateGoods();
+            } else {
+                this.addGoods();
+            }
+        },
+        addGoods: function () {
+            console.log(this.goods);
+            this.$http.post('/shop/goods/add.html', this.goods, {emulateJSON: true}).then(function (response) {
+                console.log(response);
+                alert(response.body.msg);
+                if (response.body.flag == 0) {
+                    goods.getGoodsList();
+                    this.clearGoodsInfo();
+                    $('#goodsModal').modal('hide');
+                }
+            }, function (response) {
+                console.log(response);
+                alert('发生未知错误，错误代码为' + response.status);
+            });
+        },
+        updateGoods: function () {
+            console.log(this.goods);
+            this.$http.post('/shop/goods/update.html', this.goods, {emulateJSON: true}).then(function (response) {
+                console.log(response);
+                alert(response.body.msg);
+                if (response.body.flag == 0) {
+                    goods.getGoodsList();
+                    this.clearGoodsInfo();
+                    $('#goodsModal').modal('hide');
+                }
+            }, function (response) {
+                console.log(response);
+                alert('发生未知错误，错误代码为' + response.status);
+            });
+        }
+    }
+});
+
 var goods = new Vue({
     el: '#shop',
     data: {
+        search_key: '',
         list: null
     },
     mounted: function () {
-        // var _this = this;
         this.$nextTick(function () {
             this.getGoodsList();
         })
     },
+    computed: {},
     methods: {
-        getGoodsList: function () {
-            this.$http.get('/shop/goods/list.html').then(function (response) {
+        getGoodsList: function (flag) {
+            // alert(flag);
+            if (flag!==true) {
+                console.log(this.search_key+'...');
+                this.search_key = '';
+            }
+            console.log(this.search_key);
+            this.$http.get('/shop/goods/list.html?key=' + this.search_key).then(function (response) {
                 console.log(response);
                 this.list = response.body;
             });
         },
+        showAdd: function () {
+            modal.m_title = '添加商品';
+            modal.m_btn = '确认添加';
+            modal.isAddAction = true;
+            $('#goodsModal').modal('show');
+        },
+        showUpdate: function (goods) {
+            modal.m_title = '修改商品';
+            modal.m_btn = '确认修改';
+            modal.isAddAction = false;
+            modal.goods = goods;
+            $('#goodsModal').modal('show');
+        },
         deleteGoods: function (goods) {
             if (confirm('确认要删除' + goods.title + '吗？')) {
-                this.$http.post('/shop/goods/delete.html', {id: goods.id},{emulateJSON: true}).then(function (response) {
+                this.$http.post('/shop/goods/delete.html', {id: goods.id}, {emulateJSON: true}).then(function (response) {
                     console.log(response);
                     if (response.body.flag == 0) {
                         alert('删除成功！');
@@ -32,32 +122,6 @@ var goods = new Vue({
     }
 });
 
-new Vue({
-    el: '#addGoodsModal',
-    data: {
-        title: '',
-        category: '',
-        price: '',
-        stock: '',
-        description: ''
-    },
-    methods: {
-        addGoods: function () {
-            console.log(this.title);
-            this.$http.post('/shop/goods/add.html', {
-                title: this.title,
-                category: this.category,
-                price: this.price,
-                stock: this.stock,
-                description: this.description
-            }, {emulateJSON: true}).then(function (response) {
-                console.log(response);
-                alert(response.body.msg);
-                goods.getGoodsList();
-            });
-        }
-    }
-});
 
 // goodsList.list = [{
 //     "category": 0,

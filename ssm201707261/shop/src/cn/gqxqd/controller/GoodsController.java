@@ -1,6 +1,7 @@
 package cn.gqxqd.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -27,8 +28,14 @@ public class GoodsController {
 
 	@ResponseBody
 	@RequestMapping(value = "list", produces = "text/html; charset=utf-8")
-	public String list(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		List<Goods> goodsList = goodsService.getGoodsList();
+	public String list(String key) {
+		System.out.println(key);
+		List<Goods> goodsList = new ArrayList<>();
+		if (key != null && !"".equals(key.trim())) {
+			goodsList = goodsService.getGoodsListByTitle(key);
+		} else {
+			goodsList = goodsService.getGoodsList();
+		}
 		System.out.println(goodsList.get(0));
 		return JSONArray.fromObject(goodsList).toString();
 	}
@@ -41,6 +48,25 @@ public class GoodsController {
 			if (goodsService.addGoods(goods)) {
 				result.put("flag", 0);
 				result.put("msg", "商品添加成功！");
+			} else {
+				result.put("flag", 1);
+				result.put("msg", goodsService.getError());
+			}
+		} catch (Exception e) {
+			result.put("flag", 1);
+			result.put("msg", e.getMessage());
+		}
+		return JSONObject.fromObject(result).toString();
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "update", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
+	public String update(Goods goods) {
+		HashMap<String, Object> result = new HashMap<>();
+		try {
+			if (goodsService.updateGoods(goods)) {
+				result.put("flag", 0);
+				result.put("msg", "商品修改成功！");
 			} else {
 				result.put("flag", 1);
 				result.put("msg", goodsService.getError());

@@ -9,7 +9,7 @@
 }
 
 #goods-list tr td, #goods-list tr th {
-    vertical-align: middle !important;
+    /*vertical-align: middle !important;*/
 }
 
 #goods-list .goods-title {
