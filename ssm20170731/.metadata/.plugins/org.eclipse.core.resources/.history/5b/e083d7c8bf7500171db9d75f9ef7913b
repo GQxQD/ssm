@@ -1,8 +1,13 @@
 package cn.gqxqd.service;
 
+import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+
+import com.sun.org.apache.regexp.internal.recompile;
 
 import cn.gqxqd.dao.UserDao;
 import cn.gqxqd.entity.User;
@@ -44,7 +49,7 @@ public class UserServiceImpl implements UserService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			noteResult.setStatus(1);
-			noteResult.setMsg("登录失败！信息：" + e.getMessage());
+			noteResult.setMsg(e.getMessage());
 			return noteResult;
 		}
 		noteResult.setStatus(0);
@@ -56,16 +61,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public NoteResult addUser(String name, String password, String nick) {
 		NoteResult noteResult = new NoteResult();
-		if (name == null || "".equals(name)) {
-			noteResult.setStatus(1);
-			noteResult.setMsg("用户名不能为空！");
-			return noteResult;
-		}
-		if (password == null || "".equals(password)) {
-			noteResult.setStatus(1);
-			noteResult.setMsg("密码不能为空！");
-			return noteResult;
-		}
 		// 检查用户名是否已经存在
 		User user = userDao.findByName(name);
 		if (user != null) {
