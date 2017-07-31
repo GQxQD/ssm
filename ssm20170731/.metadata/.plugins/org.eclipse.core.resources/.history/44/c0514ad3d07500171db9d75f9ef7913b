@@ -50,7 +50,6 @@ function registerUser() {
 			success : function(result) {
 				if (result.status == 0) {
 					alert('注册成功！');
-					$("#back").click();
 				} else {
 					$('#warning_1').show();
 					$('#warning_1 span').html(result.msg);

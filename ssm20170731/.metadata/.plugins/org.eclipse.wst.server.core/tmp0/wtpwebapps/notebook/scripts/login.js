@@ -23,6 +23,7 @@ function registerUser() {
 		$('#warning_2').show();
 		$('#warning_2 span').html('密码为空！');
 	} else if (password.length < 6) {
+		ok = false;
 		$('#warning_2').show();
 		$('#warning_2 span').html('密码长度不能小于6位！');
 	}
@@ -49,6 +50,7 @@ function registerUser() {
 			success : function(result) {
 				if (result.status == 0) {
 					alert('注册成功！');
+					$("#back").click();
 				} else {
 					$('#warning_1').show();
 					$('#warning_1 span').html(result.msg);
