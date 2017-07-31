@@ -1,0 +1,48 @@
+// 我们封装所有有关登录注册的处理
+// 页面一旦加载就要给它增加的单击事件
+$(function() {
+	// 登录
+	$('#login').click(checkLogin);
+});
+
+function checkLogin() {
+	$('#count_span').html('');
+	$('#password_span').html('');
+	var name = $('#count').val().trim();
+	var password = $('#password').val().trim();
+	var ok = true;
+	if (name == "") {
+		ok = false;
+		$('#count_span').html('用户名为空！');
+	}
+	if (password == "") {
+		ok = false;
+		$('#password_span').html('密码为空！');
+	}
+	// 发送AJAX请求到服务器
+	if (ok) {
+		$.ajax({
+			url : base_path + '/user/login.do',
+			type : 'post',
+			data : {
+				name : name,
+				password : password
+			},
+			dataType : 'json',
+			success : function(result) {
+				if (result.status == 0) {
+					var user = result.data;// 获取返回的user信息
+					// cookie
+//					addCookie('uid', user.cn_user_id, 2);
+//					addCookie('uname', user.cn_user_name, 2);
+					window.location.href = 'edit.html';
+				} else {
+					$('#count_span').html(result.msg);
+				}
+			},
+			error : function() {
+				alert('登录异常！');
+			}
+		});
+	}
+}
