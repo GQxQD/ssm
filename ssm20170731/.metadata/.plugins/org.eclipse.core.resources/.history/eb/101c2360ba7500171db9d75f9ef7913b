@@ -4,10 +4,12 @@ import java.util.HashMap;
 
 import javax.annotation.Resource;
 
+import org.apache.tomcat.jni.User;
 import org.springframework.stereotype.Service;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 import cn.gqxqd.dao.UserDao;
-import cn.gqxqd.entity.User;
 import cn.gqxqd.util.NoteResult;
 
 @Service(value="userService")
@@ -23,7 +25,6 @@ public class UserServiceImpl implements UserService {
 		noteResult.setMsg("success");
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("user", new User());
-		map.put("password", "sdgsdfgdfg");
 		noteResult.setData(map);
 		return noteResult;
 	}

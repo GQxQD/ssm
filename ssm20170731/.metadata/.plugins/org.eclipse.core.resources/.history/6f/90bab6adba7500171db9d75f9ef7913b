@@ -23,7 +23,6 @@ public class UserServiceImpl implements UserService {
 		noteResult.setMsg("success");
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("user", new User());
-		map.put("password", "sdgsdfgdfg");
 		noteResult.setData(map);
 		return noteResult;
 	}

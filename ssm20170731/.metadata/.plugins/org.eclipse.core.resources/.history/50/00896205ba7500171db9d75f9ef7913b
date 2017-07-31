@@ -1,13 +1,10 @@
 package cn.gqxqd.service;
 
-import java.util.HashMap;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
 import cn.gqxqd.dao.UserDao;
-import cn.gqxqd.entity.User;
 import cn.gqxqd.util.NoteResult;
 
 @Service(value="userService")
@@ -19,13 +16,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public NoteResult checkLogin(String name, String password) {
 		// TODO Auto-generated method stub
-		NoteResult noteResult = new NoteResult();
-		noteResult.setMsg("success");
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("user", new User());
-		map.put("password", "sdgsdfgdfg");
-		noteResult.setData(map);
-		return noteResult;
+		return null;
 	}
 
 	@Override
