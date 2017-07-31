@@ -1,0 +1,8 @@
+package cn.gqxqd.util;
+
+public class NoteResult {
+	// 成功
+	// 失败
+	private int status;// 0成功1失败
+	private String msg;// 登录消息
+}
