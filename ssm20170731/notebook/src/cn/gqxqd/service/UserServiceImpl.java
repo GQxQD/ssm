@@ -1,8 +1,17 @@
 package cn.gqxqd.service;
 
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import cn.gqxqd.dao.UserDao;
 import cn.gqxqd.util.NoteResult;
 
+@Service(value="userService")
 public class UserServiceImpl implements UserService {
+
+	@Resource(name = "userDao")
+	private UserDao userDao;
 
 	@Override
 	public NoteResult checkLogin(String name, String password) {
