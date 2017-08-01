@@ -1,0 +1,12 @@
+package cn.gqxqd.entity;
+
+public class NoteBook {
+	private String cn_notebook_id;// 笔记本ID
+	private String cn_user_id;// 用户ID
+	private String cn_notebook_type_id;// 笔记本类型ID
+	private String cn_notebook_name;// 笔记本名
+	private String cn_notebook_desc;// 笔记本说明
+	private String cn_notebook_createtime;
+	
+	
+}

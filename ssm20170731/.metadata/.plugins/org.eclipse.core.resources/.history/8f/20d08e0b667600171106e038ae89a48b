@@ -1,0 +1,11 @@
+package cn.gqxqd.service;
+
+import java.util.List;
+
+import cn.gqxqd.entity.Notebook;
+
+public interface NotebookService {
+	
+	public List<Notebook> 
+
+}

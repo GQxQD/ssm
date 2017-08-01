@@ -1,0 +1,16 @@
+package cn.gqxqd.service;
+
+import java.util.List;
+
+import cn.gqxqd.entity.Notebook;
+import cn.gqxqd.util.NoteResult;
+
+public interface NotebookService {
+
+	public NoteResult loadUserNotebook(String userId);
+
+	public NoteResult addNotebook(String userId, String bookName);
+
+	public NoteResult updateNotebook(String bookId, String bookName);
+
+}
