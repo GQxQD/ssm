@@ -366,6 +366,10 @@
 					$('#can').load('./alert/alert_error.html',function(){
 						$('#error_info').text(' '+e);
 						$('.opacity_bg').show();
+						setTimeout(function () {
+						    $('#can').html('');
+                            $('.opacity_bg').hide();
+                        },3000);
 					});
 				}
 			

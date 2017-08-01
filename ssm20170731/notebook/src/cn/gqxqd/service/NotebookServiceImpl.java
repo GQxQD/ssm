@@ -22,6 +22,9 @@ public class NotebookServiceImpl implements NotebookService {
 	public NoteResult loadUserNotebook(String userId) {
 		NoteResult noteResult = new NoteResult();
 		List<Notebook> notebooks = notebookDao.findByUserId(userId);
+		notebooks.forEach(note -> {
+			System.out.println(note.getCn_notebook_name());
+		});
 		noteResult.setStatus(0);
 		noteResult.setMsg("查询成功！");
 		noteResult.setData(notebooks);

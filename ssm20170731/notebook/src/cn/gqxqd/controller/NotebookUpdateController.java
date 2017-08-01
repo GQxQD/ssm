@@ -15,7 +15,7 @@ public class NotebookUpdateController {
 	@Resource
 	private NotebookService notebookService;
 
-	@RequestMapping("/book/update.do")
+	@RequestMapping("/book/rename.do")
 	@ResponseBody
 	public NoteResult execute(String bookId, String bookName) {
 		return notebookService.updateNotebook(bookId, bookName);
