@@ -1,7 +1,0 @@
-package cn.jbit.mybatisdemo.servlet;
-
-import javax.servlet.http.HttpServlet;
-
-public class EmpListServlet extends HttpServlet {
-
-}

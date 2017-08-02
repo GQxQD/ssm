@@ -257,7 +257,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_NzrkgGqUEeeQXpEd67CmXw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UpdateEmpServlet.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UpdateEmpServlet.java&quot; partName=&quot;UpdateEmpServlet.java&quot; title=&quot;UpdateEmpServlet.java&quot; tooltip=&quot;company/src/cn/jbit/mybatisdemo/servlet/UpdateEmpServlet.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/company/src/cn/jbit/mybatisdemo/servlet/UpdateEmpServlet.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1346&quot; selectionTopPixel=&quot;330&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UpdateEmpServlet.java&quot; partName=&quot;UpdateEmpServlet.java&quot; title=&quot;UpdateEmpServlet.java&quot; tooltip=&quot;company/src/cn/jbit/mybatisdemo/servlet/UpdateEmpServlet.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/company/src/cn/jbit/mybatisdemo/servlet/UpdateEmpServlet.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;280&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -632,7 +632,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HZgFjWerEeevGMO_ePRwBQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_fZE_0GqSEeeQXpEd67CmXw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_HZijiWerEeevGMO_ePRwBQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_T_q3sHU_Eeelmt0rDJFe7Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_HZijiWerEeevGMO_ePRwBQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HZgFmmerEeevGMO_ePRwBQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -662,7 +662,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HZgF9WerEeevGMO_ePRwBQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_fZJ4UGqSEeeQXpEd67CmXw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_HZijLmerEeevGMO_ePRwBQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_T_zakHU_Eeelmt0rDJFe7Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_HZijLmerEeevGMO_ePRwBQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_HZgGAWerEeevGMO_ePRwBQ" elementId="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" visible="false">
         <tags>Draggable</tags>
@@ -921,6 +921,7 @@
     <bindings xmi:id="_HZgG12erEeevGMO_ePRwBQ" keySequence="ALT+SHIFT+Q T" command="_HZii5GerEeevGMO_ePRwBQ">
       <parameters xmi:id="_HZgG2GerEeevGMO_ePRwBQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.jdt.ui.TypeHierarchy"/>
     </bindings>
+    <bindings xmi:id="_SUmdAHU_Eeelmt0rDJFe7Q" keySequence="CTRL+SHIFT+F10" command="_HZik6GerEeevGMO_ePRwBQ"/>
   </bindingTables>
   <bindingTables xmi:id="_HZgG2WerEeevGMO_ePRwBQ" elementId="org.eclipse.ui.textEditorScope" bindingContext="_HZgs6WerEeevGMO_ePRwBQ">
     <bindings xmi:id="_HZgG2merEeevGMO_ePRwBQ" keySequence="CTRL+ARROW_DOWN" command="_HZikRGerEeevGMO_ePRwBQ"/>
@@ -1272,7 +1273,9 @@
   <bindingTables xmi:id="_HZgs3WerEeevGMO_ePRwBQ" bindingContext="_HZgtU2erEeevGMO_ePRwBQ"/>
   <bindingTables xmi:id="_HZgs3merEeevGMO_ePRwBQ" bindingContext="_HZgtVGerEeevGMO_ePRwBQ"/>
   <bindingTables xmi:id="_HZgs32erEeevGMO_ePRwBQ" bindingContext="_HZgtVWerEeevGMO_ePRwBQ"/>
-  <bindingTables xmi:id="_HZgs4GerEeevGMO_ePRwBQ" elementId="org.hibernate.eclipse.console.hql" bindingContext="_HZgtC2erEeevGMO_ePRwBQ"/>
+  <bindingTables xmi:id="_HZgs4GerEeevGMO_ePRwBQ" elementId="org.hibernate.eclipse.console.hql" bindingContext="_HZgtC2erEeevGMO_ePRwBQ">
+    <bindings xmi:id="_SUiyoXU_Eeelmt0rDJFe7Q" keySequence="CTRL+CR" command="_HZik6merEeevGMO_ePRwBQ"/>
+  </bindingTables>
   <bindingTables xmi:id="_HZgs4WerEeevGMO_ePRwBQ" bindingContext="_HZgtVmerEeevGMO_ePRwBQ"/>
   <bindingTables xmi:id="_HZgs4merEeevGMO_ePRwBQ" bindingContext="_HZgtV2erEeevGMO_ePRwBQ"/>
   <bindingTables xmi:id="_HZgs42erEeevGMO_ePRwBQ" bindingContext="_HZgtWGerEeevGMO_ePRwBQ"/>
@@ -1948,6 +1951,30 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.wst.xsl.ui"/>
     <tags>View</tags>
     <tags>categoryTag:XML</tags>
+  </descriptors>
+  <descriptors xmi:id="_Sg7o0HU_Eeelmt0rDJFe7Q" elementId="org.hibernate.eclipse.console.views.KnownConfigurationsView" label="Hibernate Configurations" iconURI="platform:/plugin/org.hibernate.eclipse.console/icons/hibernate_small_icon.gif" tooltip="" category="Hibernate" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.hibernate.eclipse.console.views.KnownConfigurationsView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.hibernate.eclipse.console"/>
+    <tags>View</tags>
+    <tags>categoryTag:Hibernate</tags>
+  </descriptors>
+  <descriptors xmi:id="_Sg9eAHU_Eeelmt0rDJFe7Q" elementId="org.hibernate.eclipse.console.views.QueryPageTabView" label="Hibernate Query Result" iconURI="platform:/plugin/org.hibernate.eclipse.console/icons/hibernate_small_icon.gif" tooltip="" category="Hibernate" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.hibernate.eclipse.console.views.QueryPageTabView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.hibernate.eclipse.console"/>
+    <tags>View</tags>
+    <tags>categoryTag:Hibernate</tags>
+  </descriptors>
+  <descriptors xmi:id="_ShBIYHU_Eeelmt0rDJFe7Q" elementId="org.hibernate.eclipse.console.views.DynamicSQLPreviewView" label="Hibernate Dynamic SQL Preview" iconURI="platform:/plugin/org.hibernate.eclipse.console/icons/hibernate_small_icon.gif" tooltip="" category="Hibernate" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.hibernate.eclipse.console.views.DynamicSQLPreviewView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.hibernate.eclipse.console"/>
+    <tags>View</tags>
+    <tags>categoryTag:Hibernate</tags>
+  </descriptors>
+  <descriptors xmi:id="_ShBvcHU_Eeelmt0rDJFe7Q" elementId="org.hibernate.eclipse.console.views.QueryParametersView" label="Query Parameters" iconURI="platform:/plugin/org.hibernate.eclipse.console/icons/images/parameter.gif" tooltip="" category="Hibernate" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.hibernate.eclipse.console.views.QueryParametersView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.hibernate.eclipse.console"/>
+    <tags>View</tags>
+    <tags>categoryTag:Hibernate</tags>
   </descriptors>
   <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
     <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
