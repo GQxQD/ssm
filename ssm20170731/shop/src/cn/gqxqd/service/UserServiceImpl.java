@@ -58,4 +58,36 @@ public class UserServiceImpl implements UserService {
 		return result;
 	}
 
+	@Override
+	public ShopResult login(String username, String password) {
+		ShopResult result = new ShopResult();
+		if (username == null || "".equals(username.trim())) {
+			result.setStatus(1);
+			result.setMsg("用户名不能为空！");
+			return result;
+		}
+		if (password == null || "".equals(password.trim())) {
+			result.setStatus(2);
+			result.setMsg("密码不能为空！");
+			return result;
+		}
+		username = username.trim();
+		password = password.trim();
+		User user = this.userDao.find(username);
+		if (user == null) {
+			result.setStatus(1);
+			result.setMsg("用户不存在！");
+			return result;
+		}
+		if (!password.equals(user.getPassword())) {
+			result.setStatus(2);
+			result.setMsg("您输入的密码错误！");
+			return result;
+		}
+		result.setStatus(0);
+		result.setMsg("登录成功！");
+		result.setData(user);
+		return result;
+	}
+
 }

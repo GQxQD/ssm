@@ -8,9 +8,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.syncinfo.snap" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.syncinfo.snap" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/notebook/.markers.snap" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/notebook/.markers.snap" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/notebook/.syncinfo.snap" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/notebook/.syncinfo.snap" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/6e/26/bf/history.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/6e/26/bf/history.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/db/bf/history.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/db/bf/history.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/e4/6b/61/1d/history.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/e4/6b/61/1d/history.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/e4/6b/61/92/history.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/e4/6b/61/92/history.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/e4/6b/61/b5/history.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.indexes/e4/6b/61/b5/history.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.markers.snap" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/shop/.markers.snap" />
@@ -21,22 +18,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/3069134441.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/3069134441.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/3069134441.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/3069134441.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/publish/publish0.dat" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/publish/publish0.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/WEB-INF/classes/cn/gqxqd/controller/UserController.class" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/WEB-INF/classes/cn/gqxqd/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/WEB-INF/classes/cn/gqxqd/service/UserService.class" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/WEB-INF/classes/cn/gqxqd/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/WEB-INF/classes/cn/gqxqd/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/WEB-INF/classes/cn/gqxqd/service/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.validation/dep.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/gqxqd/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/cn/gqxqd/service/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.log" afterPath="$PROJECT_DIR$/../.metadata/.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/shop/2017/8/31/refactorings.history" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/shop/2017/8/31/refactorings.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/shop/2017/8/31/refactorings.index" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/shop/2017/8/31/refactorings.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/logs/localhost_access_log.2017-08-02.txt" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/logs/localhost_access_log.2017-08-02.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/publish.txt" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/publish.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/login.html" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/static/js/base.js" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/static/js/base.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/static/js/login.js" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop/static/js/login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/login.html" afterPath="$PROJECT_DIR$/WebContent/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/static/js/base.js" afterPath="$PROJECT_DIR$/WebContent/static/js/base.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/static/js/login.js" afterPath="$PROJECT_DIR$/WebContent/static/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/gqxqd/controller/UserController.java" afterPath="$PROJECT_DIR$/src/cn/gqxqd/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/gqxqd/service/UserService.java" afterPath="$PROJECT_DIR$/src/cn/gqxqd/service/UserService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,8 +105,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state relative-caret-position="303">
+              <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -126,21 +122,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/static/js/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="825">
+              <caret line="34" column="9" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="34" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/static/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="297">
+              <caret line="21" column="74" lean-forward="false" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -159,9 +155,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>loadingText</find>
       <find>is</find>
       <find>isPasswordRight</find>
+      <find>loadingText</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,11 +171,11 @@
         <option value="$PROJECT_DIR$/WebContent/static/css/index.css" />
         <option value="$PROJECT_DIR$/WebContent/static/js/index.js" />
         <option value="$PROJECT_DIR$/WebContent/detail.html" />
-        <option value="$PROJECT_DIR$/WebContent/static/js/login.js" />
-        <option value="$PROJECT_DIR$/WebContent/login.html" />
         <option value="$PROJECT_DIR$/WebContent/static/js/base.js" />
         <option value="$PROJECT_DIR$/WebContent/register.html" />
         <option value="$PROJECT_DIR$/WebContent/static/js/register.js" />
+        <option value="$PROJECT_DIR$/WebContent/login.html" />
+        <option value="$PROJECT_DIR$/WebContent/static/js/login.js" />
       </list>
     </option>
   </component>
@@ -300,12 +296,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501639511060</updated>
       <workItem from="1501639515639" duration="168000" />
-      <workItem from="1501639720280" duration="10094000" />
+      <workItem from="1501639720280" duration="11822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10262000" />
+    <option name="totallyTimeSpent" value="11990000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,26 +415,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/static/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/static/js/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/static/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="34" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/static/js/jquery.cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2898">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -451,10 +447,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/static/js/register.js">
+    <entry file="file://$PROJECT_DIR$/WebContent/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="303">
+          <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/static/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" column="74" lean-forward="false" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
           <folding />
         </state>
       </provider>

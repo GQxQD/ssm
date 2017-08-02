@@ -21,4 +21,10 @@ public class UserController {
 	public ShopResult register(String username, String password) {
 		return this.userService.register(username, password);
 	}
+
+	@RequestMapping("login")
+	@ResponseBody
+	public ShopResult login(String username, String password) {
+		return this.userService.login(username, password);
+	}
 }

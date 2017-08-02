@@ -1,0 +1,13 @@
+package cn.gqxqd.service;
+
+import cn.gqxqd.entity.Session;
+
+public class SessionServiceImpl implements SessionService {
+
+	@Override
+	public boolean saveSession(Session session) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

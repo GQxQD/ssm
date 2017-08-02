@@ -31,7 +31,7 @@
                               v-bind:class="{ 'glyphicon-ok':isPasswordRight,'glyphicon-remove':!isPasswordRight }"></span>
                         <span id="passwordHelpBlock" class="help-block" v-text="passwordHint"></span>
                     </div>
-                    <button class="btn btn-primary pull-right">登录</button>
+                    <button class="btn btn-primary pull-right" @click="login">登录</button>
                     <a class="btn btn-default" href="register.html">注册</a>
                 </div>
             </div>
@@ -39,6 +39,7 @@
     </div>
 </div>
 <script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery.cookie.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/vue.min.js"></script>
 <script src="static/js/vue-resource.min.js"></script>

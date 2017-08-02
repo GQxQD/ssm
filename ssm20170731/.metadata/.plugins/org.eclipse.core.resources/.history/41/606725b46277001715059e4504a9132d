@@ -1,0 +1,22 @@
+package cn.gqxqd.service;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import cn.gqxqd.dao.SessionDao;
+import cn.gqxqd.entity.Session;
+
+@Service
+public class SessionServiceImpl implements SessionService {
+
+	@Resource
+	private SessionDao sessionDao;
+
+	@Override
+	public boolean saveSession(Session session) {
+
+		return false;
+	}
+
+}

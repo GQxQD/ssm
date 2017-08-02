@@ -6,6 +6,33 @@ new Vue({
         password: '',
         isPasswordRight: true,
     },
+    methods: {
+        login: function () {
+            if (this.isUsernameRight && this.isPasswordRight) {
+                this.$http.post(base_path + '/user/login.do', {
+                    username: this.username,
+                    password: this.password
+                }, {emulateJSON: true}).then(function (response) {
+                    if (response.ok) {
+                        var result = response.body;
+                        switch (result.status) {
+                            case 0:
+                                alert('登录成功！');
+                                // window.location.href = 'login.html';
+                                $.cookie('username',result.data.username);
+                                break;
+                            default:
+                                alert(result.msg);
+                        }
+                    } else {
+                        alert('请求出错！code:' + response.status);
+                    }
+                }, function (response) {
+                    alert('请求出错！code:' + response.status);
+                });
+            }
+        }
+    },
     computed: {
         usernameHint: function () {
             this.isUsernameRight = false;
