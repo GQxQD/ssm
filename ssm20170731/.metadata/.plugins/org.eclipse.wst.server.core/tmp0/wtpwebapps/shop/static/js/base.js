@@ -43,7 +43,7 @@ Vue.component('v-navbar', {
     '            <ul class="nav navbar-nav navbar-right">\n' +
     '                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> 请先登录！</a>\n' +
     '                </li>\n' +
-    '                <li><a href="#">注册</a></li>\n' +
+    '                <li><a href="register.html">注册</a></li>\n' +
     '                <li class="dropdown">\n' +
     '                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"\n' +
     '                       aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> 设置 <span\n' +

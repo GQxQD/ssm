@@ -1,0 +1,13 @@
+package cn.gqxqd.service;
+
+import cn.gqxqd.util.ShopResult;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public ShopResult register(String username, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

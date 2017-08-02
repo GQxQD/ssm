@@ -1,0 +1,25 @@
+package cn.gqxqd.service;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import cn.gqxqd.dao.UserDao;
+import cn.gqxqd.util.ShopResult;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Resource
+	private UserDao userDao;
+
+	@Override
+	public ShopResult register(String username, String password) {
+		ShopResult result = new ShopResult();
+		if (username == null || "".equals(username.trim())) {
+
+		}
+		return result;
+	}
+
+}

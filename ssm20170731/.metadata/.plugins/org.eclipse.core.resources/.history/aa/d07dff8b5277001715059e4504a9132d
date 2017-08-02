@@ -1,0 +1,5 @@
+package cn.gqxqd.dao;
+
+public interface UserDao {
+
+}
