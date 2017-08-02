@@ -4,5 +4,5 @@ import cn.gqxqd.entity.Session;
 
 public interface SessionService {
 
-	public boolean saveSession(Session session);
+	public Session getSession(int uid);
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import cn.gqxqd.dao.SessionDao;
 import cn.gqxqd.entity.Session;
+import cn.gqxqd.util.ShopUtil;
 
 @Service
 public class SessionServiceImpl implements SessionService {
@@ -14,20 +15,19 @@ public class SessionServiceImpl implements SessionService {
 	private SessionDao sessionDao;
 
 	@Override
-	public boolean saveSession(Session session) {
-		Session session2 = sessionDao.findByUid(session.getUser_id());
-		if (session2 == null) {
+	public Session getSession(int uid) {
+		Session session = sessionDao.findByUid(uid);
+		if (session == null) {
+			session = new Session();
+			session.setUser_id(uid);
+			session.setToken_key(ShopUtil.getKey());
 			int sid = sessionDao.save(session);
-			if (sid > 0) {
-				return true;
-			}
+			return sessionDao.find(sid);
 		} else {
-			session2.setToken_key(session.getToken_key());
-			if (sessionDao.update(session2) > 0) {
-				return true;
-			}
+			session.setToken_key(ShopUtil.getKey());
+			sessionDao.update(session);
+			return session;
 		}
-		return false;
 	}
 
 }

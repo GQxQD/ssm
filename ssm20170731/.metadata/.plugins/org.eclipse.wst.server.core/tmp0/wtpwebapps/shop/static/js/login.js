@@ -19,7 +19,8 @@ new Vue({
                             case 0:
                                 alert('登录成功！');
                                 // window.location.href = 'login.html';
-                                $.cookie('username',result.data.username);
+                                $.cookie('user_id', result.data.user_id);
+                                $.cookie('token_key', result.data.token_key);
                                 break;
                             default:
                                 alert(result.msg);

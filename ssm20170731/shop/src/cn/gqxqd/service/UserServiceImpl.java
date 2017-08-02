@@ -2,14 +2,12 @@ package cn.gqxqd.service;
 
 import javax.annotation.Resource;
 
-import org.apache.catalina.manager.util.SessionUtils;
 import org.springframework.stereotype.Service;
 
 import cn.gqxqd.dao.UserDao;
 import cn.gqxqd.entity.Session;
 import cn.gqxqd.entity.User;
 import cn.gqxqd.util.ShopResult;
-import cn.gqxqd.util.ShopUtil;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -24,29 +22,29 @@ public class UserServiceImpl implements UserService {
 		ShopResult result = new ShopResult();
 		if (username == null || "".equals(username.trim())) {
 			result.setStatus(1);
-			result.setMsg("ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡");
+			result.setMsg("ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼");
 			return result;
 		}
 		if (password == null || "".equals(password.trim())) {
 			result.setStatus(2);
-			result.setMsg("ÃÜÂë²»ÄÜÎª¿Õ£¡");
+			result.setMsg("å¯†ç ä¸èƒ½ä¸ºç©ºï¼");
 			return result;
 		}
 		username = username.trim();
 		password = password.trim();
 		if (username.length() < 3 || username.length() > 10) {
 			result.setStatus(1);
-			result.setMsg("ÓÃ»§Ãû³¤¶È±ØĞëÎª3-10×Ö·û£¡");
+			result.setMsg("ç”¨æˆ·åé•¿åº¦å¿…é¡»ä¸º3-10å­—ç¬¦ï¼");
 			return result;
 		}
 		if (password.length() < 6 || password.length() > 20) {
 			result.setStatus(2);
-			result.setMsg("ÃÜÂë³¤¶È±ØĞëÎª6-20×Ö·û£¡");
+			result.setMsg("å¯†ç é•¿åº¦å¿…é¡»ä¸º6-20å­—ç¬¦ï¼");
 			return result;
 		}
 		if (this.userDao.find(username) != null) {
 			result.setStatus(1);
-			result.setMsg("ÓÃ»§ÃûÒÑ¾­´æÔÚ£¡");
+			result.setMsg("ç”¨æˆ·åå·²ç»å­˜åœ¨ï¼");
 			return result;
 		}
 		User user = new User();
@@ -55,10 +53,10 @@ public class UserServiceImpl implements UserService {
 		int uid = this.userDao.save(user);
 		if (uid > 0) {
 			result.setStatus(0);
-			result.setMsg("×¢²á³É¹¦£¡ÓÃ»§idÎª£º" + uid);
+			result.setMsg("æ³¨å†ŒæˆåŠŸï¼ç”¨æˆ·idä¸ºï¼š" + uid);
 		} else {
 			result.setStatus(3);
-			result.setMsg("×¢²áÊ§°Ü£¡");
+			result.setMsg("æ³¨å†Œå¤±è´¥ï¼");
 		}
 		return result;
 	}
@@ -68,12 +66,12 @@ public class UserServiceImpl implements UserService {
 		ShopResult result = new ShopResult();
 		if (username == null || "".equals(username.trim())) {
 			result.setStatus(1);
-			result.setMsg("ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡");
+			result.setMsg("ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼");
 			return result;
 		}
 		if (password == null || "".equals(password.trim())) {
 			result.setStatus(2);
-			result.setMsg("ÃÜÂë²»ÄÜÎª¿Õ£¡");
+			result.setMsg("å¯†ç ä¸èƒ½ä¸ºç©ºï¼");
 			return result;
 		}
 		username = username.trim();
@@ -81,21 +79,18 @@ public class UserServiceImpl implements UserService {
 		User user = this.userDao.find(username);
 		if (user == null) {
 			result.setStatus(1);
-			result.setMsg("ÓÃ»§²»´æÔÚ£¡");
+			result.setMsg("ç”¨æˆ·ä¸å­˜åœ¨ï¼");
 			return result;
 		}
 		if (!password.equals(user.getPassword())) {
 			result.setStatus(2);
-			result.setMsg("ÄúÊäÈëµÄÃÜÂë´íÎó£¡");
+			result.setMsg("æ‚¨è¾“å…¥çš„å¯†ç é”™è¯¯ï¼");
 			return result;
 		}
-		Session session = new Session();
-		session.setUser_id(user.getId());
-		session.setToken_key(ShopUtil.getKey());
-		this.sessionService.saveSession(session);
+		Session session = this.sessionService.getSession(user.getId());
 		result.setStatus(0);
-		result.setMsg("µÇÂ¼³É¹¦£¡");
-		result.setData(user);
+		result.setMsg("ç™»å½•æˆåŠŸï¼");
+		result.setData(session);
 		return result;
 	}
 

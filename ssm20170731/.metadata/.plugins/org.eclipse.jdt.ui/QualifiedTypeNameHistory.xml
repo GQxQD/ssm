@@ -40,7 +40,7 @@
 <fullyQualifiedTypeName name="cn.gqxqd.dao.SessionDao"/>
 <fullyQualifiedTypeName name="javax.annotation.Resource"/>
 <fullyQualifiedTypeName name="cn.gqxqd.service.SessionService"/>
-<fullyQualifiedTypeName name="cn.gqxqd.entity.Session"/>
 <fullyQualifiedTypeName name="org.apache.catalina.manager.util.SessionUtils"/>
+<fullyQualifiedTypeName name="cn.gqxqd.entity.Session"/>
 <fullyQualifiedTypeName name="cn.gqxqd.util.ShopUtil"/>
 </qualifiedTypeNameHistroy>
