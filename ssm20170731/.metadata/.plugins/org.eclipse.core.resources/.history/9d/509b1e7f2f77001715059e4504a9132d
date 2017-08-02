@@ -1,0 +1,8 @@
+package cn.gqxqd.util;
+
+public class ShopResult {
+
+	private int status;
+	private String msg;
+	private Object data;
+}
