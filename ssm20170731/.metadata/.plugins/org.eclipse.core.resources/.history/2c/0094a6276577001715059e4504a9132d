@@ -24,12 +24,12 @@ public class Session {
 		this.user_id = user_id;
 	}
 
-	public String getToken_key() {
-		return token_key;
+	public String getKeys() {
+		return keys;
 	}
 
-	public void setToken_key(String token_key) {
-		this.token_key = token_key;
+	public void setKeys(String keys) {
+		this.keys = keys;
 	}
 
 	public Timestamp getCreate_time() {

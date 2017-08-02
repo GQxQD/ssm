@@ -2,22 +2,17 @@ package cn.gqxqd.service;
 
 import javax.annotation.Resource;
 
-import org.apache.catalina.manager.util.SessionUtils;
 import org.springframework.stereotype.Service;
 
 import cn.gqxqd.dao.UserDao;
-import cn.gqxqd.entity.Session;
 import cn.gqxqd.entity.User;
 import cn.gqxqd.util.ShopResult;
-import cn.gqxqd.util.ShopUtil;
 
 @Service
 public class UserServiceImpl implements UserService {
 
 	@Resource
 	private UserDao userDao;
-	@Resource
-	private SessionService sessionService;
 
 	@Override
 	public ShopResult register(String username, String password) {
@@ -89,10 +84,6 @@ public class UserServiceImpl implements UserService {
 			result.setMsg("ÄúÊäÈëµÄÃÜÂë´íÎó£¡");
 			return result;
 		}
-		Session session = new Session();
-		session.setUser_id(user.getId());
-		session.setToken_key(ShopUtil.getKey());
-		this.sessionService.saveSession(session);
 		result.setStatus(0);
 		result.setMsg("µÇÂ¼³É¹¦£¡");
 		result.setData(user);

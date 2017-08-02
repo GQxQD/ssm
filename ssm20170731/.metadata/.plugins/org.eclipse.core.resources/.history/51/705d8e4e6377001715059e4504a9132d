@@ -17,15 +17,10 @@ public class SessionServiceImpl implements SessionService {
 	public boolean saveSession(Session session) {
 		Session session2 = sessionDao.findByUid(session.getUser_id());
 		if (session2 == null) {
-			int sid = sessionDao.save(session);
-			if (sid > 0) {
-				return true;
-			}
+			sessionDao.save(session);
 		} else {
-			session2.setToken_key(session.getToken_key());
-			if (sessionDao.update(session2) > 0) {
-				return true;
-			}
+			session2.setKey(session.getKey());
+			sessionDao.update(session2);
 		}
 		return false;
 	}

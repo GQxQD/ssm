@@ -12,16 +12,16 @@
 	</select>
 	
 	<select id="findByKey" parameterType="string" resultType="cn.gqxqd.entity.Session">
-		select * from shop_session where token_key=#{token_key}
+		select * from shop_session where key=#{key}
 	</select>
 	
 	<insert id="save" parameterType="cn.gqxqd.entity.Session" useGeneratedKeys="true" keyProperty="id">
-		insert into shop_session(user_id,token_key)
-		values(#{user_id},#{token_key})
+		insert into shop_session(user_id,key)
+		values(#{user_id},#{key})
 	</insert>
 	
 	<update id="update" parameterType="cn.gqxqd.entity.Session">
-		update shop_session set token_key=#{token_key} where id=#{id}
+		update shop_session set key=#{key} where id=#{id}
 	</update>
 
 </mapper>

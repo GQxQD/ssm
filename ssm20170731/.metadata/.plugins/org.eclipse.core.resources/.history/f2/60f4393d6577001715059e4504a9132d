@@ -91,7 +91,7 @@ public class UserServiceImpl implements UserService {
 		}
 		Session session = new Session();
 		session.setUser_id(user.getId());
-		session.setToken_key(ShopUtil.getKey());
+		session.setKeys(ShopUtil.getKey());
 		this.sessionService.saveSession(session);
 		result.setStatus(0);
 		result.setMsg("µÇÂ¼³É¹¦£¡");

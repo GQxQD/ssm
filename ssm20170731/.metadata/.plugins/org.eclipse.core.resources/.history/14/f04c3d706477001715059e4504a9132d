@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class Session {
 	private Integer id;
 	private Integer user_id;
-	private String token_key;
+	private String key;
 	private Timestamp create_time;
 
 	public Integer getId() {
@@ -24,12 +24,12 @@ public class Session {
 		this.user_id = user_id;
 	}
 
-	public String getToken_key() {
-		return token_key;
+	public String getKey() {
+		return key;
 	}
 
-	public void setToken_key(String token_key) {
-		this.token_key = token_key;
+	public void setKey(String key) {
+		this.key = key;
 	}
 
 	public Timestamp getCreate_time() {

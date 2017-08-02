@@ -22,10 +22,8 @@ public class SessionServiceImpl implements SessionService {
 				return true;
 			}
 		} else {
-			session2.setToken_key(session.getToken_key());
-			if (sessionDao.update(session2) > 0) {
-				return true;
-			}
+			session2.setKey(session.getKey());
+			sessionDao.update(session2);
 		}
 		return false;
 	}
