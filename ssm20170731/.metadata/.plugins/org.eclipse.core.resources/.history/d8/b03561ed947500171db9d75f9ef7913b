@@ -1,0 +1,6 @@
+package cn.gqxqd.util;
+
+public class NoteResult {
+	// 成功
+	// 失败
+}

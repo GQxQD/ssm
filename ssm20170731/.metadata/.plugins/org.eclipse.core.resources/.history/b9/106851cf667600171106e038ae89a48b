@@ -1,0 +1,25 @@
+package cn.gqxqd.service;
+
+import cn.gqxqd.util.NoteResult;
+
+public class NotebookServiceImpl implements NotebookService {
+
+	@Override
+	public NoteResult loadUserNotebook(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public NoteResult addNotebook(String userId, String bookName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public NoteResult updateNotebook(String bookId, String bookName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

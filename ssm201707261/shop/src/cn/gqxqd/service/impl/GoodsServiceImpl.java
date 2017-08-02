@@ -50,4 +50,18 @@ public class GoodsServiceImpl implements GoodsService {
 		return false;
 	}
 
+	@Override
+	public boolean updateGoods(Goods goods) {
+		if (goodsMapper.updateGoods(goods) > 0) {
+			return true;
+		}
+		this.error = "修改未能成功，没有影响任何数据！";
+		return false;
+	}
+
+	@Override
+	public List<Goods> getGoodsListByTitle(String key) {
+		return goodsMapper.getGoodsListByTitle("%" + key + "%");
+	}
+
 }

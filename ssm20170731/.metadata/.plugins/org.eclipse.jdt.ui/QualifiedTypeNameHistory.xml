@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cn.gqxqd.test.NoteTest"/>
+<fullyQualifiedTypeName name="java.security.MessageDigest"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.util.codec.binary.Base64"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.jni.User"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.recompile"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.NoTransactionException"/>
+<fullyQualifiedTypeName name="java.security.KeyStore.PrivateKeyEntry"/>
+<fullyQualifiedTypeName name="cn.gqxqd.entity.NoteBook"/>
+<fullyQualifiedTypeName name="cn.gqxqd.dao.NotebookDao"/>
+<fullyQualifiedTypeName name="cn.gqxqd.entity.Notebook"/>
+<fullyQualifiedTypeName name="cn.gqxqd.util.NoteUtil"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="cn.gqxqd.service.NotebookService"/>
+<fullyQualifiedTypeName name="cn.gqxqd.util.NoteResult"/>
+<fullyQualifiedTypeName name="org.aspectj.weaver.AjAttribute.PrivilegedAttribute"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cn.gqxqd.entity.Goods"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="cn.gqxqd.dao.GoodsDao"/>
+<fullyQualifiedTypeName name="cn.gqxqd.service.GoodsService"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="cn.gqxqd.dao.UserDao"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="cn.gqxqd.service.UserService"/>
+<fullyQualifiedTypeName name="cn.gqxqd.entity.User"/>
+<fullyQualifiedTypeName name="cn.gqxqd.util.ShopResult"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="cn.gqxqd.dao.SessionDao"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="cn.gqxqd.service.SessionService"/>
+<fullyQualifiedTypeName name="cn.gqxqd.entity.Session"/>
+<fullyQualifiedTypeName name="org.apache.catalina.manager.util.SessionUtils"/>
+<fullyQualifiedTypeName name="cn.gqxqd.util.ShopUtil"/>
+</qualifiedTypeNameHistroy>

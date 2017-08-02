@@ -1,0 +1,24 @@
+package cn.gqxqd.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.gqxqd.service.UserService;
+import cn.gqxqd.util.NoteResult;
+
+@Controller
+public class UserAddController {
+
+	@Resource(name = "userService")
+	private UserService userService;
+
+	@RequestMapping("/user/register.do")
+	@ResponseBody
+	public NoteResult execute(String name, String password, String nick) {
+		NoteResult noteResult = userService.addUser(name, password, nick);
+		return noteResult;
+	}
+}

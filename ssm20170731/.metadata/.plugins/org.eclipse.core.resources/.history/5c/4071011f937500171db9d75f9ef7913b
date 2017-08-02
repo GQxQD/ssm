@@ -1,0 +1,13 @@
+package cn.gqxqd.util;
+
+import java.util.UUID;
+
+public class NoteUtil {
+
+	// UUID:防止用户id重复
+	public static String createId() {
+		UUID uuid = UUID.randomUUID();
+		return uuid.toString().replace("-", "");
+	}
+
+}

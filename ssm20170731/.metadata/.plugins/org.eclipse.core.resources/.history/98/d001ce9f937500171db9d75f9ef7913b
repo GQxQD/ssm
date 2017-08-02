@@ -1,0 +1,10 @@
+package cn.gqxqd.test;
+
+import cn.gqxqd.util.NoteUtil;
+
+public class NoteTest {
+
+	public static void main(String[] args) {
+		System.out.println(NoteUtil.createId());
+	}
+}

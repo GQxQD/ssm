@@ -1,0 +1,46 @@
+package cn.gqxqd.service;
+
+import java.util.HashMap;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import cn.gqxqd.dao.UserDao;
+import cn.gqxqd.entity.User;
+import cn.gqxqd.util.NoteResult;
+
+@Service(value = "userService")
+public class UserServiceImpl implements UserService {
+
+	@Resource(name = "userDao")
+	private UserDao userDao;
+
+	@Override
+	public NoteResult checkLogin(String name, String password) {
+		NoteResult noteResult = new NoteResult();
+		if (name == null) {
+			noteResult.setStatus(1);
+			noteResult.setMsg("用户名不能为空！");
+		}
+		User user = userDao.findByName(name);
+		if (user == null) {
+			noteResult.setStatus(1);
+			noteResult.setMsg("用户名不存在！");
+			return noteResult;
+		}
+		noteResult.setMsg("success");
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("user", new User());
+		map.put("password", "sdgsdfgdfg");
+		noteResult.setData(map);
+		return noteResult;
+	}
+
+	@Override
+	public NoteResult addUser(String name, String password, String nick) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

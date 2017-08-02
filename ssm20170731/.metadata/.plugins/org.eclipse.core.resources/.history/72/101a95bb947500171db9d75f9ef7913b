@@ -1,0 +1,5 @@
+package cn.gqxqd.service;
+
+public interface UserService {
+	public NoteResult checkLogin(String name, String password);
+}

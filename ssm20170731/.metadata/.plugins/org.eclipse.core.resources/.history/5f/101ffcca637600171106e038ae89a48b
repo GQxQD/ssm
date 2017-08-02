@@ -1,0 +1,13 @@
+package cn.gqxqd.dao;
+
+import java.util.List;
+
+import cn.gqxqd.entity.NoteBook;
+
+public interface NotebookDao {
+
+	public List<NoteBook> findByUserId(String userId);
+	
+	
+	public void saveNote
+}

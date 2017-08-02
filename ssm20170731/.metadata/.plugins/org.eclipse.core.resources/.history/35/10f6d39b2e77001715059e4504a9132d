@@ -1,0 +1,11 @@
+package cn.gqxqd.entity;
+
+public class Goods {
+	private Integer id;
+	private String title;
+	private Integer category;
+	private String description;
+	private Double price;
+	private Integer stock;
+	private String img;
+}

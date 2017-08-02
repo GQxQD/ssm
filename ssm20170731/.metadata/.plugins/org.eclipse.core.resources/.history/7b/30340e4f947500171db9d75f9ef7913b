@@ -1,0 +1,7 @@
+package cn.gqxqd.dao;
+
+import cn.gqxqd.entity.User;
+
+public interface UserDao {
+	public User findByName(String name);
+}

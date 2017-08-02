@@ -1,0 +1,30 @@
+/** 本页面封装关于笔记本的处理 */
+// 直接加载笔记本列表
+function loadUserBooks() {
+	// 获取请求参数
+	var userId = getCookie('uid');
+	// 检查格式
+	if (userId == null) {
+		window.location.href = 'log_in.html';
+	} else {
+		// 异步请求ajax
+		$.ajax({
+			url : base_path + '/book/load.do',
+			type : 'post',
+			data : {
+				userId : userId
+			},
+			dataType : 'json',
+			success : function(result) {
+				if (result.status == 0) {
+					// 返回笔记本集合
+					var books = result.data;
+					for (var i = 0; i < books.length; i++) {
+						// 创建笔记本列表
+						createBookLi(books[i]);
+					}
+				}
+			}
+		});
+	}
+}

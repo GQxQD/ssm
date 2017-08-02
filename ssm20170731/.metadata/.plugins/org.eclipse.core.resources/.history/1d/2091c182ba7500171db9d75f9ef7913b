@@ -1,0 +1,36 @@
+package cn.gqxqd.service;
+
+import java.util.HashMap;
+
+import javax.annotation.Resource;
+
+import org.apache.tomcat.jni.User;
+import org.springframework.stereotype.Service;
+
+import cn.gqxqd.dao.UserDao;
+import cn.gqxqd.util.NoteResult;
+
+@Service(value="userService")
+public class UserServiceImpl implements UserService {
+
+	@Resource(name = "userDao")
+	private UserDao userDao;
+
+	@Override
+	public NoteResult checkLogin(String name, String password) {
+		// TODO Auto-generated method stub
+		NoteResult noteResult = new NoteResult();
+		noteResult.setMsg("success");
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("user", new User());
+		noteResult.setData(map);
+		return noteResult;
+	}
+
+	@Override
+	public NoteResult addUser(String name, String password, String nick) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

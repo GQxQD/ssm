@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gqxqd.dao.SessionDao">
+
+	<select id="find" parameterType="int" resultType="cn.gqxqd.entity.Session">
+		select * from shop_session where id=#{id}
+	</select>
+	
+	<select id="findByUid" parameterType="int" resultType="cn.gqxqd.entity.Session">
+		select * from shop_session where user_id=#{uid}
+	</select>
+	
+	<select id="findByKey" parameterType="string" resultType="cn.gqxqd.entity.Session">
+		select * from shop_session where keys=#{keys}
+	</select>
+	
+	<insert id="save" parameterType="cn.gqxqd.entity.Session" useGeneratedKeys="true" keyProperty="id">
+		insert into shop_session(user_id,keys)
+		values(#{user_id},#{keys})
+	</insert>
+	
+	<update id="update" parameterType="cn.gqxqd.entity.Session">
+		update shop_session set keys=#{keys} where id=#{id}
+	</update>
+
+</mapper>

@@ -1,0 +1,10 @@
+package cn.gqxqd.dao;
+
+import cn.gqxqd.entity.User;
+
+public interface UserDao {
+
+	public User find(int id);
+
+	public int save(User user);
+}

@@ -1,0 +1,12 @@
+package cn.gqxqd.util;
+
+import java.util.UUID;
+
+public class NoteUtil {
+
+	public static String createId() {
+		UUID uuid = UUID.randomUUID();
+		return uuid.toString().replace("-", "");
+	}
+
+}

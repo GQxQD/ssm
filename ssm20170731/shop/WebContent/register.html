@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app">
+    <v-navbar></v-navbar>
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">用户注册</div>
+                <div class="panel-body">
+                    <div class="form-group has-feedback"
+                         v-bind:class="{ 'has-success':isUsernameRight,'has-error':!isUsernameRight }">
+                        <label class="control-label" for="username">用户名</label>
+                        <input class="form-control" id="username" aria-describedby="usernameHelpBlock"
+                               placeholder="请输入您的用户名..." v-model="username">
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"
+                              v-bind:class="{ 'glyphicon-ok':isUsernameRight,'glyphicon-remove':!isUsernameRight }"></span>
+                        <span id="usernameHelpBlock" class="help-block" v-text="usernameHint"></span>
+                    </div>
+                    <div class="form-group has-feedback"
+                         v-bind:class="{ 'has-success':isPasswordRight,'has-error':!isPasswordRight }">
+                        <label class="control-label" for="password">密码</label>
+                        <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"
+                               placeholder="请输入您的密码..." v-model="password">
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"
+                              v-bind:class="{ 'glyphicon-ok':isPasswordRight,'glyphicon-remove':!isPasswordRight }"></span>
+                        <span id="passwordHelpBlock" class="help-block" v-text="passwordHint"></span>
+                    </div>
+                    <div class="form-group has-feedback"
+                         v-bind:class="{ 'has-success':isPassword2Right,'has-error':!isPassword2Right }">
+                        <label class="control-label" for="password2">确认密码</label>
+                        <input type="password" class="form-control" id="password2" aria-describedby="password2HelpBlock"
+                               placeholder="请再次输入您的密码..." v-model="password2">
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"
+                              v-bind:class="{ 'glyphicon-ok':isPassword2Right,'glyphicon-remove':!isPassword2Right }"></span>
+                        <span id="password2HelpBlock" class="help-block" v-text="password2Hint"></span>
+                    </div>
+                    <button class="btn btn-primary pull-right" @click="register">注册</button>
+                    <a class="btn btn-default" href="login.html">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-resource.min.js"></script>
+<script src="static/js/base.js"></script>
+<script src="static/js/register.js"></script>
+</body>
+</html>

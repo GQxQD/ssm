@@ -1,0 +1,19 @@
+package cn.gqxqd.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+import cn.gqxqd.service.NotebookService;
+import cn.gqxqd.util.NoteResult;
+
+@Controller
+public class NotebookAddController {
+
+	@Resource
+	private NotebookService notebookService;
+
+	public NoteResult execute(String userId, String bookName) {
+		return notebookService.addNotebook(userId, bookName);
+	}
+}

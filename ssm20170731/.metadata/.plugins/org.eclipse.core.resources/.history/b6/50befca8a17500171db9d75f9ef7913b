@@ -1,0 +1,15 @@
+package cn.gqxqd.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+import cn.gqxqd.service.UserService;
+
+@Controller
+public class UserLoginController {
+
+	@Resource(name = "userService")
+	private UserService userService;
+
+}

@@ -1,0 +1,13 @@
+package cn.gqxqd.service;
+
+import cn.gqxqd.util.ShopResult;
+
+public class GoodsServiceImpl implements GoodsService {
+
+	@Override
+	public ShopResult getGoodsList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

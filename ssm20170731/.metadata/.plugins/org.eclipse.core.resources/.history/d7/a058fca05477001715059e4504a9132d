@@ -1,0 +1,40 @@
+package cn.gqxqd.service;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import cn.gqxqd.dao.UserDao;
+import cn.gqxqd.util.ShopResult;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Resource
+	private UserDao userDao;
+
+	@Override
+	public ShopResult register(String username, String password) {
+		ShopResult result = new ShopResult();
+		if (username == null || "".equals(username.trim())) {
+			result.setStatus(1);
+			result.setMsg("用户名不能为空！");
+			return result;
+		}
+		if (password == null || "".equals(password.trim())) {
+			result.setStatus(2);
+			result.setMsg("密码不能为空！");
+			return result;
+		}
+		username = username.trim();
+		password = password.trim();
+		if (username.length() < 3 || username.length() > 10) {
+			result.setStatus(1);
+			result.setMsg("用户名长度必须为3-10字符！");
+			return result;
+		}
+
+		return result;
+	}
+
+}

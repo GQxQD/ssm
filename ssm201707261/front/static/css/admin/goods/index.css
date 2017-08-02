@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#shop #action {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#goods-list tr td, #goods-list tr th {
+    /*vertical-align: middle !important;*/
+}
+
+#goods-list .goods-title {
+    max-width: 200px;
+    min-width: 200px;
+}
+
+#goods-list .goods-title img {
+    max-height: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    transition: all .3s;
+}
+
+#goods-list tr:hover .goods-title img {
+    max-height: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    min-width: 100px;
+}
