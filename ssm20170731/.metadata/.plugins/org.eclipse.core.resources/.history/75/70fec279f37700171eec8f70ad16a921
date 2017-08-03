@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gqxqd.dao.GoodsDao">
+	
+	<select id="findAll" resultType="cn.gqxqd.entity.Goods">
+		select * from shop_goods
+	</select>
+	
+	<insert id="save" parameterType="cn.gqxqd.entity.Goods" useGeneratedKeys="true" keyProperty="id">
+		insert into shop_goods(title,category,description,price,stock,img)
+		values(#{title},#{category},#{description},#{price},#{stock},#{img})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		delete from shop_goods where id=#{id}
+	</delete>
+	
+</mapper>

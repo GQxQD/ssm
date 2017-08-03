@@ -1,0 +1,56 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+#carousel .carousel-inner .item > img {
+    min-width: 100%;
+    min-height: 200px;
+}
+
+#carousel .carousel-inner {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+#content{
+    margin-top: 10px;
+}
+
+#goods-img img{
+    /*max-width:100%;*/
+    max-height:300px;
+}
+
+#content #right{
+    height:300px;
+    position: relative;
+}
+
+#content #right #button{
+    position: absolute;
+    bottom: 10px;
+}
+
+#content #right >div{
+    margin-bottom: 20px;
+}
+
+#goods-title{
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+#goods-price{
+    font-size: 26px;
+    font-family:verdana,arial;
+    color: #F40;
+}
+#goods-price>span:nth-child(1){
+    font-size: 16px;
+    color: #000;
+}
+
+#content #count input{
+    display: inline;
+    width: 100px;
+}

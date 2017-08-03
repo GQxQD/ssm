@@ -22,11 +22,91 @@ public class GoodsServiceImpl implements GoodsService {
 		List<Goods> list = goodsDao.findAll();
 		if (list != null) {
 			result.setStatus(0);
-			result.setMsg("��ѯ�ɹ���");
+			result.setMsg("查询成功！");
 			result.setData(list);
 		} else {
 			result.setStatus(1);
-			result.setMsg("��ѯʧ�ܣ������ԣ�");
+			result.setMsg("查询失败！");
+		}
+		return result;
+	}
+
+	@Override
+	public ShopResult addGoods(Goods goods) {
+		ShopResult result = new ShopResult();
+		if (goods.getTitle() == null || "".equals(goods.getTitle().trim())) {
+			result.setStatus(1);
+			result.setMsg("商品名称不能为空！");
+			return result;
+		}
+		if (goods.getCategory() == null) {
+			result.setStatus(1);
+			result.setMsg("商品分类不能为空！");
+			return result;
+		}
+		if (goods.getPrice() == null) {
+			result.setStatus(1);
+			result.setMsg("商品价格不能为空！");
+			return result;
+		}
+		if (goods.getStock() == null) {
+			result.setStatus(1);
+			result.setMsg("商品库存不能为空！");
+			return result;
+		}
+		if (this.goodsDao.save(goods) > 0) {
+			result.setStatus(0);
+			result.setMsg("商品添加成功！");
+		} else {
+			result.setStatus(0);
+			result.setMsg("商品添加失败！");
+		}
+		return result;
+	}
+
+	@Override
+	public ShopResult deleteGoods(int id) {
+		ShopResult result = new ShopResult();
+		int row = this.goodsDao.delete(id);
+		if (row > 0) {
+			result.setStatus(0);
+			result.setMsg("删除成功！");
+		} else {
+			result.setStatus(1);
+			result.setMsg("删除失败！");
+		}
+		return result;
+	}
+
+	@Override
+	public ShopResult updateGoods(Goods goods) {
+		ShopResult result = new ShopResult();
+		if (goods.getTitle() == null || "".equals(goods.getTitle().trim())) {
+			result.setStatus(1);
+			result.setMsg("商品名称不能为空！");
+			return result;
+		}
+		if (goods.getCategory() == null) {
+			result.setStatus(1);
+			result.setMsg("商品分类不能为空！");
+			return result;
+		}
+		if (goods.getPrice() == null) {
+			result.setStatus(1);
+			result.setMsg("商品价格不能为空！");
+			return result;
+		}
+		if (goods.getStock() == null) {
+			result.setStatus(1);
+			result.setMsg("商品库存不能为空！");
+			return result;
+		}
+		if (this.goodsDao.update(goods) > 0) {
+			result.setStatus(0);
+			result.setMsg("更新成功！");
+		} else {
+			result.setStatus(1);
+			result.setMsg("更新失败！");
 		}
 		return result;
 	}

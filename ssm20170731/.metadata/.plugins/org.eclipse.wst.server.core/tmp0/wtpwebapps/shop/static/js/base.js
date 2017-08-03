@@ -61,3 +61,46 @@ Vue.component('v-navbar', {
     '    </div>\n' +
     '</nav>'
 });
+
+Vue.component('v-carousel',{
+    'template':'<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
+    '    <!-- Indicators -->\n' +
+    '    <ol class="carousel-indicators">\n' +
+    '        <li data-target="#carousel" data-slide-to="0" class="active"></li>\n' +
+    '        <li data-target="#carousel" data-slide-to="1"></li>\n' +
+    '        <li data-target="#carousel" data-slide-to="2"></li>\n' +
+    '    </ol>\n' +
+    '\n' +
+    '    <!-- Wrapper for slides -->\n' +
+    '    <div class="carousel-inner" role="listbox">\n' +
+    '        <div class="item active">\n' +
+    '            <img src="static/img/index/1.jpg" alt="1.jpg">\n' +
+    '            <div class="carousel-caption">\n' +
+    '                今生100天\n' +
+    '            </div>\n' +
+    '        </div>\n' +
+    '        <div class="item">\n' +
+    '            <img src="static/img/index/2.jpg" alt="2.jpg">\n' +
+    '            <div class="carousel-caption">\n' +
+    '                去有误解\n' +
+    '            </div>\n' +
+    '        </div>\n' +
+    '        <div class="item">\n' +
+    '            <img src="static/img/index/3.jpg" alt="3.jpg">\n' +
+    '            <div class="carousel-caption">\n' +
+    '                全球好货\n' +
+    '            </div>\n' +
+    '        </div>\n' +
+    '    </div>\n' +
+    '\n' +
+    '    <!-- Controls -->\n' +
+    '    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">\n' +
+    '        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>\n' +
+    '        <span class="sr-only">Previous</span>\n' +
+    '    </a>\n' +
+    '    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">\n' +
+    '        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>\n' +
+    '        <span class="sr-only">Next</span>\n' +
+    '    </a>\n' +
+    '</div>'
+});

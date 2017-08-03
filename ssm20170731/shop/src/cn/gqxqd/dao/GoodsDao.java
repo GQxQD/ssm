@@ -8,4 +8,10 @@ public interface GoodsDao {
 
 	public List<Goods> findAll();
 
+	public int save(Goods goods);
+
+	public int delete(int id);
+
+	public int update(Goods goods);
+
 }

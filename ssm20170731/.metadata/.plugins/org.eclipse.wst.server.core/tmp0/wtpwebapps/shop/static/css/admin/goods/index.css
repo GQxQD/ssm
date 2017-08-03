@@ -22,12 +22,11 @@
     max-width: 40px;
     min-height: 40px;
     min-width: 40px;
-    transition: all .3s;
 }
-
+/* 
 #goods-list tr:hover .goods-title img {
     max-height: 100px;
     max-width: 100px;
     min-height: 100px;
     min-width: 100px;
-}
+} */

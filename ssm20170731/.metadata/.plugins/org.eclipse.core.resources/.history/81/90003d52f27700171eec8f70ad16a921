@@ -1,0 +1,147 @@
+var modal = new Vue({
+    el: '#goodsModal',
+    data: {
+        isAddAction: true,
+        m_title: '',
+        m_btn: '',
+        goods: {
+            title: '',
+            category: '',
+            price: '',
+            stock: '',
+            description: ''
+        },
+    },
+    mounted: function () {
+        this.$nextTick(function () {
+            this.clearGoodsInfo();
+        })
+    },
+    methods: {
+        clearGoodsInfo: function () {
+            this.goods = {
+                title: '',
+                category: '',
+                price: '',
+                stock: '',
+                description: ''
+            }
+        },
+        doAction: function () {
+            console.log(this.isAddAction);
+            if (!this.isAddAction) {
+                this.updateGoods();
+            } else {
+                this.addGoods();
+            }
+        },
+        addGoods: function () {
+            console.log(this.goods);
+            this.$http.post(base_path + '/goods/add.do', this.goods, {emulateJSON: true}).then(function (response) {
+                console.log(response);
+                alert(response.body.msg);
+                if (response.body.status == 0) {
+                    goods.getGoodsList();
+                    this.clearGoodsInfo();
+                    $('#goodsModal').modal('hide');
+                }
+            }, function (response) {
+                console.log(response);
+                alert('发生未知错误，错误代码为' + response.status);
+            });
+        },
+        updateGoods: function () {
+            console.log(this.goods);
+            this.$http.post('/shop/goods/update.html', this.goods, {emulateJSON: true}).then(function (response) {
+                console.log(response);
+                alert(response.body.msg);
+                if (response.body.flag == 0) {
+                    goods.getGoodsList();
+                    this.clearGoodsInfo();
+                    $('#goodsModal').modal('hide');
+                }
+            }, function (response) {
+                console.log(response);
+                alert('发生未知错误，错误代码为' + response.status);
+            });
+        }
+    }
+});
+
+var goods = new Vue({
+    el: '#shop',
+    data: {
+        search_key: '',
+        listLoading: true,
+        loadingText: '数据加载中...',
+        list: null
+    },
+    mounted: function () {
+        this.$nextTick(function () {
+            this.getGoodsList();
+        })
+    },
+    computed: {},
+    methods: {
+        getGoodsList: function (flag) {
+            this.listLoading = true;
+            if (flag !== true) {
+                console.log(this.search_key + '...');
+                this.search_key = '';
+            }
+            console.log(this.search_key);
+            this.$http.get(base_path + '/goods/list.do?key=' + this.search_key).then(function (response) {
+                console.log(response);
+                this.listLoading = false;
+                this.list = response.body.data;
+            }, function (response) {
+                this.loadingText = '数据加载失败！';
+            });
+        },
+        showAdd: function () {
+            modal.m_title = '添加商品';
+            modal.m_btn = '确认添加';
+            modal.isAddAction = true;
+            $('#goodsModal').modal('show');
+        },
+        showUpdate: function (goods) {
+            modal.m_title = '修改商品';
+            modal.m_btn = '确认修改';
+            modal.isAddAction = false;
+            modal.goods = goods;
+            $('#goodsModal').modal('show');
+        },
+        deleteGoods: function (goods) {
+            if (confirm('确认要删除' + goods.title + '吗？')) {
+                this.$http.post('/shop/goods/delete.html', {id: goods.id}, {emulateJSON: true}).then(function (response) {
+                    console.log(response);
+                    if (response.body.flag == 0) {
+                        alert('删除成功！');
+                        this.getGoodsList();
+                    } else {
+                        alert('删除失败，' + response.body.msg);
+                    }
+                });
+            }
+        }
+    }
+});
+
+
+// goodsList.list = [{
+//     "category": 0,
+//     "description": "金罐加多寶，还是原来的配方，还是熟悉的味道！",
+//     "id": 1,
+//     "img": "",
+//     "price": 0,
+//     "stock": 0,
+//     "title": "加多寶"
+// }, {
+//     "category": 100,
+//     "description": "还是原来的配方，还是熟悉的味道！",
+//     "id": 3,
+//     "img": "",
+//     "price": 4.5,
+//     "stock": 500,
+//     "title": "王老吉"
+// }];

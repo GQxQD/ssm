@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/admin/goods/index.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="shop">
+    <div class="h1 text-center">商品列表</div>
+    <div class="row" id="action">
+        <button class="btn btn-success" id="add-goods" @click="showAdd">添加商品</button>
+        <form class="form-inline pull-right">
+            <input class="form-control" placeholder="请输入商品名称..." v-model="search_key">
+            <a class="btn btn-info" @click="getGoodsList(true)">查询</a>
+            <a class="btn btn-default" @click="getGoodsList">全部</a>
+        </form>
+    </div>
+    <div class="row" id="goods-list">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>商品编号</th>
+                <th>商品分类</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <th>商品库存</th>
+                <th>商品操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="text-center" colspan="7" v-text="loadingText" v-show="listLoading">数据加载中...</td>
+            </tr>
+            <tr v-for="(goods,index) in list">
+                <th>{{index+1}}</th>
+                <td class="goods-id">{{goods.id}}</td>
+                <td class="goods-category"><template v-if="goods.category==0">未分类</template><template v-else>{{goods.category}}</template></td>
+                <td class="goods-title"><img src="../../static/img/1.jpg" alt="1.jpg">{{goods.title}}</td>
+                <td class="goods-price">{{goods.price}}</td>
+                <td class="goods-stock">{{goods.stock}}</td>
+                <td class="text-center">
+                    <button class="btn btn-primary" @click="showUpdate(goods)">修改</button>
+                    <button class="btn btn-danger" @click="deleteGoods(goods)">删除</button>
+                </td>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--添加商品模态框-->
+<div class="modal fade" id="goodsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel" v-text="m_title"></h4>
+            </div>
+            <div class="modal-body">
+                <form id="add-goods-form">
+                    <div class="form-group">
+                        <label for="goods-title">商品名称</label>
+                        <input class="form-control" id="goods-title" name="title" v-model="goods.title" placeholder="请输入商品名称">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-category">商品分类</label>
+                        <input class="form-control" id="goods-category" name="category" v-model="goods.category" placeholder="请输入商品分类">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-price">商品价格</label>
+                        <input class="form-control" id="goods-price" name="price" v-model="goods.price" placeholder="请输入商品价格">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-stock">商品库存</label>
+                        <input type="number" class="form-control" id="goods-stock" name="stock" v-model="goods.stock" placeholder="请输入商品库存">
+                    </div>
+                    <div class="form-group">
+                        <label for="goods-description">商品描述</label>
+                        <textarea class="form-control" id="goods-description" name="description" v-model="goods.description" placeholder="请输入商品描述..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-success" @click="doAction" v-text="m_btn"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../static/js/jquery.min.js"></script>
+<script src="../../static/js/bootstrap.min.js"></script>
+<script src="../../static/js/vue.min.js"></script>
+<script src="../../static/js/vue-resource.min.js"></script>
+<script src="../../static/js/base.js"></script>
+<script src="../../static/js/admin/goods/index.js"></script>
+</body>
+</html>

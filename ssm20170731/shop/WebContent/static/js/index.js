@@ -8,21 +8,7 @@ var app = new Vue({
     el: '#app',
     data: {
         loadingText: '加载中...',
-        goodsList: [
-            {
-                title: 'AAA',
-                price: 4.52,
-                img: 'static/img/' + Math.ceil(Math.random() * 4) + '.jpg'
-            }, {
-                title: 'BBB',
-                price: 4.52,
-                img: 'static/img/' + Math.ceil(Math.random() * 4) + '.jpg'
-            }, {
-                title: 'CCC',
-                price: 4.52,
-                img: 'static/img/' + Math.ceil(Math.random() * 4) + '.jpg'
-            }
-        ]
+        goodsList: null
     },
     mounted: function () {
         this.$nextTick(function () {
@@ -38,7 +24,7 @@ var app = new Vue({
                 if (result.status == 0) {
                     this.goodsList = result.data;
                     this.goodsList.forEach(function (goods) {
-                        goods.img = 'static/img/' + Math.ceil(Math.random() * 4) + '.jpg';
+                        goods.img = 'static/img/nopic.png';
                     });
                     this.loadingText = '';
                 } else {
