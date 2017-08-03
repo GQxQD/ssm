@@ -94,4 +94,19 @@ public class UserServiceImpl implements UserService {
 		return result;
 	}
 
+	@Override
+	public ShopResult getUser(int id) {
+		ShopResult result = new ShopResult();
+		User user = this.userDao.get(id);
+		if (user == null) {
+			result.setStatus(1);
+			result.setMsg("找不到该用户！");
+		} else {
+			result.setStatus(0);
+			result.setMsg("查找成功！");
+			result.setData(user);
+		}
+		return result;
+	}
+
 }

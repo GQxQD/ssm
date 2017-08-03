@@ -1,8 +1,18 @@
 var base_path = "http://127.0.0.1:8080/shop";
 
+function hash2Object(hash) {
+    var arr = hash.substr(1).split('&');
+    var params = {};
+    for (var i in arr) {
+        var tmp = arr[i].split('=');
+        params[tmp[0]] = tmp[1];
+    }
+    return params;
+}
+
 // v-navbar
 Vue.component('v-navbar', {
-    template:'<nav class="navbar navbar-inverse" id="navbar">\n' +
+    template: '<nav class="navbar navbar-inverse" id="navbar">\n' +
     '    <div class="container">\n' +
     '        <div class="navbar-header">\n' +
     '            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"\n' +
@@ -18,7 +28,7 @@ Vue.component('v-navbar', {
     '        <!-- Collect the nav links, forms, and other content for toggling -->\n' +
     '        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">\n' +
     '            <ul class="nav navbar-nav">\n' +
-    '                <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>\n' +
+    '                <li class="active"><a href="'+base_path+'/index.html">首页 <span class="sr-only">(current)</span></a></li>\n' +
     '                <li><a href="#">Link</a></li>\n' +
     '                <li class="dropdown">\n' +
     '                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"\n' +
@@ -62,8 +72,8 @@ Vue.component('v-navbar', {
     '</nav>'
 });
 
-Vue.component('v-carousel',{
-    'template':'<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
+Vue.component('v-carousel', {
+    'template': '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
     '    <!-- Indicators -->\n' +
     '    <ol class="carousel-indicators">\n' +
     '        <li data-target="#carousel" data-slide-to="0" class="active"></li>\n' +
@@ -74,19 +84,19 @@ Vue.component('v-carousel',{
     '    <!-- Wrapper for slides -->\n' +
     '    <div class="carousel-inner" role="listbox">\n' +
     '        <div class="item active">\n' +
-    '            <img src="static/img/index/1.jpg" alt="1.jpg">\n' +
+    '            <img src="'+base_path+'/static/img/index/1.jpg" alt="1.jpg">\n' +
     '            <div class="carousel-caption">\n' +
     '                今生100天\n' +
     '            </div>\n' +
     '        </div>\n' +
     '        <div class="item">\n' +
-    '            <img src="static/img/index/2.jpg" alt="2.jpg">\n' +
+    '            <img src="'+base_path+'/static/img/index/2.jpg" alt="2.jpg">\n' +
     '            <div class="carousel-caption">\n' +
     '                去有误解\n' +
     '            </div>\n' +
     '        </div>\n' +
     '        <div class="item">\n' +
-    '            <img src="static/img/index/3.jpg" alt="3.jpg">\n' +
+    '            <img src="'+base_path+'/static/img/index/3.jpg" alt="3.jpg">\n' +
     '            <div class="carousel-caption">\n' +
     '                全球好货\n' +
     '            </div>\n' +

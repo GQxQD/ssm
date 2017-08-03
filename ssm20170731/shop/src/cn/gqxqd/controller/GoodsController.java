@@ -24,6 +24,12 @@ public class GoodsController {
 		return goodsService.getGoodsList();
 	}
 
+	@RequestMapping("find")
+	@ResponseBody
+	public ShopResult getGoodsById(int id) {
+		return goodsService.getGoodsById(id);
+	}
+
 	@RequestMapping("add")
 	@ResponseBody
 	public ShopResult addGoods(Goods goods) {

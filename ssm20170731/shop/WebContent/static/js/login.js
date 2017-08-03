@@ -20,6 +20,7 @@ new Vue({
                                 alert('登录成功！');
                                 $.cookie('user_id', result.data.user_id);
                                 $.cookie('token_key', result.data.token_key);
+                                window.location.href = base_path + '/user';
                                 break;
                             default:
                                 alert(result.msg);

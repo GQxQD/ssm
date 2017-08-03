@@ -7043,3 +7043,6 @@ Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Failure to tra
 
 !ENTRY org.eclipse.jface.text 2 0 2017-08-03 10:54:50.686
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jdt.ui 2 0 2017-08-03 15:05:08.443
+!MESSAGE The 'org.eclipse.recommenders.completion.rcp.javaCompletionProposalComputer.intelligent' proposal computer from the 'org.eclipse.recommenders.completion.rcp' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.

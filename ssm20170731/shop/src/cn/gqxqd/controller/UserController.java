@@ -27,4 +27,10 @@ public class UserController {
 	public ShopResult login(String username, String password) {
 		return this.userService.login(username, password);
 	}
+
+	@RequestMapping("getUser")
+	@ResponseBody
+	public ShopResult getUser(int id) {
+		return this.userService.getUser(id);
+	}
 }

@@ -16,11 +16,11 @@
                 <img src="static/img/nopic.png" alt="">
             </div>
             <div class="col-xs-6" id="right">
-                <div id="goods-title">Title</div>
+                <div id="goods-title" v-text="goods.title"></div>
                 <div class="bg-danger" id="goods-price">
                     <span>价格：</span>
                     <span>￥</span>
-                    <span>10000.00</span>
+                    <span v-text="formatPrice"></span>
                 </div>
                 <div id="count">
                     <span>数量：</span>
@@ -28,7 +28,7 @@
                 </div>
                 <div id="goods-stock">
                     <span>库存：</span>
-                    <span v-text="stock">999999</span>
+                    <span v-text="goods.stock"></span>
                 </div>
                 <div id="button">
                     <button class="btn btn-danger pull-left">立即购买</button>
@@ -38,7 +38,7 @@
         </div>
         <div class="row" id="center">
             <p>商品描述：</p>
-            <div>gdsfgdfgdfgdfg</div>
+            <div v-text="goods.description"></div>
         </div>
     </div>
 

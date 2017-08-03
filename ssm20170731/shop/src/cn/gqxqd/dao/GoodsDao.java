@@ -7,6 +7,8 @@ import cn.gqxqd.entity.Goods;
 public interface GoodsDao {
 
 	public List<Goods> findAll();
+	
+	public Goods find(int id);
 
 	public int save(Goods goods);
 

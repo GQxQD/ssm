@@ -1,0 +1,13 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+#carousel .carousel-inner .item > img {
+    min-width: 100%;
+    min-height: 200px;
+}
+
+#carousel .carousel-inner {
+    max-height: 200px;
+    overflow: hidden;
+}

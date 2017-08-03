@@ -7,6 +7,8 @@ public interface GoodsService {
 
 	public ShopResult getGoodsList();
 
+	public ShopResult getGoodsById(int id);
+
 	public ShopResult addGoods(Goods goods);
 
 	public ShopResult deleteGoods(int id);

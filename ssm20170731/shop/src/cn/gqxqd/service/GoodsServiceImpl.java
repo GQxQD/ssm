@@ -111,4 +111,14 @@ public class GoodsServiceImpl implements GoodsService {
 		return result;
 	}
 
+	@Override
+	public ShopResult getGoodsById(int id) {
+		ShopResult result = new ShopResult();
+		Goods goods = this.goodsDao.find(id);
+		result.setStatus(0);
+		result.setMsg("查询成功！");
+		result.setData(goods);
+		return result;
+	}
+
 }
